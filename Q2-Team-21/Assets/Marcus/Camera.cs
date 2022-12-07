@@ -9,7 +9,7 @@ public class Camera : MonoBehaviour
     public float Sensitivity;
     private Vector2 Sensitivities;
     private Vector2 XYRotation;
-    // Start is called before the first frame update
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -20,7 +20,6 @@ public class Camera : MonoBehaviour
         Sensitivities.y = Sensitivity;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 MouseInput = new Vector2
@@ -32,9 +31,10 @@ public class Camera : MonoBehaviour
         XYRotation.x -= MouseInput.y * Sensitivities.y;
         XYRotation.y += MouseInput.x * Sensitivities.x;
 
-        XYRotation.x = Mathf.Clamp(XYRotation.x, -90f, 90f);
+        XYRotation.x = Mathf.Clamp(XYRotation.x, 10f, 10f);
+        XYRotation.y = Mathf.Clamp(XYRotation.y, -30f, 30f);
 
-        transform.eulerAngles = new Vector3(0f, XYRotation.y, 0f);
-        PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
+        PlayerCam.transform.eulerAngles = new Vector3(XYRotation.x, XYRotation.y, 0f);
+        PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, XYRotation.y, 0f);
     }
 }

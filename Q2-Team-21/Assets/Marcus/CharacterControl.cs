@@ -10,14 +10,6 @@ public class CharacterControl : MonoBehaviour
     /// layers: Ground, Interactables
     /// <notes>
 
-    //Camera
-
-    private GameObject PlayerCam;
-    private Transform PlayerCamera;
-    public float Sensitivity;
-    private Vector2 Sensitivities;
-    private Vector2 XYRotation;
-
     //Raycast
 
     private LayerMask InteractablesLayerMask;
@@ -50,15 +42,6 @@ public class CharacterControl : MonoBehaviour
     //////////////////////////////////////////////////////
     void Start()
     {
-        //Camera
-
-        Cursor.lockState = CursorLockMode.Locked;
-        PlayerCam = GameObject.FindGameObjectWithTag("MainCamera");
-        //PlayerCamera = PlayerCam.transform;
-
-        Sensitivities.x = Sensitivity;
-        Sensitivities.y = Sensitivity;
-
         //Raycast
 
         InteractablesLayerMask = LayerMask.GetMask("Interactables");
@@ -80,22 +63,6 @@ public class CharacterControl : MonoBehaviour
     //////////////////////////////////////////////////////
     void Update()
     {
-        //Camera
-
-        Vector2 MouseInput = new Vector2
-        {
-            x = Input.GetAxis("Mouse X"),
-            y = Input.GetAxis("Mouse Y")
-        };
-
-        XYRotation.x -= MouseInput.y * Sensitivities.y;
-        XYRotation.y += MouseInput.x * Sensitivities.x;
-
-        XYRotation.x = Mathf.Clamp(XYRotation.x, -90f, 90f);
-
-        transform.eulerAngles = new Vector3(0f, XYRotation.y, 0f);
-        PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
-
         //Raycast
 
         var ray = new Ray(origin: this.transform.position, direction: this.transform.forward);
