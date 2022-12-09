@@ -10,11 +10,6 @@ public class CharacterControl : MonoBehaviour
     /// layers: Ground, Interactables
     /// <notes>
 
-    //Raycast
-
-    private LayerMask InteractablesLayerMask;
-    private GameObject LookingAtObj;
-
     //Movement
 
     Vector3 move;
@@ -24,15 +19,13 @@ public class CharacterControl : MonoBehaviour
     private CharacterController controller;
     public float moveSpeed;
     private float speed;
-    private float speedButFaster;
-    private float stamina;
-    private float gravity = -18;
+    public float gravity;
     public float jumpHeight;
 
-    private GameObject groundCheckOBJ;
-    private Transform groundCheck;
-    private float groundDistance = 0.3f;
-    private LayerMask groundLayerMask;
+    private GameObject WaterCheckOBJ;
+    private Transform WaterCheck;
+    private float WaterDistance = 0.3f;
+    private LayerMask WaterLayerMask;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -42,75 +35,23 @@ public class CharacterControl : MonoBehaviour
     //////////////////////////////////////////////////////
     void Start()
     {
-        //Raycast
-
-        InteractablesLayerMask = LayerMask.GetMask("Interactables");
-
         //Movement
 
         controller = gameObject.GetComponent<CharacterController>();
-        groundLayerMask = LayerMask.GetMask("Ground");
-        groundCheckOBJ = GameObject.FindGameObjectWithTag("GroundChecker");
-        groundCheck = groundCheckOBJ.transform;
-        speed = moveSpeed;
-        speedButFaster = speed * 1.6f;
+        WaterLayerMask = LayerMask.GetMask("Water");
+        WaterCheckOBJ = GameObject.FindGameObjectWithTag("WaterChecker");
+        WaterCheck = WaterCheckOBJ.transform;
 
         //UI
-
 
     }
 
     //////////////////////////////////////////////////////
     void Update()
     {
-        //Raycast
-
-        var ray = new Ray(origin: this.transform.position, direction: this.transform.forward);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100, InteractablesLayerMask))
-        {
-            LookingAtObj = hit.transform.gameObject;
-            if (LookingAtObj.tag == "")
-            {
-
-            }
-            if (LookingAtObj.tag == "")
-            {
-
-            }
-            if (LookingAtObj.tag == "")
-            {
-
-            }
-        }
-        else
-        {
-            LookingAtObj = null;
-        }
-
         // Movement
 
-        if (speed == speedButFaster)
-        {
-            stamina -= Time.deltaTime;
-        }
-        else if (stamina <= 5)
-        {
-            stamina += Time.deltaTime * 0.6f;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) || stamina <= 0)
-        {
-            speed = moveSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && stamina > 0)
-        {
-            speed = speedButFaster;
-        }
-
-        //^^^sprint end
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
+        isGrounded = Physics.CheckSphere(WaterCheck.position, WaterDistance, WaterLayerMask);
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -134,7 +75,6 @@ public class CharacterControl : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //UI
-
 
     }
 }
