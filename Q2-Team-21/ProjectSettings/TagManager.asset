@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaterChecker
+  - Car
+  - Projectitle
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - Water
   - Interactables
-  - 
+  - Projectiles
   - 
   - 
   - 
