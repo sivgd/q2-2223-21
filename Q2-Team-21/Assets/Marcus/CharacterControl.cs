@@ -6,8 +6,8 @@ using UnityEngine;
 public class CharacterControl : MonoBehaviour
 {
     /// <notes>
-    /// Tags: GroundChecker, MainCamera
-    /// layers: Ground, Interactables
+    /// Tags: WaterChecker, MainCamera
+    /// layers: Water, Interactables
     /// <notes>
 
     //Movement
@@ -15,8 +15,11 @@ public class CharacterControl : MonoBehaviour
     private CharacterController controller;
     public float moveSpeed;
     private float speed = 10;
-    public float gravity;
-    public float jumpHeight;
+    private float gravity = -18;
+    private bool isWatered;
+    private Vector3 velocity;
+
+    private GameObject WaterCheckOBJ;
 
     //UI
 
@@ -39,8 +42,8 @@ public class CharacterControl : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         Vector3 move = transform.forward * z * speed;
-        Vector3 rotate= transform.up * x;
-        controller.Move(move * Time.deltaTime);
+        Vector3 rotate= transform.up * x * 0.5f;
+        gameObject.transform.forward += move * Time.deltaTime;
         gameObject.transform.Rotate(rotate);
 
         //UI
