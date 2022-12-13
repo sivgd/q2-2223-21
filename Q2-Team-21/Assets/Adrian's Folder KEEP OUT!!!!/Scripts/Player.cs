@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         {
             rb.useGravity = true;
             timer += Time.deltaTime;
-
+            gameObject.GetComponent<CharacterController>().enabled = false;
             if (timer > time)
             {
                 timer = 0;
