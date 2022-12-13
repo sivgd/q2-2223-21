@@ -16,6 +16,11 @@ public class WaterBlast : MonoBehaviour
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector3(direction.x, direction.y, direction.z).normalized * speed;
+
+        if(player.GetComponent<Player>().health == 0 || GameObject.FindGameObjectsWithTag("Car") == null)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -25,6 +30,11 @@ public class WaterBlast : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-       
+       if(collision.gameObject.tag == "Car")
+        {
+            //Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Player>().health--;
+            Destroy(gameObject);
+        }
     }
 }
