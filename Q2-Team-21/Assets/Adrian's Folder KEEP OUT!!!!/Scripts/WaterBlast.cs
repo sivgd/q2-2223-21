@@ -25,7 +25,6 @@ public class WaterBlast : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.ga)
-        Destroy(gameObject);
+       
     }
 }
