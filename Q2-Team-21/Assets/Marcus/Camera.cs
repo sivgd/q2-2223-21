@@ -10,6 +10,7 @@ public class Camera : MonoBehaviour
     public float Sensitivity;
     private Vector2 Sensitivities;
     private Vector2 XYRotation;
+    private GameObject boat;
 
     //Raycast
 
@@ -18,11 +19,12 @@ public class Camera : MonoBehaviour
 
     void Start()
     {
+        boat = GameObject.FindGameObjectWithTag("Player");
         //Camera
 
         Cursor.lockState = CursorLockMode.Locked;
         PlayerCam = GameObject.FindGameObjectWithTag("MainCamera");
-        PlayerCamera = PlayerCam.transform;
+        PlayerCamera = gameObject.transform;
 
         Sensitivities.x = Sensitivity;
         Sensitivities.y = Sensitivity;
@@ -34,6 +36,7 @@ public class Camera : MonoBehaviour
 
     void Update()
     {
+        gameObject.transform.position = boat.transform.position;
         //Camera
 
         Vector2 MouseInput = new Vector2
@@ -46,7 +49,7 @@ public class Camera : MonoBehaviour
         XYRotation.y += MouseInput.x * Sensitivities.x;
 
         XYRotation.x = Mathf.Clamp(XYRotation.x, 10f, 10f);
-        XYRotation.y = Mathf.Clamp(XYRotation.y, -30f, 30f);
+        //XYRotation.y = Mathf.Clamp(XYRotation.y, -30f, 30f);
 
         PlayerCam.transform.eulerAngles = new Vector3(XYRotation.x, XYRotation.y, 0f);
         PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, XYRotation.y, 0f);
