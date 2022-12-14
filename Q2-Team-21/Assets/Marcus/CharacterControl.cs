@@ -12,27 +12,8 @@ public class CharacterControl : MonoBehaviour
 
     //Movement
 
-    private CharacterController controller;
     public float moveSpeed;
     private float speed = 10;
-    private float gravity = -18;
-    private bool isWatered;
-    private Vector3 velocity;
-
-    private GameObject WaterCheckOBJ;
-
-    //UI
-
-    //////////////////////////////////////////////////////
-    void Start()
-    {
-        //Movement
-
-        controller = gameObject.GetComponent<CharacterController>();
-
-        //UI
-
-    }
 
     //////////////////////////////////////////////////////
     void Update()
@@ -41,12 +22,7 @@ public class CharacterControl : MonoBehaviour
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        Vector3 move = transform.forward * z * speed;
-        Vector3 rotate= transform.up * x * 0.5f;
-        gameObject.transform.forward += move * Time.deltaTime;
-        gameObject.transform.Rotate(rotate);
-
-        //UI
-
+        gameObject.transform.forward += new Vector3(0, z, 0) * Time.deltaTime;
+        gameObject.transform.Rotate(new Vector3(0, 0, x) * Time.deltaTime);
     }
 }
