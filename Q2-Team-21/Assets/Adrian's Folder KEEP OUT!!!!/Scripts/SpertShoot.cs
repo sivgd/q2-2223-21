@@ -22,6 +22,7 @@ public class SpertShoot : MonoBehaviour
         if(timer > time)
         {
             timer = 0;
+
             shoot();
         }
     }
