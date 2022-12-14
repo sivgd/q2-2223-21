@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FaceCamera : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public float DegreesRotate;
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
