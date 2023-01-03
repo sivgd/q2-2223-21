@@ -19,7 +19,7 @@ public class WaterManager : MonoBehaviour
 
         for (int i = 0; i < vertices.Length; i++)
         {
-            vertices[i].y = WaveManager.instance.GetWaveHeight(transform.position.x + vertices[i].x, transform.position.z + vertices[i].z);
+            vertices[i].y = WaveManager.instance.GetWaveHeight(transform.position.x + vertices[i].x*100, transform.position.z + vertices[i].z * 100);
         }
 
         meshFilter.mesh.vertices = vertices;
