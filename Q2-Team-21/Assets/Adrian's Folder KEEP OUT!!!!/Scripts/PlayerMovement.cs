@@ -2,22 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float time;
-    private float timer;
+    // The speed at which the player moves
     public float speed;
-    public float health = 10;
-    private Rigidbody rb;
     public float rotationSpeed;
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-        rb.useGravity =false;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // Get the horizontal and vertical input axes
@@ -34,28 +23,17 @@ public class Player : MonoBehaviour
         transform.position += movement * speed * Time.deltaTime;
 
         // If the Q key is pressed
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             // Rotate the player to the left
             transform.Rotate(0.0f, -rotationSpeed * Time.deltaTime, 0.0f);
         }
         // If the E key is pressed
-        else if (Input.GetKey(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E))
         {
             // Rotate the player to the right
             transform.Rotate(0.0f, rotationSpeed * Time.deltaTime, 0.0f);
         }
-        if (health <= 0)
-        {
-            rb.useGravity = true;
-            timer += Time.deltaTime;
-            gameObject.GetComponent<CharacterController>().enabled = false;
-            if (timer > time)
-            {
-                timer = 0;
-                Destroy(gameObject);
-            }
-            
-        }
+
     }
 }
