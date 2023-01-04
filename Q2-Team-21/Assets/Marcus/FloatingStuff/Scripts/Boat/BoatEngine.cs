@@ -75,8 +75,13 @@ public class BoatEngine : MonoBehaviour
 
             waterJetTransform.localEulerAngles = newRotation;
         }
+        else
+        {
+            WaterJetRotation_Y = 0f;
+        }
+
         //Steer right
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - 2f;
 
@@ -88,6 +93,10 @@ public class BoatEngine : MonoBehaviour
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
 
             waterJetTransform.localEulerAngles = newRotation;
+        }
+        else
+        {
+            WaterJetRotation_Y = 0f;
         }
     }
 
