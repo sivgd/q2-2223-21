@@ -4,90 +4,124 @@ using UnityEngine;
 
 public class FrogController : MonoBehaviour
 {
-    public float tongueLength = 10.0f; // The length of the tongue
-    public float tongueThickness = 0.2f; // The thickness of the tongue
-    public int tongueSegments = 10; // The number of segments in the tongue
-    public float tongueCooldown = 1.0f; // The time between tongue attacks
-    public LayerMask tongueLayerMask; // The layer mask for the objects that the tongue can hit
+    // Speed of the frog
+    public float speed = 10.0f;
 
-    private LineRenderer lineRenderer; // The line renderer component for the tongue
-    private float tongueTimer = 0.0f; // The timer for the tongue cooldown
-    private Vector3[] tonguePositions; // The positions of the segments in the tongue
-    private bool tongueAttacking = false; // Whether the tongue is currently attacking
+    // Rotation speed of the frog
+    public float rotationSpeed = 10.0f;
 
-    void Start()
+    // Mass of the frog
+    public float mass = 1.0f;
+
+    // Drag of the frog
+    public float drag = 1.0f;
+
+    // Angular drag of the frog
+    public float angularDrag = 1.0f;
+
+    // Force to apply to the frog when moving
+    public Vector3 force = Vector3.zero;
+
+    // Torque to apply to the frog when rotating
+    public Vector3 torque = Vector3.zero;
+
+    // Main camera
+    Camera mainCamera;
+
+    // Rigidbody of the frog
+    Rigidbody rb;
+
+    //void Start()
+    //{
+    //    // Get the main camera
+    //    mainCamera = GameObject.Find("Camera").GetComponent<Camera>();
+
+    //    // Get the rigidbody of the frog
+    //    rb = GetComponent<Rigidbody>();
+    //}
+
+    //void Update()
+    //{
+    //    // Convert the mouse cursor position to a ray in world space
+    //    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+    //    // Check if the ray hits the ground
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(ray, out hit))
+    //    {
+    //        // Calculate the direction to the hit point
+    //        Vector3 direction = hit.point - transform.position;
+    //        direction.y = 0;
+
+    //        // Rotate the frog towards the hit point
+    //        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+    //        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+    //        // Calculate the force to apply to the frog
+    //        force = transform.forward * speed;
+
+    //        // Check if the frog has reached the hit point
+    //        if (Vector3.Distance(transform.position, hit.point) < 0.1f)
+    //        {
+    //            // Set the force to zero
+    //            force = Vector3.zero;
+
+    //            // Play the landing sound
+    //            AudioSource audio = GameObject.Find("Audio").GetComponent<AudioSource>();
+    //            audio.Play();
+    //        }
+    //    }
+    //}    //void Start()
+    //{
+    //    // Get the main camera
+    //    mainCamera = GameObject.Find("Camera").GetComponent<Camera>();
+
+    //    // Get the rigidbody of the frog
+    //    rb = GetComponent<Rigidbody>();
+    //}
+
+    //void Update()
+    //{
+    //    // Convert the mouse cursor position to a ray in world space
+    //    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+    //    // Check if the ray hits the ground
+    //    RaycastHit hit;
+    //    if (Physics.Raycast(ray, out hit))
+    //    {
+    //        // Calculate the direction to the hit point
+    //        Vector3 direction = hit.point - transform.position;
+    //        direction.y = 0;
+
+    //        // Rotate the frog towards the hit point
+    //        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
+    //        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+    //        // Calculate the force to apply to the frog
+    //        force = transform.forward * speed;
+
+    //        // Check if the frog has reached the hit point
+    //        if (Vector3.Distance(transform.position, hit.point) < 0.1f)
+    //        {
+    //            // Set the force to zero
+    //            force = Vector3.zero;
+
+    //            // Play the landing sound
+    //            AudioSource audio = GameObject.Find("Audio").GetComponent<AudioSource>();
+    //            audio.Play();
+    //        }
+    //    }
+    //}
+
+    void FixedUpdate()
     {
-        // Get the line renderer component
-        lineRenderer = GetComponent<LineRenderer>();
+        // Apply the force to the frog
+        rb.AddForce(force, ForceMode.Acceleration);
 
-        // Enable the line renderer component
-        lineRenderer.enabled = true;
-
-        // Set the line renderer component to render in world space
-        lineRenderer.useWorldSpace = true;
-
-        // Set the line renderer component's sorting layer and order
-        lineRenderer.sortingLayerName = "Default";
-        lineRenderer.sortingOrder = 0;
-        // Initialize the tongue positions
-        tonguePositions = new Vector3[tongueSegments];
-        for (int i = 0; i < tongueSegments; i++)
-        {
-            tonguePositions[i] = transform.position;
-        }
-    }
-
-    void Update()
-    {
-        // Check if the tongue is attacking
-        if (tongueAttacking)
-        {
-            // Update the tongue positions
-            for (int i = 0; i < tongueSegments - 1; i++)
-            {
-                tonguePositions[i] = tonguePositions[i + 1];
-            }
-
-            // Check if the tongue has reached its maximum length
-            if (Vector3.Distance(tonguePositions[tongueSegments - 1], transform.position) > tongueLength)
-            {
-                // End the tongue attack
-                tongueAttacking = false;
-                tongueTimer = tongueCooldown;
-            }
-            else
-            {
-                // Extend the tongue
-                Vector3 tongueDirection = (tonguePositions[tongueSegments - 1] - transform.position).normalized;
-                tonguePositions[tongueSegments - 1] += tongueDirection * Time.deltaTime;
-            }
-        }
-        else
-        {
-            // Decrement the tongue timer
-            tongueTimer -= Time.deltaTime;
-
-            // Check if the tongue attack button is pressed
-            if (Input.GetButtonDown("Fire1") && tongueTimer <= 0.0f)
-            {
-                // Start the tongue attack
-                tongueAttacking = true;
-
-                // Convert the mouse cursor position to a ray in world space
-                //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                // Check if the ray hits any objects in the scene
-                //if (Physics.Raycast(ray, out RaycastHit hit))
-                //{
-                    // Set the starting position of the tongue to the hit point
-                   // tonguePositions[tongueSegments - 1] = hit.point;
-               // }
-              //  else
-              //  {
-                    // Set the starting position of the tongue to the player position
-                //    tonguePositions[tongueSegments - 1] = transform.position;
-              //  }
-            }
-        }
+        // Set the mass and drag of the frog
+        rb.mass = mass;
+        rb.drag = drag;
+        rb.angularDrag = angularDrag;
     }
 }
+
