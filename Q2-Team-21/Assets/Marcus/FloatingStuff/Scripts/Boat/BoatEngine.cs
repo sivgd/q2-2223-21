@@ -66,28 +66,23 @@ public class BoatEngine : MonoBehaviour
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + 2f;
 
-            if (WaterJetRotation_Y > 30f && WaterJetRotation_Y < 270f)
+            if (WaterJetRotation_Y > 5f && WaterJetRotation_Y < 270f)
             {
-                WaterJetRotation_Y = 30f;
+                WaterJetRotation_Y = 5f;
             }
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
 
             waterJetTransform.localEulerAngles = newRotation;
         }
-        else
-        {
-            WaterJetRotation_Y = 0f;
-        }
-
         //Steer right
-        if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - 2f;
 
-            if (WaterJetRotation_Y < 330f && WaterJetRotation_Y > 90f)
+            if (WaterJetRotation_Y < 355f && WaterJetRotation_Y > 90f)
             {
-                WaterJetRotation_Y = 330f;
+                WaterJetRotation_Y = 355f;
             }
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
@@ -97,7 +92,13 @@ public class BoatEngine : MonoBehaviour
         else
         {
             WaterJetRotation_Y = 0f;
+
+            Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
+
+            waterJetTransform.localEulerAngles = newRotation;
         }
+
+
     }
 
 

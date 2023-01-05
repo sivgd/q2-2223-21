@@ -64,8 +64,8 @@ public class BoatPhysics : MonoBehaviour
         underWaterMesh = underWaterObj.GetComponent<MeshFilter>().mesh;
         aboveWaterMesh = aboveWaterObj.GetComponent<MeshFilter>().mesh;
         
-        underWaterMirrorMesh = underWaterMirrorObj.GetComponent<MeshFilter>().mesh;
-        foamMesh = foamSkirtObj.GetComponent<MeshFilter>().mesh;
+        //underWaterMirrorMesh = underWaterMirrorObj.GetComponent<MeshFilter>().mesh;
+        //foamMesh = foamSkirtObj.GetComponent<MeshFilter>().mesh;
     }
 
 
@@ -76,16 +76,16 @@ public class BoatPhysics : MonoBehaviour
         modifyBoatMesh.GenerateUnderwaterMesh(intersectionVertices);
 
         //Display the under water mesh - is always needed to get the underwater length for forces calculations
-        generateExtraMeshes.DisplayMesh(underWaterMesh, "UnderWater Mesh", modifyBoatMesh.underWaterTriangleData);
+        //generateExtraMeshes.DisplayMesh(underWaterMesh, "UnderWater Mesh", modifyBoatMesh.underWaterTriangleData);
 
         //Display the above water mesh
-        generateExtraMeshes.DisplayMesh(aboveWaterMesh, "AboveWater Mesh", modifyBoatMesh.aboveWaterTriangleData);
+        //generateExtraMeshes.DisplayMesh(aboveWaterMesh, "AboveWater Mesh", modifyBoatMesh.aboveWaterTriangleData);
 
         //Display the mesh that's the mirror
-        generateExtraMeshes.DisplayMirrorMesh(underWaterMirrorMesh, "UnderwaterWater Mirror Mesh", modifyBoatMesh.aboveWaterTriangleData);
+        //generateExtraMeshes.DisplayMirrorMesh(underWaterMirrorMesh, "UnderwaterWater Mirror Mesh", modifyBoatMesh.aboveWaterTriangleData);
 
         //Generate the foam skirt
-        generateExtraMeshes.GenerateFoamSkirt(foamMesh, "Foam skirt", intersectionVertices);
+        //generateExtraMeshes.GenerateFoamSkirt(foamMesh, "Foam skirt", intersectionVertices);
     }
 
 
