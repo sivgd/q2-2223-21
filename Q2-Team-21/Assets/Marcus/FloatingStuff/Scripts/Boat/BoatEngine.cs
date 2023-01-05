@@ -56,6 +56,13 @@ public class BoatEngine : MonoBehaviour
                 currentJetPower += 1f * powerFactor;
             }
         }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            if (boatController.CurrentSpeed > -50f && currentJetPower > -maxPower)
+            {
+                currentJetPower -= 1f * powerFactor;
+            }
+        }
         else
         {
             currentJetPower = 0f;
