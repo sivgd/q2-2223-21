@@ -77,16 +77,16 @@ public class FrogController : MonoBehaviour
                 //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 // Check if the ray hits any objects in the scene
-                if (Physics.Raycast(ray, out RaycastHit hit))
-                {
+                //if (Physics.Raycast(ray, out RaycastHit hit))
+                //{
                     // Set the starting position of the tongue to the hit point
-                    tonguePositions[tongueSegments - 1] = hit.point;
-                }
-                else
-                {
+                   // tonguePositions[tongueSegments - 1] = hit.point;
+               // }
+              //  else
+              //  {
                     // Set the starting position of the tongue to the player position
-                    tonguePositions[tongueSegments - 1] = transform.position;
-                }
+                //    tonguePositions[tongueSegments - 1] = transform.position;
+              //  }
             }
         }
     }
