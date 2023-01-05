@@ -74,7 +74,7 @@ public class FrogController : MonoBehaviour
                 tongueAttacking = true;
 
                 // Convert the mouse cursor position to a ray in world space
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 // Check if the ray hits any objects in the scene
                 if (Physics.Raycast(ray, out RaycastHit hit))
