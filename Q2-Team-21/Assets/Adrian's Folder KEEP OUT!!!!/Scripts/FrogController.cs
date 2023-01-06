@@ -4,124 +4,156 @@ using UnityEngine;
 
 public class FrogController : MonoBehaviour
 {
-    // Speed of the frog
-    public float speed = 10.0f;
+    // The starting position of the tongue
+    public Transform startPosition;
+    public float minY = -5.0f;
+    // The ending position of the tongue
+    public Vector3 endPosition;
 
-    // Rotation speed of the frog
-    public float rotationSpeed = 10.0f;
+    // The speed at which the tongue extends
+    public float speed = 1.0f;
 
-    // Mass of the frog
-    public float mass = 1.0f;
+    public float offset = 1f;
+    // The Line Renderer component used to render the tongue
+    LineRenderer lineRenderer;
+    public float coolDownTime = 5.0f;
 
-    // Drag of the frog
-    public float drag = 1.0f;
+    private bool isTongueAvailable = true;
 
-    // Angular drag of the frog
-    public float angularDrag = 1.0f;
 
-    // Force to apply to the frog when moving
-    public Vector3 force = Vector3.zero;
-
-    // Torque to apply to the frog when rotating
-    public Vector3 torque = Vector3.zero;
-
-    // Main camera
-    Camera mainCamera;
-
-    // Rigidbody of the frog
-    Rigidbody rb;
-
-    //void Start()
-    //{
-    //    // Get the main camera
-    //    mainCamera = GameObject.Find("Camera").GetComponent<Camera>();
-
-    //    // Get the rigidbody of the frog
-    //    rb = GetComponent<Rigidbody>();
-    //}
-
-    //void Update()
-    //{
-    //    // Convert the mouse cursor position to a ray in world space
-    //    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-    //    // Check if the ray hits the ground
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(ray, out hit))
-    //    {
-    //        // Calculate the direction to the hit point
-    //        Vector3 direction = hit.point - transform.position;
-    //        direction.y = 0;
-
-    //        // Rotate the frog towards the hit point
-    //        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
-    //        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-
-    //        // Calculate the force to apply to the frog
-    //        force = transform.forward * speed;
-
-    //        // Check if the frog has reached the hit point
-    //        if (Vector3.Distance(transform.position, hit.point) < 0.1f)
-    //        {
-    //            // Set the force to zero
-    //            force = Vector3.zero;
-
-    //            // Play the landing sound
-    //            AudioSource audio = GameObject.Find("Audio").GetComponent<AudioSource>();
-    //            audio.Play();
-    //        }
-    //    }
-    //}    //void Start()
-    //{
-    //    // Get the main camera
-    //    mainCamera = GameObject.Find("Camera").GetComponent<Camera>();
-
-    //    // Get the rigidbody of the frog
-    //    rb = GetComponent<Rigidbody>();
-    //}
-
-    //void Update()
-    //{
-    //    // Convert the mouse cursor position to a ray in world space
-    //    Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-    //    // Check if the ray hits the ground
-    //    RaycastHit hit;
-    //    if (Physics.Raycast(ray, out hit))
-    //    {
-    //        // Calculate the direction to the hit point
-    //        Vector3 direction = hit.point - transform.position;
-    //        direction.y = 0;
-
-    //        // Rotate the frog towards the hit point
-    //        Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
-    //        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-
-    //        // Calculate the force to apply to the frog
-    //        force = transform.forward * speed;
-
-    //        // Check if the frog has reached the hit point
-    //        if (Vector3.Distance(transform.position, hit.point) < 0.1f)
-    //        {
-    //            // Set the force to zero
-    //            force = Vector3.zero;
-
-    //            // Play the landing sound
-    //            AudioSource audio = GameObject.Find("Audio").GetComponent<AudioSource>();
-    //            audio.Play();
-    //        }
-    //    }
-    //}
-
-    void FixedUpdate()
+    //Time
+    public float time;
+    void Start()
     {
-        // Apply the force to the frog
-        rb.AddForce(force, ForceMode.Acceleration);
+        // Get the Line Renderer component
+        lineRenderer = GetComponent<LineRenderer>();
+    }
 
-        // Set the mass and drag of the frog
-        rb.mass = mass;
-        rb.drag = drag;
-        rb.angularDrag = angularDrag;
+    void Update()
+    {
+        // Check if the tongue attack is available
+        if (isTongueAvailable)
+        {
+            // Check if the player pressed the attack button
+            if (Input.GetMouseButtonDown(0))
+            {
+                // Start the tongue attack
+                StartTongueAttack();
+            }
+        }
+    }
+    void StartTongueAttack()
+    {
+        // Set the tongue attack as unavailable
+        isTongueAvailable = false;
+
+        // Start the ExtendTongue coroutine
+        StartCoroutine(ExtendTongue());
+
+        // Start the cool down coroutine
+        StartCoroutine(CoolDown());
+    }
+    IEnumerator ExtendTongue()
+    {
+        // Convert the mouse cursor position to a ray in world space
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        // Check if the ray hits the ground
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            // Set the end position to the hit point
+            endPosition = hit.point;
+            endPosition.y = startPosition.position.y;
+        }
+
+        // The maximum length of the tongue
+        float maxLength = 5.0f;
+
+        // Calculate the direction from the start to the end position
+        Vector3 direction = (endPosition - startPosition.position).normalized;
+
+        // Set the end position to the maximum length from the start position
+        endPosition = startPosition.position + direction * maxLength;
+
+        // The elapsed time of the tongue extension
+        float elapsedTime = 0.0f;
+
+        // Set the initial position of the Line Renderer
+        lineRenderer.SetPosition(0, startPosition.position);
+        lineRenderer.SetPosition(1, startPosition.position);
+
+        // Enable the Line Renderer
+        lineRenderer.enabled = true;
+
+        // Extension loop
+        while (elapsedTime < 2.0f)
+        {
+            // Calculate the extension ratio
+            float ratio = elapsedTime / 2.0f;
+
+            // Interpolate between the start and end positions
+            Vector3 position = Vector3.Lerp(startPosition.position, endPosition, ratio);
+
+            // Set the y component of the position to the y component of the start position
+            position.y = startPosition.position.y;
+
+            // Check if the y component of the position is below the minimum
+            if (position.y < minY)
+            {
+                // Set the y component of the position to the minimum
+                position.y = minY;
+            }
+
+            // Set the position of the Line Renderer
+            lineRenderer.SetPosition(1, position);
+
+            // Update the elapsed time
+            elapsedTime += Time.deltaTime;
+
+            // Wait for the next frame
+            yield return null;
+        }
+
+        // Retraction loop
+        while (elapsedTime > 0.0f)
+        {
+            // Calculate the extension ratio
+            float ratio = elapsedTime / 2.0f;
+
+            // Interpolate between the start and end positions
+            Vector3 position = Vector3.Lerp(startPosition.position, endPosition, ratio);
+
+            // Set the y component of the position to the y component of the start position
+            position.y = startPosition.position.y;
+
+            // Check if the y component of the position is below the minimum
+            if (position.y < minY)
+            {
+                // Set the y component of the position to the minimum
+                position.y = minY;
+            }
+
+            // Set the position of the Line Renderer
+            lineRenderer.SetPosition(1, position);
+
+            // Update the elapsed time
+            elapsedTime -= Time.deltaTime;
+
+            // Wait for the next frame
+            yield return null;
+        }
+
+        // Disable the Line Renderer
+        lineRenderer.enabled = false;
+    }
+
+    IEnumerator CoolDown()
+    {
+        // Wait for the cool down time
+        yield return new WaitForSeconds(coolDownTime);
+
+        // Set the tongue attack as available
+        isTongueAvailable = true;
     }
 }
-
