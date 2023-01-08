@@ -23,6 +23,12 @@ public class BoatEngine : MonoBehaviour
 
     BoatController boatController;
 
+    public bool InMotion;
+    public bool InReverseMotion;
+
+    public GameObject Proppeler;
+    private Animator Prop;
+
 
 
     void Start() 
@@ -30,6 +36,8 @@ public class BoatEngine : MonoBehaviour
         boatRB = GetComponent<Rigidbody>();
 
         boatController = GetComponent<BoatController>();
+
+        Prop = Proppeler.GetComponent<Animator>();
     }
 
 
@@ -37,6 +45,23 @@ public class BoatEngine : MonoBehaviour
     void Update() 
 	{
         UserInput();
+
+        if (InMotion == true)
+        {
+            Prop.SetBool("InMotion", true);
+            Prop.SetBool("InReverseMotion", false);
+        }
+        else if (InReverseMotion == true)
+        {
+            Prop.SetBool("InMotion", false);
+            Prop.SetBool("InReverseMotion", true);
+        }
+        else
+        {
+            Prop.SetBool("InMotion", false);
+            Prop.SetBool("InReverseMotion", false);
+        }
+
     }
 
 
@@ -54,6 +79,8 @@ public class BoatEngine : MonoBehaviour
             if (boatController.CurrentSpeed < 50f && currentJetPower < maxPower)
             {
                 currentJetPower += 1f * powerFactor;
+                InMotion = true;
+                InReverseMotion = false;
             }
         }
         else if (Input.GetKey(KeyCode.S))
@@ -61,11 +88,15 @@ public class BoatEngine : MonoBehaviour
             if (boatController.CurrentSpeed > -50f && currentJetPower > -maxPower)
             {
                 currentJetPower -= 1f * powerFactor;
+                InReverseMotion = true;
+                InMotion = false;
             }
         }
         else
         {
             currentJetPower = 0f;
+            InMotion=false;
+            InReverseMotion = false;
         }
 
         //Steer left
@@ -73,9 +104,9 @@ public class BoatEngine : MonoBehaviour
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + 2f;
 
-            if (WaterJetRotation_Y > 5f && WaterJetRotation_Y < 270f)
+            if (WaterJetRotation_Y > 10f && WaterJetRotation_Y < 270f)
             {
-                WaterJetRotation_Y = 5f;
+                WaterJetRotation_Y = 10f;
             }
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
@@ -87,9 +118,9 @@ public class BoatEngine : MonoBehaviour
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - 2f;
 
-            if (WaterJetRotation_Y < 355f && WaterJetRotation_Y > 90f)
+            if (WaterJetRotation_Y < 350f && WaterJetRotation_Y > 90f)
             {
-                WaterJetRotation_Y = 355f;
+                WaterJetRotation_Y = 350f;
             }
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
