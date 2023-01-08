@@ -38,8 +38,8 @@ public class BoatController : MonoBehaviour
                 shipWidth = 3f;
                 break;
             case BoatType.Visby:
-                shipLength = VisbyData.length;
-                shipWidth = VisbyData.width;
+                //shipLength = VisbyData.length;
+                //shipWidth = VisbyData.width;
                 break;
             default:
                 shipLength = 1f;

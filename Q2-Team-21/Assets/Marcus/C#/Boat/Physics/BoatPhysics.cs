@@ -23,7 +23,7 @@ public class BoatPhysics : MonoBehaviour
     private ModifyBoatMesh modifyBoatMesh;
 
     //Script that displays extra meshes, generate a mirrored mesh and a foam skirt
-    private GenerateExtraBoatMeshes generateExtraMeshes;
+    //private GenerateExtraBoatMeshes generateExtraMeshes;
 
     //Meshes for debugging
     private Mesh underWaterMesh;
@@ -58,7 +58,7 @@ public class BoatPhysics : MonoBehaviour
         //Init the script that will modify the boat mesh
         modifyBoatMesh = new ModifyBoatMesh(boatMeshObj, underWaterObj, aboveWaterObj, boatRB);
 
-        generateExtraMeshes = new GenerateExtraBoatMeshes(boatMeshObj);
+        //generateExtraMeshes = new GenerateExtraBoatMeshes(boatMeshObj);
 
         //Meshes that are below and above the water
         underWaterMesh = underWaterObj.GetComponent<MeshFilter>().mesh;
@@ -126,8 +126,8 @@ public class BoatPhysics : MonoBehaviour
         CalculateSlammingVelocities(slammingForceData);
 
         //Need this data for slamming forces
-        float boatArea = modifyBoatMesh.boatArea;
-        float boatMass = VisbyData.mass;
+        //float boatArea = modifyBoatMesh.boatArea;
+        //float boatMass = VisbyData.mass;
 
         //To connect the submerged triangles with the original triangles
         List<int> indexOfOriginalTriangle = modifyBoatMesh.indexOfOriginalTriangle;
@@ -199,7 +199,7 @@ public class BoatPhysics : MonoBehaviour
             Vector3 forceToAdd = Vector3.zero;
 
             //Force 1 - Air resistance 
-            forceToAdd += BoatPhysicsMath.AirResistanceForce(rhoAir, triangleData, VisbyData.C_r);
+            //forceToAdd += BoatPhysicsMath.AirResistanceForce(rhoAir, triangleData, VisbyData.C_r);
 
             //Add the forces to the boat
             boatRB.AddForceAtPosition(forceToAdd, triangleData.center);
