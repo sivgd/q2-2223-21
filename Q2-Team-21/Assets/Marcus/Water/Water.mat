@@ -42,7 +42,7 @@ Material:
     m_Floats:
     - _Depth: 2
     - _Displacement: 0
-    - _NormalStrength: 0.05
+    - _NormalStrength: 0.07
     - _Smoothness: 0.8
     - _Strength: 2
     m_Colors:
