@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PearlCollectAnnouncment : MonoBehaviour
 {
+    //Adrian please dont touch this
     public GameObject player;
     public bool HasFinished;
     public int WaitTime = 600;

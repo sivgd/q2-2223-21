@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MermaidDialogue : MonoBehaviour
 {
+    //Adrian please dont touch this
     public GameObject Player;
     public bool HasGivenQuest = false;
 
