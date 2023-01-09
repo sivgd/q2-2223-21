@@ -19,14 +19,16 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     // A flag indicating whether the object is sticking to the player
     private bool isSticking = false;
-
-    void Start()
+    
+    void Awake()
     {
         // Find the object with the tag "Player"
         GameObject player = GameObject.FindWithTag("Player");
+        print(player);
 
         // Get the player's rigidbody component
         playerRigidbody = player.GetComponent<Rigidbody>();
+        print(playerRigidbody);
 
         // Get the object's rigidbody component
         objectRigidbody = GetComponent<Rigidbody>();
@@ -34,6 +36,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void Update()
     {
+        
         // If the object is sticking to the player, don't do anything
         if (isSticking)
         {

@@ -35,7 +35,7 @@ public class FrogController : MonoBehaviour
         if (isTongueAvailable)
         {
             // Check if the player pressed the attack button
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(1))
             {
                 // Start the tongue attack
                 StartTongueAttack();
