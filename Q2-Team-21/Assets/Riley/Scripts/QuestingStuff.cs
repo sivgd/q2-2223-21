@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestingStuff : MonoBehaviour
 {
+    //Adrian please dont touch this
     public bool HasPearl;
     public bool HasBarnacle;
     public bool HasReturnedPearl;

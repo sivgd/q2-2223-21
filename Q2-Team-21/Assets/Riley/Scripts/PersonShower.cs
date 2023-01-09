@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PersonShower : MonoBehaviour
 {
+    //Adrian please dont touch this
     public GameObject PersonsCredits;
     public GameObject CreditsMenu;
     public int CreditsPlace;
