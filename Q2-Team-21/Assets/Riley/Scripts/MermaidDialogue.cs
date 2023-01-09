@@ -28,25 +28,27 @@ public class MermaidDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Player.GetComponent<QuestingStuff>().InSpeakingRange == true && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
+        if (Player.GetComponent<QuestingStuff>().InSpeakingRange == true)
         {
 
             //Introduction, No pearl, not talked
-            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == false && HasGivenQuest == false)
+            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == false && HasGivenQuest == false && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
             {
                 Player.GetComponent<QuestingStuff>().HasSomethingToSay = false;
+                
                 DialogueQuestIntroduction.SetActive(true);
+                HasGivenQuest = true;
             }
 
             //No progress: No pearl, has talked
-            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == false && HasGivenQuest == true)
+            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == false && HasGivenQuest == true && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
             {
                 Player.GetComponent<QuestingStuff>().HasSomethingToSay = false;
                 DialogueNoProgress.SetActive(true);
             }
 
             //Quest Complete: Yes pearl, has talked
-            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == true && HasGivenQuest == true)
+            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == true && HasGivenQuest == true && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
             {
                 Player.GetComponent<QuestingStuff>().HasSomethingToSay = false;
                 Player.GetComponent<QuestingStuff>().HasReturnedPearl = true;
@@ -54,7 +56,7 @@ public class MermaidDialogue : MonoBehaviour
             }
 
             //Quest Samaritan: Yes pearl, not talked
-            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == true && HasGivenQuest == false)
+            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == false && Player.GetComponent<QuestingStuff>().HasPearl == true && HasGivenQuest == false && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
             {
                 Player.GetComponent<QuestingStuff>().HasSomethingToSay = false;
                 Player.GetComponent<QuestingStuff>().HasReturnedPearl = true;
@@ -62,7 +64,7 @@ public class MermaidDialogue : MonoBehaviour
             }
 
             //After quest: Has returned pearl.
-            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == true)
+            if (Player.GetComponent<QuestingStuff>().HasReturnedPearl == true && Player.GetComponent<QuestingStuff>().HasSomethingToSay == true)
             {
                 Player.GetComponent<QuestingStuff>().HasSomethingToSay = false;
                 DialogueAfterQuest.SetActive(true);
