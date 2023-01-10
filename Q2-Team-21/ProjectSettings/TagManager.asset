@@ -7,6 +7,9 @@ TagManager:
   - WaterChecker
   - Car
   - Projectitle
+  - PlayerBoat
+  - GroundChecker
+  - BoatCam
   layers:
   - Default
   - TransparentFX
@@ -17,7 +20,7 @@ TagManager:
   - Water
   - Interactables
   - Projectiles
-  - 
+  - Ground
   - 
   - 
   - 
