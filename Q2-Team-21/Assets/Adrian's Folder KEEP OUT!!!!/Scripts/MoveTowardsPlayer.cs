@@ -92,6 +92,8 @@ public class MoveTowardsPlayer : MonoBehaviour
             transform.parent = playerRigidbody.transform;
             // Start the health drain coroutine
             StartCoroutine(DrainHealth());
+            // Disable the box collider component
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 

@@ -30,7 +30,10 @@ public class FrogController : MonoBehaviour
     }
 
     void Update()
+
     {
+        // Update the start position to the player's current position
+        startPosition.position = transform.position;
         // Check if the tongue attack is available
         if (isTongueAvailable)
         {
@@ -62,19 +65,18 @@ public class FrogController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            // Set the end position to the hit point
-            endPosition = hit.point;
-            endPosition.y = startPosition.position.y;
+            // Set the end position to the hit point relative to the player's current position
+            endPosition = hit.point - transform.position;
         }
 
         // The maximum length of the tongue
         float maxLength = 5.0f;
 
         // Calculate the direction from the start to the end position
-        Vector3 direction = (endPosition - startPosition.position).normalized;
+        Vector3 direction = endPosition.normalized;
 
         // Set the end position to the maximum length from the start position
-        endPosition = startPosition.position + direction * maxLength;
+        endPosition = direction * maxLength;
 
         // The elapsed time of the tongue extension
         float elapsedTime = 0.0f;
@@ -93,7 +95,7 @@ public class FrogController : MonoBehaviour
             float ratio = elapsedTime / 2.0f;
 
             // Interpolate between the start and end positions
-            Vector3 position = Vector3.Lerp(startPosition.position, endPosition, ratio);
+            Vector3 position = Vector3.Lerp(startPosition.position, endPosition + transform.position, ratio);
 
             // Set the y component of the position to the y component of the start position
             position.y = startPosition.position.y;
@@ -110,35 +112,6 @@ public class FrogController : MonoBehaviour
 
             // Update the elapsed time
             elapsedTime += Time.deltaTime;
-
-            // Wait for the next frame
-            yield return null;
-        }
-
-        // Retraction loop
-        while (elapsedTime > 0.0f)
-        {
-            // Calculate the extension ratio
-            float ratio = elapsedTime / 2.0f;
-
-            // Interpolate between the start and end positions
-            Vector3 position = Vector3.Lerp(startPosition.position, endPosition, ratio);
-
-            // Set the y component of the position to the y component of the start position
-            position.y = startPosition.position.y;
-
-            // Check if the y component of the position is below the minimum
-            if (position.y < minY)
-            {
-                // Set the y component of the position to the minimum
-                position.y = minY;
-            }
-
-            // Set the position of the Line Renderer
-            lineRenderer.SetPosition(1, position);
-
-            // Update the elapsed time
-            elapsedTime -= Time.deltaTime;
 
             // Wait for the next frame
             yield return null;
