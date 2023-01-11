@@ -51,8 +51,8 @@ public class RotateAroundCam : MonoBehaviour
     {
         //Move the camera when we hold left mouse
         //Can also use transform.RotateAround();
-        if (Input.GetMouseButton(0))
-        {
+        //if (Input.GetMouseButton(0))
+        //{
             xAngle += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
             yAngle -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
@@ -60,7 +60,7 @@ public class RotateAroundCam : MonoBehaviour
             yAngle = ClampAngle(yAngle, yMin, yMax);
 
             rotation = Quaternion.Euler(yAngle, xAngle, 0f);
-        }
+        //}
 
         //Add the new rotation to the camera
         Vector3 newCamPosition = lookAtThisTrans.position;

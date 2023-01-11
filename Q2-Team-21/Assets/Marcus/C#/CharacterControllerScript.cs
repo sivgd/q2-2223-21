@@ -129,7 +129,6 @@ public class CharacterControllerScript : MonoBehaviour
                     {
                         EnterBoat();
                         InBoat= true;
-                        Debug.Log("erg");
                     }
                 }
             }
