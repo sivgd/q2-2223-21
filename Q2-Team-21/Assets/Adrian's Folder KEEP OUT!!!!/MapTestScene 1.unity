@@ -1317,7 +1317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064389800451212432, guid: 5d04d67d443456747a90473e2f0f0f3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.752865
+      value: 28.2
       objectReference: {fileID: 0}
     - target: {fileID: 6064389800451212432, guid: 5d04d67d443456747a90473e2f0f0f3a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2090,6 +2090,8 @@ MonoBehaviour:
   enemy2SpawnProbability: 0.3
   spawnInterval: 5
   minDistanceFromPlayer: 10
+  currentWave: 0
+  enemies: []
 --- !u!33 &3946284881595570424
 MeshFilter:
   m_ObjectHideFlags: 0
