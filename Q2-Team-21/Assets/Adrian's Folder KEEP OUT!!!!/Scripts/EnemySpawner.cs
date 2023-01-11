@@ -13,6 +13,8 @@ public class EnemySpawner : MonoBehaviour
     public float enemy2SpawnProbability = 0.3f;
     public float spawnInterval = 5f;
     public float minDistanceFromPlayer = 2f;
+    public int currentWave;
+    public List<GameObject> enemies;
 
     void Start()
     {

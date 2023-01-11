@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Riley/TitleScreen.unity
     guid: 76a1edd746168e34ca8061b2d774a3c7
   - enabled: 1
-    path: Assets/Riley/Riley'sTestScene.unity
-    guid: fa44026d5fa72e54facdd40734068262
-  - enabled: 1
-    path: Assets/Marcus/MapTestScene.unity
-    guid: 43fc9e0f08a05c942ac9a7b813b61eb2
+    path: Assets/Adrian's Folder KEEP OUT!!!!/MapTestScene 1.unity
+    guid: f826ebb08ec28264f81ca6415d36cc18
   m_configObjects: {}
