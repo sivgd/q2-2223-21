@@ -28,6 +28,7 @@ public class CharacterControllerScript : MonoBehaviour
     public GameObject Boat;
     private GameObject BoatCam;
     public bool InBoat;
+    public Transform PlayerOnBoatPos;
 
     //Movement
 
@@ -147,6 +148,8 @@ public class CharacterControllerScript : MonoBehaviour
         }
 
         // Movement
+
+        //PlayerOnBoatPos = GameObject.FindGameObjectWithTag("PlayerOnBoat").GetComponent<>(transform);
 
         if (speed == speedButFaster)
         {
