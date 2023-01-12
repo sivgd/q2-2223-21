@@ -2181,13 +2181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce740986de3ecf347bafb1537b4fb919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {fileID: 3946284883324562895}
-  minY: 0
-  endPosition: {x: 0, y: 0, z: 0}
-  speed: 10
-  offset: 1
-  coolDownTime: 5
-  time: 0
+  tongueExtendTime: 1
+  maxTongueLength: 10
+  tongueRenderer: {fileID: 3946284881595570429}
 --- !u!120 &3946284881595570429
 LineRenderer:
   m_ObjectHideFlags: 0

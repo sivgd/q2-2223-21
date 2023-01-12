@@ -4,129 +4,70 @@ using UnityEngine;
 
 public class FrogController : MonoBehaviour
 {
-    // The starting position of the tongue
-    public Transform startPosition;
-    public float minY = -5.0f;
-    // The ending position of the tongue
-    public Vector3 endPosition;
+    public float tongueExtendTime = 1.0f; // the amount of time it takes for the tongue to extend
+    public float tongueRetractTime = 1.0f; // the amount of time it takes for the tongue to retract
+    public float maxTongueLength = 10.0f; // the maximum length the tongue can reach
+    public LineRenderer tongueRenderer; // the line renderer component for the tongue
 
-    // The speed at which the tongue extends
-    public float speed = 1.0f;
-
-    public float offset = 1f;
-    // The Line Renderer component used to render the tongue
-    LineRenderer lineRenderer;
-    public float coolDownTime = 5.0f;
-
-    private bool isTongueAvailable = true;
-
-
-    //Time
-    public float time;
-    void Start()
-    {
-        // Get the Line Renderer component
-        lineRenderer = GetComponent<LineRenderer>();
-    }
+    private Vector3 currentTongueEndPos; // the current endpoint of the tongue
+    private float tongueTimer; // a timer for the tongue extend/retract animation
+    private bool isTongueExtending = false; // a flag for whether the tongue is currently extending
+    private bool isTongueRetracting = false;
 
     void Update()
-
     {
-        // Update the start position to the player's current position
-        startPosition.position = transform.position;
-        // Check if the tongue attack is available
-        if (isTongueAvailable)
+        if (Input.GetMouseButton(0)) // if the player left clicks
         {
-            // Check if the player pressed the attack button
-            if (Input.GetMouseButtonDown(1))
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
             {
-                // Start the tongue attack
-                StartTongueAttack();
+                currentTongueEndPos = hit.point; // set the endpoint to the point where the player clicked
+                currentTongueEndPos.y = transform.position.y; //set the y position of the currentTongueEndPos to be the same as the player's y position
+                // if the distance between the start and end points exceeds the max length
+                if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
+                {
+                    Vector3 direction = (currentTongueEndPos - transform.position).normalized;
+                    currentTongueEndPos = transform.position + direction * maxTongueLength;
+                }
+                isTongueExtending = true;
+                tongueTimer = 0.0f;
             }
         }
-    }
-    void StartTongueAttack()
-    {
-        // Set the tongue attack as unavailable
-        isTongueAvailable = false;
-
-        // Start the ExtendTongue coroutine
-        StartCoroutine(ExtendTongue());
-
-        // Start the cool down coroutine
-        StartCoroutine(CoolDown());
-    }
-    IEnumerator ExtendTongue()
-    {
-        // Convert the mouse cursor position to a ray in world space
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        // Check if the ray hits the ground
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (isTongueExtending) // if the tongue is currently extending
         {
-            // Set the end position to the hit point relative to the player's current position
-            endPosition = hit.point - transform.position;
-        }
+            tongueTimer += Time.deltaTime; // update the timer
+            float t = tongueTimer / tongueExtendTime; // calculate the animation progress (0-1)
 
-        // The maximum length of the tongue
-        float maxLength = 5.0f;
+            // set the position of the first and second vertex of the line renderer
+            tongueRenderer.SetPosition(0, transform.position);
+            tongueRenderer.SetPosition(1, Vector3.Lerp(transform.position, currentTongueEndPos, t));
 
-        // Calculate the direction from the start to the end position
-        Vector3 direction = endPosition.normalized;
-
-        // Set the end position to the maximum length from the start position
-        endPosition = direction * maxLength;
-
-        // The elapsed time of the tongue extension
-        float elapsedTime = 0.0f;
-
-        // Set the initial position of the Line Renderer
-        lineRenderer.SetPosition(0, startPosition.position);
-        lineRenderer.SetPosition(1, startPosition.position);
-
-        // Enable the Line Renderer
-        lineRenderer.enabled = true;
-
-        // Extension loop
-        while (elapsedTime < 2.0f)
-        {
-            // Calculate the extension ratio
-            float ratio = elapsedTime / 2.0f;
-
-            // Interpolate between the start and end positions
-            Vector3 position = Vector3.Lerp(startPosition.position, endPosition + transform.position, ratio);
-
-            // Set the y component of the position to the y component of the start position
-            position.y = startPosition.position.y;
-
-            // Check if the y component of the position is below the minimum
-            if (position.y < minY)
+            if (tongueTimer >= tongueExtendTime) // if the timer has reached the extend time
             {
-                // Set the y component of the position to the minimum
-                position.y = minY;
+                isTongueExtending = false; // set the flag to indicate the tongue is no longer extending
+                isTongueRetracting = true;
+                tongueTimer = 0.0f;
             }
-
-            // Set the position of the Line Renderer
-            lineRenderer.SetPosition(1, position);
-
-            // Update the elapsed time
-            elapsedTime += Time.deltaTime;
-
-            // Wait for the next frame
-            yield return null;
         }
+        else if (isTongueRetracting) // if the tongue is currently retracting
+        {
+            tongueTimer += Time.deltaTime; // update the timer
+            float t = tongueTimer / tongueRetractTime; // calculate the animation progress (0-1)
 
-        // Disable the Line Renderer
-        lineRenderer.enabled = false;
-    }
+            // set the position of the first and second vertex of the line renderer
+            tongueRenderer.SetPosition(0, transform.position);
+            tongueRenderer.SetPosition(1, Vector3.Lerp(currentTongueEndPos, transform.position, t));
 
-    IEnumerator CoolDown()
-    {
-        // Wait for the cool down time
-        yield return new WaitForSeconds(coolDownTime);
-
-        // Set the tongue attack as available
-        isTongueAvailable = true;
+            if (tongueTimer >= tongueRetractTime) // if the timer has reached the retract time
+            {
+                isTongueRetracting = false;
+                tongueRenderer.SetPosition(0, Vector3.zero);
+                tongueRenderer.SetPosition(1, Vector3.zero);
+            }
+        }
     }
 }
+
+
+
