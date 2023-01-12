@@ -17,12 +17,12 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float healthPercent = (healthCurrent / healthMax) * 100;
+        float healthPercent = (healthCurrent / healthMax) * 80;
 
         if (healthPercent > 100) healthPercent = 100;
         if (healthPercent < 0) healthPercent = 0;
 
-        HpBar.GetComponent<RectTransform>().anchoredPosition = new Vector3(100-healthPercent, 0, 0);
-        HealthMask.GetComponent<RectTransform>().anchoredPosition = new Vector3(-3 * (100-healthPercent), 0, 0);
+        HpBar.GetComponent<RectTransform>().anchoredPosition = new Vector3(80-healthPercent, 0, 0);
+        HealthMask.GetComponent<RectTransform>().anchoredPosition = new Vector3(-3 * (80-healthPercent), 0, 0);
     }
 }
