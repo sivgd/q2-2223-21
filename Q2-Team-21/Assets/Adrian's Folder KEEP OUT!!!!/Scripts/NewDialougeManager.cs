@@ -16,11 +16,14 @@ public class NewDialougeManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
+    public BoatEngine engine;
+    public RotateAroundCam cam;
     public void OpenDialogue(Message[] messages, Actor[] actors, GameObject gameobjects)
     {
 
         player.GetComponent<FindMousePositionTest>().enabled = false;
-        //player.GetComponent<Animator>().enabled = false;
+        engine.GetComponent<BoatEngine>().enabled = false;
+        cam.GetComponent<RotateAroundCam>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
         currentMessages = messages;
@@ -32,9 +35,10 @@ public class NewDialougeManager : MonoBehaviour
     }
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
+        cam.GetComponent<RotateAroundCam>().enabled = false;
         gameObject.GetComponent<Canvas>().enabled = true;
         //player.GetComponent<FindMousePositionTest>().enabled = false;
-        //player.GetComponent<Animator>().enabled = false;
+        engine.GetComponent<BoatEngine>().enabled = false;
         
         currentMessages = messages;
         currentActors = actors;
@@ -75,7 +79,8 @@ public class NewDialougeManager : MonoBehaviour
         }
         else
         {
-            //player.GetComponent<Animator>().enabled = true;
+            cam.GetComponent<RotateAroundCam>().enabled = true;
+            engine.GetComponent<BoatEngine>().enabled = true;
             //player.GetComponent<FindMousePositionTest>().enabled = true;
             Debug.Log("conservation ended");
             gameObject.GetComponent<Canvas>().enabled = false;
