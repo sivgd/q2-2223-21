@@ -6,34 +6,43 @@ public class MultidirectionalNonsense : MonoBehaviour
 {
     public FaceCamera Image;
     public WhatDirection RealBody;
-    public bool FacingTowards;
-    public bool FacingAway;
-    public bool FacingLeft;
-    public bool FacingRight;
+    public string direction;
+    public float Determiner;
+    Renderer m_renderer;
+    public Texture FrogToward, FrogAway, FrogLeft, FrogRight;
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(Image.DegreesRotate == 0)
-        {
 
+        Determiner = Image.DegreesRotate + RealBody.DirectionFacing;
+        if (Determiner < 0) Determiner += 360;
+
+        //Debug.Log(Determiner);
+
+        if(Determiner >= 315 || Determiner <= 45)
+        {
+            direction = "Towards";
+            m_renderer.material.mainTexture = FrogToward;
         }
-        else if(Image.DegreesRotate == 1)
+        else if(Determiner >= 135 && Determiner <= 225)
         {
-
+            direction = "Away";
+            m_renderer.material.mainTexture = FrogAway;
         }
-        else if(Image.DegreesRotate == 2)
+        else if(Determiner > 45 && Determiner < 135)
         {
-
-        }else if(Image.DegreesRotate == 3)
+            direction = "Left";
+            m_renderer.material.mainTexture = FrogLeft;
+        }
+        else if(Determiner > 225 && Determiner < 315)
         {
-
+            direction = "right";
         }
 
 
