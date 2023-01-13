@@ -39,7 +39,7 @@ public class dialougeTriigger : MonoBehaviour
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0,0);
             //UIDUI.enabled = true;
             StartDialogue();
-            
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
 
         
