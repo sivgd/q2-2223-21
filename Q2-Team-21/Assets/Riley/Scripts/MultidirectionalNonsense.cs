@@ -22,7 +22,7 @@ public class MultidirectionalNonsense : MonoBehaviour
 
         Determiner = Image.DegreesRotate + RealBody.DirectionFacing;
         if (Determiner < 0) Determiner += 360;
-
+        if (Determiner > 360) Determiner -= 360;
         //Debug.Log(Determiner);
 
         if(Determiner >= 315 || Determiner <= 45)
@@ -43,6 +43,7 @@ public class MultidirectionalNonsense : MonoBehaviour
         else if(Determiner > 225 && Determiner < 315)
         {
             direction = "right";
+            m_renderer.material.mainTexture = FrogRight;
         }
 
 
