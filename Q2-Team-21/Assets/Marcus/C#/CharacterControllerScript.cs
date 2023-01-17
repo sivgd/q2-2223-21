@@ -53,6 +53,9 @@ public class CharacterControllerScript : MonoBehaviour
 
     //UI
 
+    public GameObject BoatTXT;
+    public GameObject LightTXT;
+
     //////////////////////////////////////////////////////
     void Start()
     {
@@ -124,16 +127,18 @@ public class CharacterControllerScript : MonoBehaviour
 
         var ray = new Ray(origin: this.transform.position, direction: this.transform.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 100, InteractablesLayerMask))
+        if (Physics.Raycast(ray, out hit, 1000))
         {
             LookingAtObj = hit.transform.gameObject;
             if (LookingAtObj.tag == "PlayerBoat")
             {
+                BoatTXT.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     if (InBoat == false)
                     {
                         EnterBoat();
+                        BoatTXT.SetActive(false);
                     }
                 }
             }
@@ -207,7 +212,7 @@ public class CharacterControllerScript : MonoBehaviour
         }
     }
 
-    void EnterBoat()
+    public void EnterBoat()
     {
         Boat.GetComponent<BoatEngine>().enabled = true;
         PlayerCam.SetActive(false);
@@ -215,7 +220,7 @@ public class CharacterControllerScript : MonoBehaviour
         InBoat = true;
     }
 
-    void ExitBoat()
+    public void ExitBoat()
     {
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
