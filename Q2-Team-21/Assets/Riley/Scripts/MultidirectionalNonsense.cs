@@ -20,7 +20,7 @@ public class MultidirectionalNonsense : MonoBehaviour
     void Update()
     {
 
-        Determiner = Image.DegreesRotate + RealBody.DirectionFacing;
+        Determiner = Image.DegreesRotate - RealBody.DirectionFacing;
         if (Determiner < 0) Determiner += 360;
         if (Determiner > 360) Determiner -= 360;
         //Debug.Log(Determiner);
