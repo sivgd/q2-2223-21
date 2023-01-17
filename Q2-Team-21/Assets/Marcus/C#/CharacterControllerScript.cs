@@ -28,7 +28,7 @@ public class CharacterControllerScript : MonoBehaviour
     public GameObject Boat;
     private GameObject BoatCam;
     public bool InBoat;
-    public Transform PlayerOnBoatPos;
+    public Transform PlayerBoatPosTransform;
 
     //Movement
 
@@ -47,7 +47,6 @@ public class CharacterControllerScript : MonoBehaviour
     private GameObject groundCheckOBJ;
     private Transform groundCheck;
     private float groundDistance = 0.3f;
-    private LayerMask groundLayerMask;
 
     private Vector3 velocity;
     private bool isGrounded;
@@ -79,7 +78,6 @@ public class CharacterControllerScript : MonoBehaviour
         //Movement
 
         controller = gameObject.GetComponent<CharacterController>();
-        groundLayerMask = LayerMask.GetMask("Ground");
         groundCheckOBJ = GameObject.FindGameObjectWithTag("GroundChecker");
         groundCheck = groundCheckOBJ.transform;
         speed = moveSpeed;
@@ -88,6 +86,14 @@ public class CharacterControllerScript : MonoBehaviour
         //UI
 
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (InBoat == true)
+        {
+            gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
+        }
     }
 
     //////////////////////////////////////////////////////
@@ -114,7 +120,6 @@ public class CharacterControllerScript : MonoBehaviour
         if (InBoat == true && Input.GetKeyDown(KeyCode.E))
         {
             ExitBoat();
-            InBoat= false;
         }
 
         var ray = new Ray(origin: this.transform.position, direction: this.transform.forward);
@@ -129,7 +134,6 @@ public class CharacterControllerScript : MonoBehaviour
                     if (InBoat == false)
                     {
                         EnterBoat();
-                        InBoat= true;
                     }
                 }
             }
@@ -148,8 +152,6 @@ public class CharacterControllerScript : MonoBehaviour
         }
 
         // Movement
-
-        //PlayerOnBoatPos = GameObject.FindGameObjectWithTag("PlayerOnBoat").GetComponent<>(transform);
 
         if (speed == speedButFaster)
         {
@@ -171,7 +173,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         //^^^sprint end
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayerMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, InteractablesLayerMask);
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -195,14 +197,22 @@ public class CharacterControllerScript : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //UI
-
-
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            EnterBoat();
+        }
+    }
+
     void EnterBoat()
     {
         Boat.GetComponent<BoatEngine>().enabled = true;
         PlayerCam.SetActive(false);
         BoatCam.SetActive(true);
+        InBoat = true;
     }
 
     void ExitBoat()
@@ -210,5 +220,6 @@ public class CharacterControllerScript : MonoBehaviour
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
         PlayerCam.SetActive(true);
+        InBoat = false;
     }
 }

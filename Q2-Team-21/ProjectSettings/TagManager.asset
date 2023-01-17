@@ -11,6 +11,7 @@ TagManager:
   - GroundChecker
   - BoatCam
   - PlayerBoatSpot
+  - Water
   layers:
   - Default
   - TransparentFX
