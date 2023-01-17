@@ -14,17 +14,20 @@ public class FrogController : MonoBehaviour
     private bool isTongueExtending = false; // a flag for whether the tongue is currently extending
     private bool isTongueRetracting = false;
 
-    void Update()
+    
+void Update()
     {
-        if (Input.GetMouseButton(0)) // if the player left clicks
+        if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            // create a ray from the camera in the direction the camera is facing
+            Ray ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
             RaycastHit hit;
+
             if (Physics.Raycast(ray, out hit))
             {
-                currentTongueEndPos = hit.point; // set the endpoint to the point where the player clicked
-                currentTongueEndPos.y = transform.position.y; //set the y position of the currentTongueEndPos to be the same as the player's y position
-                // if the distance between the start and end points exceeds the max length
+                currentTongueEndPos = hit.point; // set the endpoint to the point where the ray hit
+                currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
+                                                              // if the distance between the start and end points exceeds the max length
                 if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
                 {
                     Vector3 direction = (currentTongueEndPos - transform.position).normalized;
@@ -59,7 +62,7 @@ public class FrogController : MonoBehaviour
             tongueRenderer.SetPosition(0, transform.position);
             tongueRenderer.SetPosition(1, Vector3.Lerp(currentTongueEndPos, transform.position, t));
 
-            if (tongueTimer >= tongueRetractTime) // if the timer has reached the retract time
+                if (tongueTimer >= tongueRetractTime) // if the timer has reached the retract time
             {
                 isTongueRetracting = false;
                 tongueRenderer.SetPosition(0, Vector3.zero);
