@@ -14,7 +14,7 @@ public class WhatDirection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DirectionFacing = transform.rotation.eulerAngles.y;
+        DirectionFacing = transform.localRotation.eulerAngles.y;
         //Debug.Log(transform.rotation.eulerAngles.y);
     }
 }
