@@ -14,28 +14,50 @@ public class FrogController : MonoBehaviour
     private bool isTongueExtending = false; // a flag for whether the tongue is currently extending
     private bool isTongueRetracting = false;
 
+    public GameObject endPoint;
     
 void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
             // create a ray from the camera in the direction the camera is facing
-            Ray ray = new Ray(gameObject.transform.position, gameObject.transform.forward);
+            Ray ray = new Ray(gameObject.transform.position, endPoint.transform.position);
             RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
             {
-                currentTongueEndPos = hit.point; // set the endpoint to the point where the ray hit
-                currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
-                                                              // if the distance between the start and end points exceeds the max length
-                if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
+                
+                
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Vector3 direction = (currentTongueEndPos - transform.position).normalized;
-                    currentTongueEndPos = transform.position + direction * maxTongueLength;
+                    List<GameObject> hitObjects = new List<GameObject>();
+                    // create a ray from the camera in the direction the camera is facing
+                    //var ray = new Ray(origin: gameObject.transform.position, direction: endPoint.transform.forward);
+                    //RaycastHit hit;
+
+                    while (Physics.Raycast(ray, out hit))
+                    {
+                        hitObjects.Add(hit.collider.gameObject);
+                        ray = new Ray(hit.point + gameObject.transform.position * 0.01f, endPoint.transform.forward);
+                    }
+                 
+                    currentTongueEndPos = endPoint.transform.position; // set the endpoint to the point where the ray hit
+                    currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
+                                                                  // if the distance between the start and end points exceeds the max length
+                    if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
+                    {
+                        Vector3 direction = (currentTongueEndPos - transform.position).normalized;
+                        currentTongueEndPos = transform.position + direction * maxTongueLength;
+                    }
+                    isTongueExtending = true;
+                    tongueTimer = 0.0f;
+                    if (hitObjects[0].tag == "enemy")
+                    {
+                        hitObjects[0].GetComponent<MoveTowardsPlayer>().health--;
+                    }
+
                 }
-                isTongueExtending = true;
-                tongueTimer = 0.0f;
             }
+           
         }
         if (isTongueExtending) // if the tongue is currently extending
         {

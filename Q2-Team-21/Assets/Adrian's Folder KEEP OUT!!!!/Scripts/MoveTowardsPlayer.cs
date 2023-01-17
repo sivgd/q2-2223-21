@@ -19,7 +19,8 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     // A flag indicating whether the object is sticking to the player
     private bool isSticking = false;
-    
+
+    public int health;
     void Awake()
     {
         // Find the object with the tag "Player"
@@ -36,7 +37,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void Update()
     {
-        
+        if (health <= 0) Destroy(gameObject);
         // If the object is sticking to the player, don't do anything
         if (isSticking)
         {
