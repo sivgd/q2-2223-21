@@ -12,11 +12,12 @@ TagManager:
   - BoatCam
   - PlayerBoatSpot
   - Water
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemies
   - Water
   - UI
   - 

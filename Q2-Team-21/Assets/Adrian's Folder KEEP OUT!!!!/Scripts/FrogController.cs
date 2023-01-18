@@ -18,47 +18,57 @@ public class FrogController : MonoBehaviour
     
 void Update()
     {
+        
+            
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
             // create a ray from the camera in the direction the camera is facing
             Ray ray = new Ray(gameObject.transform.position, endPoint.transform.position);
             RaycastHit hit;
-            if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
+            Debug.DrawRay(ray.origin, ray.direction * 0.01f, Color.red);
+            int layerMask = 3; // this sets the layer mask to only hit objects on layer 8
+                
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
-                
-                
-                if (Physics.Raycast(ray, out hit))
+                Debug.Log(hit.collider.gameObject.layer + "324r234");
+                List<GameObject> hitObjects = new List<GameObject>();
+                // create a ray from the camera in the direction the camera is facing
+                //var ray = new Ray(origin: gameObject.transform.position, direction: endPoint.transform.forward);
+                //RaycastHit hit;
+
+                while (Physics.Raycast(ray, out hit))
                 {
-                    List<GameObject> hitObjects = new List<GameObject>();
-                    // create a ray from the camera in the direction the camera is facing
-                    //var ray = new Ray(origin: gameObject.transform.position, direction: endPoint.transform.forward);
-                    //RaycastHit hit;
-
-                    while (Physics.Raycast(ray, out hit))
-                    {
-                        hitObjects.Add(hit.collider.gameObject);
-                        ray = new Ray(hit.point + gameObject.transform.position * 0.01f, endPoint.transform.forward);
-                    }
-                 
-                    currentTongueEndPos = endPoint.transform.position; // set the endpoint to the point where the ray hit
-                    currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
-                                                                  // if the distance between the start and end points exceeds the max length
-                    if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
-                    {
-                        Vector3 direction = (currentTongueEndPos - transform.position).normalized;
-                        currentTongueEndPos = transform.position + direction * maxTongueLength;
-                    }
-                    isTongueExtending = true;
-                    tongueTimer = 0.0f;
-                    if (hitObjects[0].tag == "enemy")
-                    {
-                        hitObjects[0].GetComponent<MoveTowardsPlayer>().health--;
-                    }
-
+                    hitObjects.Add(hit.collider.gameObject);
+                    ray = new Ray(hit.point + gameObject.transform.position * 0.01f, endPoint.transform.forward);
                 }
+                    
+                Debug.Log(hitObjects[1]);
+                Debug.Log(hitObjects[2]);
+                Debug.Log(hitObjects[3]);
+                currentTongueEndPos = endPoint.transform.position; // set the endpoint to the point where the ray hit
+                currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
+                                                                // if the distance between the start and end points exceeds the max length
+                if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
+                {
+                    Vector3 direction = (currentTongueEndPos - transform.position).normalized;
+                    currentTongueEndPos = transform.position + direction * maxTongueLength;
+                }
+                isTongueExtending = true;
+                tongueTimer = 0.0f;
+                for (int i = 0; i < hitObjects.Count; i++)
+                {
+                    //Debug.Log(hitObjects[i].name);
+                    if (hitObjects[i].tag == "enemy")
+                    {
+                        hitObjects[i].GetComponent<MoveTowardsPlayer>().health--;
+                    }
+                }
+                    
+
             }
-           
         }
+           
+        
         if (isTongueExtending) // if the tongue is currently extending
         {
             tongueTimer += Time.deltaTime; // update the timer
