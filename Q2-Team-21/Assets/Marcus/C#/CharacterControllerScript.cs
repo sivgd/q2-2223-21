@@ -125,7 +125,7 @@ public class CharacterControllerScript : MonoBehaviour
             ExitBoat();
         }
 
-        var ray = new Ray(origin: this.transform.position, direction: this.transform.forward);
+        var ray = new Ray(origin: PlayerCam.transform.position, direction: PlayerCam.transform.forward);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1000))
         {
