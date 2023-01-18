@@ -123,14 +123,23 @@ public class CharacterControllerScript : MonoBehaviour
         if (InBoat == true && Input.GetKeyDown(KeyCode.E))
         {
             ExitBoat();
+            BoatTXT.SetActive(false);
+        }
+        else if(InBoat == false)
+        {
+            BoatTXT.SetActive(false);
+        }
+        else if (InBoat == true)
+        {
+            BoatTXT.SetActive(false);
         }
 
         var ray = new Ray(origin: PlayerCam.transform.position, direction: PlayerCam.transform.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000))
+        if (Physics.Raycast(ray, out hit, 1000, InteractablesLayerMask))
         {
             LookingAtObj = hit.transform.gameObject;
-            if (LookingAtObj.tag == "PlayerBoat")
+            if (LookingAtObj.tag == "PlayerBoat" && InBoat == false)
             {
                 BoatTXT.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
