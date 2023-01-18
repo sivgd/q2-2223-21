@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 257986125478570527}
   - component: {fileID: 257986125478570512}
   - component: {fileID: 257986125478570524}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Spert
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257986126117133049}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: bulletPos
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 2158928630574214280}
   - component: {fileID: 6875203588617565022}
   - component: {fileID: 5707911094145347207}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

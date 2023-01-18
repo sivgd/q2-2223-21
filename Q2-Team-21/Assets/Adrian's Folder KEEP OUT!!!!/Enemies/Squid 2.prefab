@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7082776802701582969}
   - component: {fileID: 3212184792927960138}
   - component: {fileID: 6844448946613007087}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 3428658438145381462}
   - component: {fileID: 3428658438145381463}
   - component: {fileID: 3428658438145381458}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Squid 2
   m_TagString: enemy
   m_Icon: {fileID: 0}
