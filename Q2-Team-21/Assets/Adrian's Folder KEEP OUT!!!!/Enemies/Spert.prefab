@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 257986125478570527}
   - component: {fileID: 257986125478570512}
   - component: {fileID: 257986125478570524}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Spert
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

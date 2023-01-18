@@ -124,9 +124,9 @@ GameObject:
   - component: {fileID: 3428658438145381462}
   - component: {fileID: 3428658438145381463}
   - component: {fileID: 3428658438145381458}
-  m_Layer: 8
+  m_Layer: 3
   m_Name: Squid 2
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,6 +223,7 @@ MonoBehaviour:
   drainRate: 1
   rotationSpeed: 1
   stickDistance: 1
+  health: 0
 --- !u!54 &3428658438145381458
 Rigidbody:
   m_ObjectHideFlags: 0
