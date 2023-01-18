@@ -13,24 +13,26 @@ public class FrogController : MonoBehaviour
     private float tongueTimer; // a timer for the tongue extend/retract animation
     private bool isTongueExtending = false; // a flag for whether the tongue is currently extending
     private bool isTongueRetracting = false;
-
+    private int InteractablesLayerMask = 64;
     public GameObject endPoint;
     
 void Update()
     {
-        
-            
+        Vector3 pos = endPoint.transform.position;
+        endPoint.transform.position = pos;
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
             // create a ray from the camera in the direction the camera is facing
             Ray ray = new Ray(gameObject.transform.position, endPoint.transform.position);
             RaycastHit hit;
-            Debug.DrawRay(ray.origin, ray.direction * 0.01f, Color.red);
-            int layerMask = 3; // this sets the layer mask to only hit objects on layer 8
-                
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+            
+            InteractablesLayerMask = LayerMask.GetMask("Enemy"); // this sets the layer mask to only hit objects on layer 8
+        
+
+            if (Physics.Raycast(ray, out hit, 1000,InteractablesLayerMask, QueryTriggerInteraction.Ignore))
             {
-                Debug.Log(hit.collider.gameObject.layer + "324r234");
+                Debug.Log(hit.collider.gameObject.layer + " LayerNumber");
+                Debug.Log(hit.collider.isTrigger + " HasTrigger");
                 List<GameObject> hitObjects = new List<GameObject>();
                 // create a ray from the camera in the direction the camera is facing
                 //var ray = new Ray(origin: gameObject.transform.position, direction: endPoint.transform.forward);
@@ -42,19 +44,8 @@ void Update()
                     ray = new Ray(hit.point + gameObject.transform.position * 0.01f, endPoint.transform.forward);
                 }
                     
-                Debug.Log(hitObjects[1]);
-                Debug.Log(hitObjects[2]);
-                Debug.Log(hitObjects[3]);
-                currentTongueEndPos = endPoint.transform.position; // set the endpoint to the point where the ray hit
-                currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
-                                                                // if the distance between the start and end points exceeds the max length
-                if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
-                {
-                    Vector3 direction = (currentTongueEndPos - transform.position).normalized;
-                    currentTongueEndPos = transform.position + direction * maxTongueLength;
-                }
-                isTongueExtending = true;
-                tongueTimer = 0.0f;
+                              // if the distance between the start and end points exceeds the max length
+                
                 for (int i = 0; i < hitObjects.Count; i++)
                 {
                     //Debug.Log(hitObjects[i].name);
@@ -66,6 +57,17 @@ void Update()
                     
 
             }
+
+            currentTongueEndPos = endPoint.transform.position; // set the endpoint to the point where the ray hit
+            currentTongueEndPos.y = transform.position.y; // set the y position of the currentTongueEndPos to be the same as the player's y position
+
+            if (Vector3.Distance(transform.position, currentTongueEndPos) > maxTongueLength)
+            {
+                Vector3 direction = (currentTongueEndPos - transform.position).normalized;
+                currentTongueEndPos = transform.position + direction * maxTongueLength;
+            }
+            isTongueExtending = true;
+            tongueTimer = 0.0f;
         }
            
         
@@ -101,6 +103,12 @@ void Update()
                 tongueRenderer.SetPosition(1, Vector3.zero);
             }
         }
+    }
+    void OnDrawGizmosSelected()
+    {
+        // Draws a 5 unit long red line in front of the object
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(gameObject.transform.position, endPoint.transform.position);
     }
 }
 

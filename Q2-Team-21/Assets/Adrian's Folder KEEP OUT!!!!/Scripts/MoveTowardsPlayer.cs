@@ -25,11 +25,11 @@ public class MoveTowardsPlayer : MonoBehaviour
     {
         // Find the object with the tag "Player"
         GameObject player = GameObject.FindWithTag("Player");
-        print(player);
+        
 
         // Get the player's rigidbody component
         playerRigidbody = player.GetComponent<Rigidbody>();
-        print(playerRigidbody);
+       
 
         // Get the object's rigidbody component
         objectRigidbody = GetComponent<Rigidbody>();
@@ -43,8 +43,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             return;
         }
-        // Print the value of drainRate
-        Debug.Log(drainRate);
+        
 
         // If the player's rigidbody exists
         if (playerRigidbody != null)
