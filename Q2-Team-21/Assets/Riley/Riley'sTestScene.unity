@@ -864,8 +864,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174108380}
   m_LocalRotation: {x: 0.40729663, y: -0.57802206, z: 0.57802206, w: 0.40729663}
-  m_LocalPosition: {x: 0, y: 0.34, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0.983, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.39, z: 0.39}
   m_Children: []
   m_Father: {fileID: 133145877}
   m_RootOrder: 0
@@ -2849,7 +2849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &562779884
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3410,11 +3410,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5.824997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &851678043 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6064389800815742836, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
-  m_PrefabInstance: {fileID: 559517639}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &883211396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,7 +7395,6 @@ MonoBehaviour:
   RestartAreYouSure: {fileID: 1124938665}
   MainMenuAreYouSure: {fileID: 997418423}
   MainPauseMenu: {fileID: 366848655}
-  Camera: {fileID: 851678043}
 --- !u!1001 &5256252469525899734
 PrefabInstance:
   m_ObjectHideFlags: 0
