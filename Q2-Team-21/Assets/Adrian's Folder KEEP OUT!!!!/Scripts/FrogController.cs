@@ -18,12 +18,15 @@ public class FrogController : MonoBehaviour
     
 void Update()
     {
-        Vector3 pos = endPoint.transform.position;
-        endPoint.transform.position = pos;
+        Vector3 dir = endPoint.transform.position - this.transform.position;
+        Debug.DrawLine(this.transform.position, endPoint.transform.position, Color.yellow, 2, false);
+        Debug.DrawRay(this.transform.position, dir, Color.red, 2, false);
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
+            Vector3 pos = endPoint.transform.position;
+            Debug.Log("current pos: " + pos);
             // create a ray from the camera in the direction the camera is facing
-            Ray ray = new Ray(gameObject.transform.position, endPoint.transform.position);
+            Ray ray = new Ray(gameObject.transform.position, dir);
             RaycastHit hit;
             
             InteractablesLayerMask = LayerMask.GetMask("Enemy"); // this sets the layer mask to only hit objects on layer 8
@@ -41,7 +44,7 @@ void Update()
                 while (Physics.Raycast(ray, out hit))
                 {
                     hitObjects.Add(hit.collider.gameObject);
-                    ray = new Ray(hit.point + gameObject.transform.position * 0.01f, endPoint.transform.forward);
+                    ray = new Ray(hit.point + gameObject.transform.position * 0.01f, dir);
                 }
                     
                               // if the distance between the start and end points exceeds the max length
