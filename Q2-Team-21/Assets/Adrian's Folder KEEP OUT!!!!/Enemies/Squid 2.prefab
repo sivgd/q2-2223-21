@@ -223,7 +223,7 @@ MonoBehaviour:
   drainRate: 1
   rotationSpeed: 1
   stickDistance: 1
-  health: 0
+  health: 10
 --- !u!54 &3428658438145381458
 Rigidbody:
   m_ObjectHideFlags: 0

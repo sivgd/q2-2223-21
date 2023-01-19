@@ -19,8 +19,7 @@ public class FrogController : MonoBehaviour
 void Update()
     {
         Vector3 dir = endPoint.transform.position - this.transform.position;
-        Debug.DrawLine(this.transform.position, endPoint.transform.position, Color.yellow, 2, false);
-        Debug.DrawRay(this.transform.position, dir, Color.red, 2, false);
+       
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
             Vector3 pos = endPoint.transform.position;
