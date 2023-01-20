@@ -218,7 +218,7 @@ Transform:
   - {fileID: 304212366}
   - {fileID: 1468195330}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14748464
 GameObject:
@@ -997,7 +997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375ebf7907371c544ad63e5b70397b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 559517640}
+  player: {fileID: 1420544283}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -2197,7 +2197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f8e20e248eeb84d8a884bfacce8eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 559517640}
+  player: {fileID: 1420544283}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -2334,7 +2334,7 @@ Transform:
   m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -34.39, y: -7.9, z: -39.41}
 --- !u!1 &499755235
 GameObject:
@@ -2799,38 +2799,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
---- !u!1 &559517640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6064389800451212435, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
-  m_PrefabInstance: {fileID: 559517639}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &559517641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6064389801839393226, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
-  m_PrefabInstance: {fileID: 559517639}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &559517642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 559517640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05fb6c6f874de5b4ab723ce971f46c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HasPearl: 0
-  HasBarnacle: 0
-  HasReturnedPearl: 0
-  InSpeakingRange: 0
-  HasDestroyedCoral: 0
-  HasSomethingToSay: 0
-  Barnacle: {fileID: 483588902}
-  Mermaid: {fileID: 1468195329}
-  pearl: {fileID: 883211396}
-  Boat: {fileID: 559517641}
 --- !u!1 &562779883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3021,7 +2989,7 @@ Transform:
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 24.7, z: 90}
 --- !u!1 &612866733
 GameObject:
@@ -3260,6 +3228,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693285786}
   m_CullTransparentMesh: 1
+--- !u!1 &719599119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6376946978038949932, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+  m_PrefabInstance: {fileID: 559517639}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &750751080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,7 +3307,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &774524639
 GameObject:
@@ -3506,7 +3479,7 @@ Transform:
   m_Children:
   - {fileID: 993167671}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &883211401
 Rigidbody:
@@ -4386,7 +4359,7 @@ Transform:
   m_Children:
   - {fileID: 133145877}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -3, y: -18.28, z: 0}
 --- !u!1 &1124938665
 GameObject:
@@ -5437,6 +5410,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419168711}
   m_CullTransparentMesh: 1
+--- !u!1 &1420544283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6376946976214603125, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+  m_PrefabInstance: {fileID: 559517639}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1420544285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420544283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fb6c6f874de5b4ab723ce971f46c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HasPearl: 0
+  HasBarnacle: 0
+  HasReturnedPearl: 0
+  InSpeakingRange: 0
+  HasDestroyedCoral: 0
+  HasSomethingToSay: 0
+  Barnacle: {fileID: 483588902}
+  Mermaid: {fileID: 1468195329}
+  pearl: {fileID: 883211396}
+  Boat: {fileID: 719599119}
 --- !u!1 &1455589128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,7 +5528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1468195329
 GameObject:
@@ -5639,7 +5639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd130cc61ab8ba94ebbc2fbc3cba4052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 559517640}
+  Player: {fileID: 1420544283}
   HasGivenQuest: 0
   DialogueQuestIntroduction: {fileID: 1492411148}
   DialogueNoProgress: {fileID: 1517104832}
@@ -5740,7 +5740,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492411148
 GameObject:
@@ -6249,7 +6249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4998a99452bfdc042b99293c35d7c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 559517640}
+  player: {fileID: 1420544283}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -6385,7 +6385,7 @@ Transform:
   m_LocalScale: {x: 40, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -35.58, y: -12.41, z: -45.4}
 --- !u!1 &1797260610
 GameObject:
@@ -7371,7 +7371,7 @@ RectTransform:
   - {fileID: 527778488}
   - {fileID: 774524640}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
