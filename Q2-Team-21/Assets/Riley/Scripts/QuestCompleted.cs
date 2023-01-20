@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestCompleted : MonoBehaviour
 {
     //Adrian please dont touch this
-    public GameObject player;
+    private GameObject player;
     public bool HasFinished;
     public int WaitTime = 600;
     private RectTransform UI;
@@ -14,6 +14,7 @@ public class QuestCompleted : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("RileysCanvas");
         UI = GetComponent<RectTransform>();
     }
 
