@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
 {
-    /// <notes>
-    /// Tags: GroundChecker, MainCamera
-    /// layers: Ground, Interactables
-    /// <notes>
-
     //Camera
 
     private GameObject PlayerCam;
@@ -32,16 +27,14 @@ public class CharacterControllerScript : MonoBehaviour
 
     //Movement
 
-    Vector3 move;
-    private float moveX;
-    private float moveY;
-
     private CharacterController controller;
+    Vector3 move;
+    private LayerMask GroundLayer;
     public float moveSpeed;
     private float speed;
     private float speedButFaster;
     private float stamina;
-    private float gravity = -18;
+    private float gravity = -38;
     public float jumpHeight;
 
     private GameObject groundCheckOBJ;
@@ -73,22 +66,20 @@ public class CharacterControllerScript : MonoBehaviour
         InteractablesLayerMask = LayerMask.GetMask("Interactables");
 
         //Utility
+
         Boat = GameObject.FindGameObjectWithTag("PlayerBoat");
-        Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam = GameObject.FindGameObjectWithTag("BoatCam");
         BoatCam.SetActive(false);
+        Boat.GetComponent<BoatEngine>().enabled = false;
 
         //Movement
 
+        GroundLayer = LayerMask.GetMask("Ground");
         controller = gameObject.GetComponent<CharacterController>();
         groundCheckOBJ = GameObject.FindGameObjectWithTag("GroundChecker");
         groundCheck = groundCheckOBJ.transform;
         speed = moveSpeed;
         speedButFaster = speed * 1.6f;
-
-        //UI
-
-
     }
 
     private void FixedUpdate()
@@ -136,7 +127,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         var ray = new Ray(origin: PlayerCam.transform.position, direction: PlayerCam.transform.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1000, InteractablesLayerMask))
+        if (Physics.Raycast(ray, out hit, 1000))
         {
             LookingAtObj = hit.transform.gameObject;
             if (LookingAtObj.tag == "PlayerBoat" && InBoat == false)
@@ -187,7 +178,7 @@ public class CharacterControllerScript : MonoBehaviour
 
         //^^^sprint end
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, InteractablesLayerMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, GroundLayer);
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -217,23 +208,28 @@ public class CharacterControllerScript : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            EnterBoat();
+            gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
         }
     }
 
     public void EnterBoat()
     {
-        Boat.GetComponent<BoatEngine>().enabled = true;
-        PlayerCam.SetActive(false);
-        BoatCam.SetActive(true);
         InBoat = true;
+        Boat.GetComponent<BoatEngine>().enabled = true;
+        BoatCam.SetActive(true);
+        PlayerCam.SetActive(false);
     }
 
     public void ExitBoat()
     {
+        InBoat = false;
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
         PlayerCam.SetActive(true);
-        InBoat = false;
+    }
+
+    public void Death()
+    {
+        gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
     }
 }

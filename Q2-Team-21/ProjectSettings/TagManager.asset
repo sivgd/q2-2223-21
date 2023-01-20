@@ -5,18 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaterChecker
-  - Car
-  - Projectitle
   - PlayerBoat
   - GroundChecker
   - BoatCam
   - PlayerBoatSpot
   - Water
   - enemy
-  - RileysCanvas
-  - Pearl
-  - Barnacle
-  - Mermaid
+  - LightPost
+  - Bulb
   layers:
   - Default
   - TransparentFX
@@ -25,9 +21,9 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - Interactables
-  - Projectiles
   - Ground
+  - Projectiles
+  - 
   - 
   - 
   - 

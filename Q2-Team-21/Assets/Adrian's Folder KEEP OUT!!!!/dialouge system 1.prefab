@@ -145,7 +145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 35b0c211648c7be44832d1dc2581bbba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f2af317786c146468f711a40c9a1362, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -337,6 +337,7 @@ MonoBehaviour:
   xray: 6
   engine: {fileID: 0}
   cam: {fileID: 0}
+  cam2: {fileID: 0}
 --- !u!1 &3486478217694569724
 GameObject:
   m_ObjectHideFlags: 0
