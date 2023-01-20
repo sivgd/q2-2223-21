@@ -18,12 +18,14 @@ public class NewDialougeManager : MonoBehaviour
     int activeMessage = 0;
     public BoatEngine engine;
     public RotateAroundCam cam;
+    public CharacterControllerScript cam2;
     public void OpenDialogue(Message[] messages, Actor[] actors, GameObject gameobjects)
     {
 
         player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
+        cam2.GetComponent<CharacterControllerScript>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
         currentMessages = messages;
@@ -36,6 +38,7 @@ public class NewDialougeManager : MonoBehaviour
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         cam.GetComponent<RotateAroundCam>().enabled = false;
+        cam2.GetComponent<CharacterControllerScript>().enabled = false;
         gameObject.GetComponent<Canvas>().enabled = true;
         //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
@@ -80,6 +83,7 @@ public class NewDialougeManager : MonoBehaviour
         else
         {
             cam.GetComponent<RotateAroundCam>().enabled = true;
+            cam2.GetComponent<CharacterControllerScript>().enabled = true;
             engine.GetComponent<BoatEngine>().enabled = true;
             //player.GetComponent<FindMousePositionTest>().enabled = true;
             Debug.Log("conservation ended");
