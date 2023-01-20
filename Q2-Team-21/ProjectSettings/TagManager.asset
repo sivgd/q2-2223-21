@@ -13,6 +13,10 @@ TagManager:
   - PlayerBoatSpot
   - Water
   - enemy
+  - RileysCanvas
+  - Pearl
+  - Barnacle
+  - Mermaid
   layers:
   - Default
   - TransparentFX

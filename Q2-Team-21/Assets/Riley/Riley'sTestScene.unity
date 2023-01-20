@@ -809,7 +809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375ebf7907371c544ad63e5b70397b27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2092697675}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -1753,6 +1752,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1194262339095945728, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
   m_PrefabInstance: {fileID: 559517639}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &387868269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1194262339095945735, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+  m_PrefabInstance: {fileID: 559517639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387868264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a787aa62423ebf943aa54d1d7f8d768e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &396140584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f8e20e248eeb84d8a884bfacce8eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2092697669}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -2412,7 +2421,7 @@ GameObject:
   - component: {fileID: 483588903}
   m_Layer: 0
   m_Name: Barnacle
-  m_TagString: Untagged
+  m_TagString: Barnacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3063,8 +3072,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.82
+      value: 2.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194262339095945786, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6064389800451212432, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
       propertyPath: m_RootOrder
@@ -3116,11 +3153,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6376946976214603126, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 279.09
+      value: 276.31
       objectReference: {fileID: 0}
     - target: {fileID: 6376946976214603126, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -303.86
+      value: -292.97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8bb4f6dc69c780469f1ea439429625c, type: 3}
@@ -3327,6 +3364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MermaidIntroConversation
       objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3376,28 +3417,138 @@ PrefabInstance:
       value: 15.76442
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065818, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065818, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: m_Center.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.size
-      value: 1
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].name
       value: Mermaid
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[1].name
+      value: Jerry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
       objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: HEY LISTEN
+      value: Hey you okay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[1].message
+      value: You just got out of the worst tsunami Ive ever seen!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[2].message
+      value: But dont worry about being stuck here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[3].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[3].message
+      value: Because im pretty clever and I know how to get you home!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[4].message
+      value: And its quite simple, You just got to go past the giant coral reef!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[5].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[5].message
+      value: '*ribbit*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[6].message
+      value: Oh your boat cant go through coral? Well dont worry I have a plan!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[7].message
+      value: You just need to steal some stuff from that old shipwreck over there!
+        It'll have SOMETHING.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[8].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[8].message
+      value: '*croak*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[9].message
+      value: Oh wait you cant swim in salt water? That... makes sense actually.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[10].message
+      value: Yeah dont know how to help you with that-OH WAIT!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[11].message
+      value: I still got that Barrel of Gunpowder!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[12].message
+      value: and with that you can just BLOW IT UP!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[13].message
+      value: Though, gunpowder isn't cheap... So how about you get me something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[14].message
+      value: Something valuable like say... A giant pearl?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[15].message
+      value: Though I have no clue where you could find something like that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[16].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[16].message
+      value: Definitely nothing of that description in a nearby shrine to an evil
+        storm god.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[17].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[17].message
+      value: in the place surrounded by black spikes. Nope
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[18].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[18].message
+      value: No clue at all where you could get a giant pearl...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
@@ -3927,7 +4078,7 @@ GameObject:
   - component: {fileID: 883211401}
   m_Layer: 0
   m_Name: Pearl
-  m_TagString: Untagged
+  m_TagString: Pearl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4807,6 +4958,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2076005092139260989, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1c6b3ed4e6b7f96439a04e0a557787c8, type: 3}
+    - target: {fileID: 2076005092139260989, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2076005092646975884, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
       propertyPath: m_Name
       value: dialouge system 1
@@ -4815,6 +4974,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963087712}
+    - target: {fileID: 2076005092646975887, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: cam2
+      value: 
+      objectReference: {fileID: 387868269}
     - target: {fileID: 2076005092646975887, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
       propertyPath: engine
       value: 
@@ -4833,7 +4996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2076005092646976112, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2076005092646976112, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4907,9 +5070,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3486478217694569726, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1c6b3ed4e6b7f96439a04e0a557787c8, type: 3}
+    - target: {fileID: 3486478217694569726, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486478217694569726, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486478217694569727, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 486.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486478217694569727, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 106.33
+      objectReference: {fileID: 0}
     - target: {fileID: 3486478219089300500, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
       propertyPath: m_CullTransparentMesh
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249219371122209022, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249219371122209022, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bfefe5b30490784f9c0d14ec578fad1, type: 3}
@@ -5292,6 +5483,207 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364472836}
   m_CullTransparentMesh: 1
+--- !u!1001 &1415782280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_Name
+      value: MermaidIntroConversation (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 271.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -321.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065816, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065818, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_Radius
+      value: 15.76442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065818, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[0].name
+      value: Mermaid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[1].name
+      value: Jerry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[1].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[0].message
+      value: Woah. you actually got that giant pearl!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[1].message
+      value: uh... by the way. if you so happened to take it from an ancient shrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[2].message
+      value: like one dedicated to an evil storm god known for being petty beyond
+        mesure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[3].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[3].message
+      value: Yeah I'd head hurry home fast, and... NEVER touch the ocean again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[4].message
+      value: Because thats how greek myths about people lost at sea for decades happen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[5].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[5].message
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[6].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[6].message
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[7].message
+      value: ANYWAYS, Heres the gunpowder you asked for
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[8].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[8].message
+      value: now simply take it to that wreck by the sand cliffs and...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[9].message
+      value: KPLOW!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[10].message
+      value: and something of use to you is sure to come out!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[11].message
+      value: I still got a subscription to gunpowder weekly!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[12].message
+      value: and with that you can totally total that ol hunk a wood!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[13].message
+      value: Though ya know, that subscription aint cheap... So how about ya get
+        me something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[14].message
+      value: Something valuable like say... A giant pearl.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[15].message
+      value: Though I got no clue where you could find something that radical little
+        guy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[16].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[16].message
+      value: Definitely nothing of that description in the spooky shrine to that
+        evil storm god guy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[17].actorId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[17].message
+      value: No clue at all...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[18].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[18].message
+      value: No clue at all...
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
 --- !u!1 &1419168711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5632,7 +6024,7 @@ GameObject:
   - component: {fileID: 1468195331}
   m_Layer: 0
   m_Name: MermaidPlaceholder
-  m_TagString: Untagged
+  m_TagString: Mermaid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6172,7 +6564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4998a99452bfdc042b99293c35d7c564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2092697669}
   HasFinished: 0
   WaitTime: 1200
   VisiblePosition: 850
@@ -7468,7 +7859,7 @@ GameObject:
   - component: {fileID: 2092697675}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: RileysCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7602,6 +7993,7 @@ MonoBehaviour:
   Barnacle: {fileID: 483588902}
   Mermaid: {fileID: 1468195329}
   pearl: {fileID: 883211396}
+  Boat: {fileID: 0}
 --- !u!1001 &5256252469525899734
 PrefabInstance:
   m_ObjectHideFlags: 0
