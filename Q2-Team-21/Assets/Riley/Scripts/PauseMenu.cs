@@ -45,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -53,6 +54,7 @@ public class PauseMenu : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
+        Cursor.lockState = CursorLockMode.None;
         //LockRotation = Camera.transform.eulerAngles;
     }
 
@@ -65,6 +67,7 @@ public class PauseMenu : MonoBehaviour
     public void ToMainMenu()
     {
         Resume();
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(MainMenuNumber);
     }
 

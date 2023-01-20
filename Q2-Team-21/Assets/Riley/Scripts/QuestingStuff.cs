@@ -20,6 +20,10 @@ public class QuestingStuff : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Boat = GameObject.FindGameObjectWithTag("Player");
+        Barnacle = GameObject.FindGameObjectWithTag("Barnacle");
+        pearl = GameObject.FindGameObjectWithTag("Pearl");
+        Mermaid = GameObject.FindGameObjectWithTag("Mermaid");
         HasSomethingToSay = true;
     }
 
