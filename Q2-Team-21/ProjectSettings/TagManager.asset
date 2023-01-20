@@ -5,14 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - WaterChecker
-  - Car
-  - Projectitle
   - PlayerBoat
   - GroundChecker
   - BoatCam
   - PlayerBoatSpot
   - Water
   - enemy
+  - LightPost
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - Enemy
   - Interactables
   - Projectiles
-  - Ground
+  - 
   - 
   - 
   - 

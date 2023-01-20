@@ -6,11 +6,6 @@ using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
 {
-    /// <notes>
-    /// Tags: GroundChecker, MainCamera
-    /// layers: Ground, Interactables
-    /// <notes>
-
     //Camera
 
     private GameObject PlayerCam;
@@ -32,11 +27,8 @@ public class CharacterControllerScript : MonoBehaviour
 
     //Movement
 
-    Vector3 move;
-    private float moveX;
-    private float moveY;
-
     private CharacterController controller;
+    Vector3 move;
     public float moveSpeed;
     private float speed;
     private float speedButFaster;
@@ -73,10 +65,11 @@ public class CharacterControllerScript : MonoBehaviour
         InteractablesLayerMask = LayerMask.GetMask("Interactables");
 
         //Utility
+
         Boat = GameObject.FindGameObjectWithTag("PlayerBoat");
-        Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam = GameObject.FindGameObjectWithTag("BoatCam");
         BoatCam.SetActive(false);
+        Boat.GetComponent<BoatEngine>().enabled = false;
 
         //Movement
 
@@ -85,10 +78,6 @@ public class CharacterControllerScript : MonoBehaviour
         groundCheck = groundCheckOBJ.transform;
         speed = moveSpeed;
         speedButFaster = speed * 1.6f;
-
-        //UI
-
-
     }
 
     private void FixedUpdate()
@@ -218,22 +207,24 @@ public class CharacterControllerScript : MonoBehaviour
         if (other.CompareTag("Water"))
         {
             EnterBoat();
+            ExitBoat();
         }
     }
 
     public void EnterBoat()
     {
-        Boat.GetComponent<BoatEngine>().enabled = true;
-        PlayerCam.SetActive(false);
-        BoatCam.SetActive(true);
         InBoat = true;
+        Boat.GetComponent<BoatEngine>().enabled = true;
+        BoatCam.SetActive(true);
+        PlayerCam.SetActive(false);
+
     }
 
     public void ExitBoat()
     {
+        InBoat = false;
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
         PlayerCam.SetActive(true);
-        InBoat = false;
     }
 }
