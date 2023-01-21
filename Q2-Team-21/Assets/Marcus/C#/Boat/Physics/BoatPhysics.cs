@@ -42,7 +42,7 @@ public class BoatPhysics : MonoBehaviour
     private float rhoAir = BoatPhysicsMath.RHO_AIR;
 
     //A list with all vertices that are at the intersection point between the air and water
-    private List<Vector3> intersectionVertices = new List<Vector3>();
+    public List<Vector3> intersectionVertices = new List<Vector3>();
 
 
 

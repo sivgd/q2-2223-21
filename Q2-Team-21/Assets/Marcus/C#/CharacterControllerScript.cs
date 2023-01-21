@@ -208,7 +208,8 @@ public class CharacterControllerScript : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
+            EnterBoat();
+            ExitBoat();
         }
     }
 
@@ -226,10 +227,6 @@ public class CharacterControllerScript : MonoBehaviour
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
         PlayerCam.SetActive(true);
-    }
-
-    public void Death()
-    {
         gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
     }
 }
