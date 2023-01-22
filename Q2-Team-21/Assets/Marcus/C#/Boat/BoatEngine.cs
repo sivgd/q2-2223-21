@@ -46,21 +46,21 @@ public class BoatEngine : MonoBehaviour
 	{
         UserInput();
 
-        if (InMotion == true)
-        {
-            Prop.SetBool("InMotion", true);
-            Prop.SetBool("InReverseMotion", false);
-        }
-        else if (InReverseMotion == true)
-        {
-            Prop.SetBool("InMotion", false);
-            Prop.SetBool("InReverseMotion", true);
-        }
-        else
-        {
-            Prop.SetBool("InMotion", false);
-            Prop.SetBool("InReverseMotion", false);
-        }
+        //if (InMotion == true)
+        //{
+        //    Prop.SetBool("InMotion", true);
+        //    Prop.SetBool("InReverseMotion", false);
+        //}
+        //else if (InReverseMotion == true)
+        //{
+        //    Prop.SetBool("InMotion", false);
+        //    Prop.SetBool("InReverseMotion", true);
+        //}
+        //else
+        //{
+        //    Prop.SetBool("InMotion", false);
+        //    Prop.SetBool("InReverseMotion", false);
+        //}
 
     }
 
