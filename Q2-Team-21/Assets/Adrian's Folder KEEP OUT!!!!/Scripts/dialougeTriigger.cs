@@ -36,7 +36,7 @@ public class dialougeTriigger : MonoBehaviour
         }
         if (x == 1 && disableCollider == false && collision.tag != "blood")
         {
-            player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0,0);
+            player.GetComponent<CharacterControllerScript>().enabled = false;
             //UIDUI.enabled = true;
             StartDialogue();
             gameObject.GetComponent<SphereCollider>().enabled = false;

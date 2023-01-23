@@ -1,0 +1,1031 @@
+[33mcommit 157bc134953d941a248fcb0d1bf3281fe1433c8c[m[33m ([m[1;36mHEAD -> [m[1;32mNewMain[m[33m, [m[1;31morigin/NewMain[m[33m)[m
+Merge: 0adf520 863c500
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Mon Jan 23 12:18:45 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+    
+    # Conflicts:
+    #       Q2-Team-21/Assets/Marcus/Prefabs/Player.prefab.meta
+
+[33mcommit 0adf5205f076b2b14a9f6772fb0f593d4cbd702c[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Mon Jan 23 12:17:50 2023 -0800
+
+    ah shit
+
+[33mcommit 863c5008d6773cbd8302f5ceaf35ddfd8c8e5109[m
+Merge: 561d32a 8ecad2f
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Mon Jan 23 12:14:00 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 561d32a40415d87925b78743e0f974444bd183ce[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Mon Jan 23 12:13:56 2023 -0800
+
+    did some into comic work
+
+[33mcommit 8ecad2f0191c4bb99ec297fd03cb2a1e64776da6[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Mon Jan 23 11:25:58 2023 -0800
+
+    Boat prefab
+
+[33mcommit f655154bef6dc97b7796873a60419de076492731[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 22 02:08:01 2023 -0800
+
+    scene changes
+
+[33mcommit 434c1fec8acf7c35a27bf2be61bac8eec4daa317[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sat Jan 21 07:01:58 2023 -0800
+
+    New Boat
+
+[33mcommit 14ac067998e8a911bafae7c989ce20af991eb794[m
+Merge: 1f25466 ca61eb5
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 20 13:30:49 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+    
+    # Conflicts:
+    #       Q2-Team-21/ProjectSettings/TagManager.asset
+
+[33mcommit 1f25466f317dc71fe2e0c1fb046c0a88df888711[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 20 13:30:26 2023 -0800
+
+    Final Commit of the day
+
+[33mcommit ca61eb5a9c84c883b9b30d0797f27da4a9eee34c[m
+Merge: 94d1e5d e854cb9
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 13:23:13 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 94d1e5df1d729d57a643919281bdf8ceec51e461[m
+Merge: 2f599ea 063dbbe
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 13:22:59 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit e854cb95b4a4a9ae31b3782e4203ebd205be70a7[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Fri Jan 20 13:22:57 2023 -0800
+
+    fixed fps controller
+
+[33mcommit 2f599ea5c29dd0ad41a303e5a07bb7f2252bf427[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 13:22:56 2023 -0800
+
+    Added button to dialoague
+
+[33mcommit 063dbbe982df4a8abd2182913d53e9116d3e3fd2[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Fri Jan 20 12:52:12 2023 -0800
+
+    Scene changes, prefab updated, light puzzle made, animations
+
+[33mcommit 07d04425f542ec73ecd63ff0d22660090bcd203e[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 20 12:32:17 2023 -0800
+
+    The Announcments should now find the object they need automatically, Though youll need to place a script and tag on my canvas for it to work
+
+[33mcommit dbac5f6d045b1ac9aac2bf5f16b27ab08655a45d[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 12:19:31 2023 -0800
+
+    Cursor unlock when dialoge unes
+
+[33mcommit ac2a91188774cc672a5a87d59289074d85598f95[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 12:15:28 2023 -0800
+
+    FPS control cam stop now
+
+[33mcommit 30d308fb6742a444c446841b99eb1b0a37d6365f[m
+Merge: 8ed5a23 41b7ead
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 11:54:15 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 8ed5a23312edb413fa082767369dfdfbf4aaf727[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 20 11:54:12 2023 -0800
+
+    sfafawfe
+
+[33mcommit 41b7ead696f0229a73344c17f55c3ceae33eedf5[m
+Merge: b313cbb 0882d3e
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 20 11:19:32 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit b313cbb9e589fc9b9bdaff3b74d81025cfc5ee0a[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 20 11:19:29 2023 -0800
+
+    begun work on intro scene
+
+[33mcommit 0882d3ec54723af3c2c50147a7fc009834370a22[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:29:49 2023 -0800
+
+    C4
+
+[33mcommit fd4a1bfe107d45363e00e6b9c13007769786b509[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:29:40 2023 -0800
+
+    C4
+
+[33mcommit d49b27a5497769f648a8e7f3af3a4a8650a6e99d[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:29:31 2023 -0800
+
+    C4
+
+[33mcommit b09db62f96fec6fb458a7783b3c8027b7e1b6c7d[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:29:17 2023 -0800
+
+    C4
+
+[33mcommit 14198c94c5c79142905a44b52ba62e17814f94ad[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:29:12 2023 -0800
+
+    C4
+
+[33mcommit 65a0173445aa51393adfc64ece5b8b9b85d24687[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:28:55 2023 -0800
+
+    C4
+
+[33mcommit a18b3c50bc5f1eb3209d0d54811cc119ed88003c[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:28:42 2023 -0800
+
+    C4
+
+[33mcommit 21d716122902e73d86782574bc5344d5ef4b261b[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:28:19 2023 -0800
+
+    C4
+
+[33mcommit a0e676236828b41fbea77a210222fbbaa527ef98[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:28:10 2023 -0800
+
+    c4
+
+[33mcommit c5b8cea947efb9688e561fa2cc25fc05244132a7[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:27:57 2023 -0800
+
+    C4
+
+[33mcommit 098f813e14a6aa69835cb6718fa269fe40675c00[m
+Merge: 39f449b fcb2e7f
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:12:40 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 39f449bf497acbe91a92d5528a87229635ecda96[m
+Merge: bfa2c77 a228f5b
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:11:50 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit fcb2e7fdaf1896fd517a6d2fd4cca3e2f06fa399[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 19 13:11:49 2023 -0800
+
+    scene changes push for room swap
+
+[33mcommit bfa2c772937e3e81c2040b075446b8cd15ca8f7b[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 19 13:11:44 2023 -0800
+
+    ppeeessdfaefweafg
+
+[33mcommit a228f5bafbf48b5f7ff7b897b9b995fd8b618008[m
+Merge: 588a90f 5fd910b
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 19 12:25:23 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 588a90fbb1bc8ebdb7987bc0a2fb35dbf93f3ce7[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 19 12:25:19 2023 -0800
+
+    terrain now has a platform for a puzzle thing
+
+[33mcommit 5fd910b31bdd1f526b546dc4700854cb2d928a7c[m
+Merge: 36d8649 47a0e63
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 19 12:18:53 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 36d8649bc2d5c6376c55ea4a94e71868f70892b7[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 19 12:18:50 2023 -0800
+
+    Making prefabs and updating to new map
+
+[33mcommit 47a0e63ddaf9d5beb998faccee8844fb48b2df08[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 19 11:44:50 2023 -0800
+
+    removed an unused scene
+
+[33mcommit 9de8418e9b43bcf3bb18baadaf056e0c96caa2af[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 19 11:28:18 2023 -0800
+
+    turned off water plane
+
+[33mcommit f2a8420723f591ff8ca0819a91d782437cd61361[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 19 11:23:03 2023 -0800
+
+    Statue of the vengance god now in my scene and correctly sized
+
+[33mcommit e9faa7222cc6ddfd2fa41fb772a47509293815e8[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Thu Jan 19 00:30:44 2023 -0800
+
+    RaY CaStInG iN UnItY Is A CoMpLeTe AnD UtTeR NiGhTmArE. ThE PeRfOrMaNcE HiT It TaKeS On YoUr GaMe Is AsTrOnOmIcAl AnD It's InCrEdIbLy DiFfIcUlT To FiNe-TuNe It To WoRk WiTh CeRtAiN CoLlIdErS AnD CoMpLeX GeOmEtRy. NoT OnLy ThAt, BuT TrYiNg To DeBuG WhEn ThInGs Go WrOnG Is A CoMpLeTe NiGhTmArE.  It's TrUe ThAt It CaN Be UsEd FoR A WiDe RaNgE Of TaSkS SuCh As DeTeRmInInG If A PlAyEr Is LoOkInG At An ObJeCt Or DeTeCtInG If A WeApOn HaS HiT A TaRgEt, BuT ThE TrUtH Is ThErE ArE MuCh BeTtEr, MoRe EfFiCiEnT WaYs Of AcHiEvInG ThE SaMe ReSuLtS.  ObJeCt PoOlInG AnD LiMiTiNg ThE NuMbEr Of RaYcAsTs PeR FrAmE MaY HeLp ImPrOvE PeRfOrMaNcE, BuT It's NoT EnOuGh To JuStIfY ThE HaSsLe AnD FrUsTrAtIoN ThAt CoMeS WiTh UsInG It.  In ShOrT, If YoU HaVe ThE OpTiOn, StAy AwAy FrOm UsInG RaY CaStInG In UnItY. It's NoT WoRtH ThE HeAdAcHe.
+
+[33mcommit 76320245c5720561e4e4931521c1eede9c24c46f[m
+Merge: e56bc24 144493a
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 18 13:31:53 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit e56bc24118f59c420cb9dc53737f0ebac76a82dc[m
+Merge: b3aa12b 08fc2b3
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 18 13:31:37 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 144493a4b7c05323bff3491e5c43c60a2ca516eb[m
+Merge: 63a52c4 08fc2b3
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Wed Jan 18 13:31:34 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit b3aa12b97c1aa655eaa1cbbf41405584fb0b28de[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 18 13:31:32 2023 -0800
+
+    changes
+
+[33mcommit 63a52c440847f59b8186c5e544aa4526beec156f[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Wed Jan 18 13:31:30 2023 -0800
+
+    asfd
+
+[33mcommit 08fc2b3511caad2b18d90681b21b8413088b839f[m
+Merge: 2da4e9c 7bfd329
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 18 13:29:25 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 2da4e9c726a07672bdd36e33d70fb38061f5ac55[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 18 13:29:06 2023 -0800
+
+    Riley's push (by Jim)
+
+[33mcommit 7bfd3295d6031e4b6bb4dc82b47c336c000018cb[m
+Merge: a098657 2d9ca3b
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 18 11:27:52 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit a098657b4b91f6d267fd838937b1984e4f36110a[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 18 11:25:07 2023 -0800
+
+    cat
+
+[33mcommit 2d9ca3b8204bc6af83bc9a338457b6a09da79ba0[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Wed Jan 18 00:34:35 2023 -0800
+
+    fixed raycast
+
+[33mcommit 366705034156f955218858f593dda355784943cc[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Tue Jan 17 13:28:28 2023 -0800
+
+    dfgdg
+
+[33mcommit 57e82a1f604902ae8ccd6eda52b768b224a23005[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Tue Jan 17 13:20:05 2023 -0800
+
+    Tmp and 1st puzzle
+
+[33mcommit 8bb502ff94e2e6fd6578d2742bd6483e86fcd614[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 17 12:34:53 2023 -0800
+
+    Changed something to be localrotation instead of Global rotation. Will this fix or break anything? IDK!
+
+[33mcommit 08355c09204698ade96fa0d2781cfa646b744a40[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 17 12:24:40 2023 -0800
+
+    some landscape updates
+
+[33mcommit 1028e9f7e3ee9e11eda494984f6c66d9a30c07db[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 17 11:57:28 2023 -0800
+
+    Implement Enemy Art
+
+[33mcommit 3e2d0f16bc07cf56e40b07d32727ed03cf9974d3[m
+Merge: bb4de58 b9e6cb5
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 17 01:24:47 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit bb4de5812e42f59e48ca087062c877c3e443f0a9[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 17 01:24:44 2023 -0800
+
+    Make the tongue go to the point on the player
+
+[33mcommit b9e6cb50ae482f16511462a8072ac05b9a366ea7[m
+Merge: 865ff5e 0e5a3dc
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Tue Jan 17 00:37:42 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 865ff5ec60ed2028760fa0d23816083122a64c02[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Tue Jan 17 00:37:41 2023 -0800
+
+    changes to fps controller
+
+[33mcommit 0e5a3dc6c8aed4db2e0ceb15e45dcc9b131e3980[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 17 00:27:44 2023 -0800
+
+    Updated Terrain included maze
+
+[33mcommit 8177d6ee4bc195dc9bc92b21a2f03a77993f699f[m
+Merge: a2c2211 27b4925
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 13 13:29:36 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit a2c22118fd12787d4e12e128bbcaef928b5c3a68[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 13 13:29:30 2023 -0800
+
+    dsfsdf
+
+[33mcommit 27b4925269f62fa88e8a02726c96d582b5772882[m
+Merge: 30b05b4 c128f53
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 13:28:54 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 30b05b4cb231ec7838c0e64d8045ac917f952580[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 13:28:44 2023 -0800
+
+    I've added Papyrus! NYEH HEH HEH!
+
+[33mcommit c128f532275790fc938f29ac344606663cdb65f1[m
+Merge: 2e4019e 85bdc70
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Fri Jan 13 13:01:15 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 2e4019ee8fda63cae963e199d7f1d2a60febd7ab[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Fri Jan 13 13:01:11 2023 -0800
+
+    progress on missions
+
+[33mcommit 85bdc70f6bf71d0fbeb04a440a7f38ee1a208da1[m
+Merge: 8738cd1 4fc575f
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 12:42:09 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 8738cd1ec1af2e5382697eadc6892fdccde1efed[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 12:42:05 2023 -0800
+
+    Introducing the new Frog Cube(tm) now with 50% more frog
+
+[33mcommit 4fc575f8d787ce05ef4891ec2b8f53ddb0f11cc7[m
+Merge: 3c9584b 1f7cdd6
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 13 11:47:31 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 3c9584b41152f6893b5d5b8191cd4c6696336431[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Fri Jan 13 11:47:28 2023 -0800
+
+    Fixed dialogue bugs
+
+[33mcommit 1f7cdd63a7d350247d344a05b35f190bee0b12e5[m
+Merge: 3ab99e1 a8ff726
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 11:19:59 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 3ab99e107befd53a6c31e31e97c00038c126a731[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 13 11:19:27 2023 -0800
+
+    Did some work on the forgs rotational ability
+
+[33mcommit a8ff726091131f1d77cd6bb02ef9e7d2cd611ec9[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Thu Jan 12 23:46:54 2023 -0800
+
+    Dialogue system
+
+[33mcommit c1bbd0b579c5ab56132299a0fc037e72b2bf77e9[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 12 12:53:41 2023 -0800
+
+    lemme drive the boat
+
+[33mcommit d8614aa05ce567f363dae0ce85c7e725386e0499[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 12 11:37:44 2023 -0800
+
+    final commit before move
+
+[33mcommit a87f7da02162312013801733f3c9fc6d1ae2b2aa[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 12 11:30:45 2023 -0800
+
+    made healthbar end when your at zero instead of 20% HP
+
+[33mcommit 106705665219aad4f9308e18b10bf9c76e578a08[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Thu Jan 12 00:05:39 2023 -0800
+
+    health bar works
+
+[33mcommit f66361648d31a01824bb74697c8fae79b14cc286[m
+Merge: 9ee4aae 0f69985
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 11 23:50:20 2023 -0800
+
+    Merge branch 'NewMain' of https://github.com/sivgd/q2-2223-21 into NewMain
+
+[33mcommit 9ee4aaeaf0e366af6e8f2b8b967c338f8dbcad49[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 11 23:49:58 2023 -0800
+
+    Player's tongue
+
+[33mcommit 0f699856478831331b1d716fba98f4cb7a5e9840[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Wed Jan 11 22:50:04 2023 -0800
+
+    shader graph testing
+
+[33mcommit fbfad08e3dae44940b357ecddc06a6535cdcd937[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 11 13:23:20 2023 -0800
+
+    1st person controller 90% done
+
+[33mcommit 1d4629d03209d0f6ea4125a7efd41ad26d656efe[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 13:23:15 2023 -0800
+
+    AAAAA
+
+[33mcommit d4f1fc0214c8609eafda3419c69e42ecec08a56c[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 12:46:14 2023 -0800
+
+    I dont care
+
+[33mcommit 021b1fc4e49fc7e8179b1f2219427d5f274b7be6[m
+Merge: 8de0c11 067dfaf
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 12:27:06 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 8de0c119d23007e03baca898fb9bf550f94156cd[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 12:27:03 2023 -0800
+
+    Implement Mermaid
+
+[33mcommit 067dfaf1fb5924d8c177e4c4ef084589b0741e37[m
+Merge: 2b84250 5d9a27a
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 11 11:33:59 2023 -0800
+
+    rgx
+
+[33mcommit 2b84250a8b46afc9b4da93582766722e780f92b1[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 11 11:22:43 2023 -0800
+
+    ghhtygfftxs
+
+[33mcommit 5d9a27a1803c74da4572d1f63829983a3b56f520[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 11:18:29 2023 -0800
+
+    Made it so the build actually starts at the title and makes it so the title goes to the pretty looking one
+
+[33mcommit 5295f0a2d651616b71ed7a57fe2138094f67b533[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 11 11:15:28 2023 -0800
+
+    title screen actually looks professional now
+
+[33mcommit b30ae421f879d7779090baa89869870da88dcf41[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Tue Jan 10 21:29:20 2023 -0800
+
+    scene updates and build
+
+[33mcommit 089d3deb066978c59bd0915bee89956db685772d[m
+Merge: 1660f5b c29e95f
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 10 14:20:06 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 1660f5bb7d68bd0d2e4546380a34ed97e138cec7[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 10 14:20:02 2023 -0800
+
+    fafaefea
+
+[33mcommit c29e95f1633074082a349365d367f0a2d86fc775[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Tue Jan 10 13:24:21 2023 -0800
+
+    FPS Componet
+
+[33mcommit 64d9edf9dd414d23d7a00287d4f69a4cb4e07d53[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 10 13:21:16 2023 -0800
+
+    Added Health bar, and made text more consistent with games artstyle
+
+[33mcommit cdb8686882b12b6dc505f8c96a29c36dec480509[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 10 12:00:32 2023 -0800
+
+    Minor Fixes to the title screen (like it actually starting at the title screen)
+
+[33mcommit f1ab77dbc79d1309a52419fd15089b1a0037cdc0[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 10 11:58:47 2023 -0800
+
+    Credit Scene Finalized (mostly)
+
+[33mcommit ff7b9e9459eaa746a2184eb0dcb76328d026951c[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Tue Jan 10 03:09:44 2023 -0800
+
+    Scene updates
+
+[33mcommit b840d4a8ab06c10b397abd678f028801ca29da2a[m
+Merge: bc930cb d429867
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Mon Jan 9 15:24:49 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit bc930cb9f8a310f66d32e7d9c82e0a80a2e272cf[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Mon Jan 9 15:24:44 2023 -0800
+
+    adfafa
+
+[33mcommit d429867ac6b513c2e24c0039039fa37bd08991ad[m
+Merge: f23f205 ceb0346
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Mon Jan 9 13:27:53 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit f23f205b77f01b5993c537a97306412d136a255c[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Mon Jan 9 13:27:37 2023 -0800
+
+    Scene edit's
+
+[33mcommit ceb03466e84924273adbca3d1c6eae50fd30dd99[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Mon Jan 9 13:26:30 2023 -0800
+
+    basic placegikder dialogue
+
+[33mcommit 05c5f1d30cb4939c3cbf1c80b4a46a9fbe609caf[m
+Merge: f3f520d 9fded4b
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Mon Jan 9 11:17:54 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit f3f520d0b9b636f6c0e25ff30e297e478203ad35[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Mon Jan 9 11:17:46 2023 -0800
+
+    just unpacking the prefabs incase a boat update breaks my scene, Ill update it personally to the new prefab later
+
+[33mcommit 9fded4b4ac72d61a6eea7b9a78d8e440d7b8a454[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 22:45:29 2023 -0800
+
+    Boat physics and animation update
+
+[33mcommit 2ccbec982be1b14196ce29feec5c6521adb3e868[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 14:36:34 2023 -0800
+
+    Final boat model
+
+[33mcommit 953aeb35d7171840f33365deed2f9032c19e25ea[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 14:17:10 2023 -0800
+
+    Removing redundant code
+
+[33mcommit 9fd0ac5f9b384fef7a2d35b33dffa8568e961119[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 14:08:11 2023 -0800
+
+    Scene changes
+
+[33mcommit 1e7dc5ac67a17d8f005876a7bbfc6b21a1139c89[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 14:05:35 2023 -0800
+
+    ShaderDone
+
+[33mcommit 5ffc5401bb7acaf1fadb50af596923224c4777de[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 13:33:28 2023 -0800
+
+    URP and water shader
+
+[33mcommit 7cfd569c2e5d37e4cbb6d667c5926ae12aa70fbe[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sun Jan 8 00:10:51 2023 -0800
+
+    New boat better physics
+
+[33mcommit 0820c8f054c5cf3b0b3c3bec25f1da27968414ad[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sat Jan 7 20:15:38 2023 -0800
+
+    new boat
+
+[33mcommit 5d261fd30c20f8fd595f8e85ee325ee7dcf8bc3f[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Sat Jan 7 17:39:02 2023 -0800
+
+    water looks better?
+
+[33mcommit ea27a0cbd59e9dbdc9c5466bce9ffe62a99e10f5[m
+Merge: 27c2808 c225569
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 6 13:41:34 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 27c2808653afaa1f773bb319753b4b4920cba6f0[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Fri Jan 6 13:41:31 2023 -0800
+
+    Almost finished the Quest system
+
+[33mcommit c2255699ca3ed7d7f487ae19114e0709704a9831[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Fri Jan 6 13:26:21 2023 -0800
+
+    Ai cracked
+
+[33mcommit 9808818b444bec75d0746ea0ef65fae8a2c6bc44[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Fri Jan 6 11:29:08 2023 -0800
+
+    Update Adrian'sTestScene.unity
+
+[33mcommit 8509f0de50f12ece4746571e1684d64d1b723e51[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Fri Jan 6 11:20:32 2023 -0800
+
+    not t4sh
+
+[33mcommit eb23b5a818617272f85feff9edf72d94f2345899[m
+Merge: cb05a48 cb93351
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 13:29:56 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit cb05a4854811e41e9a4eec9472bd09d216ecc0ad[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 13:29:52 2023 -0800
+
+    we will we will rock you
+
+[33mcommit cb933515299a0ad80f7c828f36996a84bea1c093[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 5 13:26:05 2023 -0800
+
+    Begun the quest work
+
+[33mcommit fc003d5c4d833d44d93be542285db1e63b946aec[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 13:15:03 2023 -0800
+
+    You shall not pass
+
+[33mcommit bf7e3be158e37fd7b08fe83390c42c6b63de40fd[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 13:13:23 2023 -0800
+
+    I want you to suffer
+
+[33mcommit 582de5d3ea3ef2fc9ff802313dabf0a846fbf6d8[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 12:57:41 2023 -0800
+
+    sd
+
+[33mcommit e5cf9d77a1c0dc7ef9e3c0a424eb695a2d3d8de8[m
+Merge: 03b58b5 2007032
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 12:56:44 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 03b58b52493749e87d063fa8514a484634ceb0e7[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Thu Jan 5 12:56:40 2023 -0800
+
+    Button
+
+[33mcommit 200703276f08cae3519c033b446815f1baf8ab99[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 5 12:56:09 2023 -0800
+
+    test scene changes
+
+[33mcommit b9119bec13303c2989f276819827047cb2b3ab2b[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 5 12:13:25 2023 -0800
+
+    aaaa
+
+[33mcommit e5e38f4c15ce115940360f81d1cbdda8f94ab989[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Jan 5 11:47:00 2023 -0800
+
+    strange meta file?
+
+[33mcommit 32695eb27848cec80edb1ca9213f0fce8365cc79[m
+Merge: 5c72703 946e7df
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 5 11:15:05 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 5c72703992f68d8fddfba36ae77d2f8aa66821f9[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Jan 5 11:15:01 2023 -0800
+
+    minor title screen updates
+
+[33mcommit 946e7df32cff3a1cc4481db7ecaaa9cfa9fc203d[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Thu Jan 5 06:45:35 2023 -0800
+
+    player prefab in my folder
+
+[33mcommit 404e366624cf28f0035df4178f8ec6c6d01724c8[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Thu Jan 5 06:38:54 2023 -0800
+
+    updating scene
+
+[33mcommit f245bd2901d225b1d31a2f402ad908531b8f7f6f[m
+Merge: cd52c92 dcbd504
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Thu Jan 5 05:13:58 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit cd52c9278294599571db10df0c0774be0dbdf18f[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Thu Jan 5 05:13:56 2023 -0800
+
+    physics update
+
+[33mcommit dcbd504f5513a9ae66b4107d098505e703a8f46d[m
+Merge: db33ad9 e768458
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 4 23:26:49 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit db33ad93b6212a7fc0e09c9a82d342cf5bcde779[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 4 23:26:45 2023 -0800
+
+    idk
+
+[33mcommit e7684583e0ef1b243260fa296eb4fa587fe130f4[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Wed Jan 4 17:39:14 2023 -0800
+
+    character into level integration
+
+[33mcommit c1e554f45b0f21ea5f0a2d57eb4638adce297987[m
+Author: bagelyboi5 <garmanmt@gmail.com>
+Date:   Wed Jan 4 17:18:18 2023 -0800
+
+    Movement Works
+
+[33mcommit 356251c15ac4fd200abf6a7f1e5e537eda5a30d0[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 4 13:28:29 2023 -0800
+
+    boat can move
+
+[33mcommit 13225876c3a6214891c442c48f30fa8e58cc1903[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Jan 4 13:25:53 2023 -0800
+
+    boat moves
+
+[33mcommit 2a69a49cc16afce52884219d94588bd173bbbf9d[m
+Merge: d98f449 597619b
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 4 12:34:20 2023 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit d98f4492c32dffbcb486fa2173c150a695a45b5d[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Wed Jan 4 12:34:12 2023 -0800
+
+    r
+
+[33mcommit 597619b1fbf6405373933df85f50ac1e80a73fdd[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 4 11:21:27 2023 -0800
+
+    Adriens credits now have a quote
+
+[33mcommit 5d014b93b10643fe5a86e37fc81f3b85e4619584[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Jan 4 11:17:31 2023 -0800
+
+    Title scene now works almost completely
+
+[33mcommit 436e9fa7ac3e11bf3c7ab8b5e5f9ccbd7bf58586[m
+Merge: 17353e9 c3ba2a3
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 3 23:00:10 2023 -0800
+
+    shii
+
+[33mcommit 17353e912b72d33fecfd4fbe807ce1ab5fbb8343[m
+Author: breakingit32 <75185545+breakingit32@users.noreply.github.com>
+Date:   Tue Jan 3 22:57:46 2023 -0800
+
+    Added new stuff
+
+[33mcommit c3ba2a3679b18d7eb1c04d14cdf85c9d768d2882[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Tue Jan 3 13:26:58 2023 -0800
+
+    boat physics
+
+[33mcommit b78677002d93cf60b590462d6593bf54fa39c075[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Tue Jan 3 13:25:39 2023 -0800
+
+    Title screen now mostly works
+
+[33mcommit 079798639da571fb3b1c5c5984d69d2a8652e401[m
+Merge: a8b1eb2 5ebafae
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Dec 15 13:25:43 2022 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit a8b1eb25560284b139792254e15c8e2f860e7616[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Thu Dec 15 13:25:39 2022 -0800
+
+    Added waves
+
+[33mcommit 5ebafaeae590af1ccdf87f5290cc4df93ac0e557[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Dec 15 13:25:35 2022 -0800
+
+    boat
+
+[33mcommit a80aee528ac45e8bdf1c658e9136d401464b5b6f[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Thu Dec 15 12:50:08 2022 -0800
+
+    Test big things
+
+[33mcommit 41a9accf71218be24f01484b938e71b941bc6d54[m
+Merge: 2031118 eec7f42
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Dec 14 13:26:31 2022 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 2031118773213d32dbcf477658e0c1fd6ffd9788[m
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Date:   Wed Dec 14 13:26:28 2022 -0800
+
+    characterPhysics
+
+[33mcommit eec7f42dc2fae72fc9bec389032824385278b691[m
+Merge: f0ead5d 69eff7f
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Wed Dec 14 12:50:17 2022 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit f0ead5df542f3199aa254474b4681cb625664c5a[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Wed Dec 14 12:50:13 2022 -0800
+
+    rid
+
+[33mcommit 69eff7f65722638660fdd99be35fca8af020c7fd[m
+Author: MUKILTEO\1710152 <Riley05Park@gmail.com>
+Date:   Wed Dec 14 12:49:42 2022 -0800
+
+    updated something to no longer require manual setting (the face camera script)
+
+[33mcommit 7cb873d7f085fd9de2346cbafa8d2afdb765917a[m
+Merge: 3bceb9c 662b7e8
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Tue Dec 13 13:30:37 2022 -0800
+
+    Merge branch 'main' of https://github.com/sivgd/q2-2223-21
+
+[33mcommit 3bceb9ce2e35a9f6db0c46f4ed61dc1407c01e45[m
+Author: MUKILTEO\1710219 <1710219@mulkilteo.wednet.edu>
+Date:   Tue Dec 13 13:30:13 2022 -0800
+
+    fafa
+
+[33mcommit 662b7e814c5314bc0d9cf6ea5d192520f2bce918[m
+Merge: 3ed52a2 8b75608
+Author: MUKILTEO\1709603 <garmanmt@gmail.com>
+Da
