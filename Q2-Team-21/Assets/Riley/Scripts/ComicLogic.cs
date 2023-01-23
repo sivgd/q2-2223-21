@@ -9,6 +9,7 @@ public class ComicLogic : MonoBehaviour
     private RectTransform rect;
     public float moveSpeed;
     public int MainMenuSceneNumber = 0;
+    public int GameScene = 1;
     private Vector2 Position = Vector2.zero;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class ComicLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PanelNumber > 5) PanelNumber = 5;
+        if (PanelNumber > 6) PanelNumber = 6;
         if (PanelNumber < 0) PanelNumber = 0;
 
         switch(PanelNumber)
@@ -49,6 +50,7 @@ public class ComicLogic : MonoBehaviour
                 break;
                 
             default:
+                Position = new Vector2(-60, 90);
                 break;
         }
 
@@ -57,7 +59,12 @@ public class ComicLogic : MonoBehaviour
         if (rect.anchoredPosition.y > Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y-moveSpeed);
         if (rect.anchoredPosition.y < Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y+moveSpeed);
 
-        if (rect.anchoredPosition == Position && PanelNumber == 5) SceneManager.LoadScene(MainMenuSceneNumber);
+        if (PanelNumber == 6 && rect.localScale.x > 0) rect.localScale = new Vector2(rect.localScale.x - 0.0005f, rect.localScale.y - 0.0005f);
+        else if (rect.localScale.x < 1) rect.localScale = new Vector2(rect.localScale.x + 0.0005f, rect.localScale.y + 0.0005f);
+        else if (rect.localScale.x > 1) rect.localScale = new Vector2(1, 1);
+
+        if (rect.anchoredPosition == Position && PanelNumber == 0) SceneManager.LoadScene(MainMenuSceneNumber);
+        if (rect.anchoredPosition == Position && PanelNumber == 6 && rect.localScale.x < 0.001) SceneManager.LoadScene(GameScene);
 
     }
 
