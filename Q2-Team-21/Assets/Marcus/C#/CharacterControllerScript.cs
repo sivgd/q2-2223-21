@@ -82,14 +82,6 @@ public class CharacterControllerScript : MonoBehaviour
         speedButFaster = speed * 1.6f;
     }
 
-    private void FixedUpdate()
-    {
-        //if (InBoat == true)
-        //{
-        //    gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
-        //}
-    }
-
     //////////////////////////////////////////////////////
     void Update()
     {
@@ -213,7 +205,7 @@ public class CharacterControllerScript : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            Death();
+            EnterBoat();
         }
     }
 
@@ -231,11 +223,5 @@ public class CharacterControllerScript : MonoBehaviour
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
         PlayerCam.SetActive(true);
-    }
-
-    public void Death()
-    {
-        InBoat = true;
-        ExitBoat();
     }
 }
