@@ -19,11 +19,11 @@ public class BarnacleCollected : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (player.GetComponent<QuestingStuff>().HasBarnacle == true && HasFinished == false)
         {
-            if (UI.position.x > VisiblePosition) UI.position = new Vector3(UI.position.x - 1, UI.position.y, UI.position.z);
+            if (UI.position.x > VisiblePosition) UI.position = new Vector3(UI.position.x - 5, UI.position.y, UI.position.z);
 
             if (UI.position.x <= VisiblePosition) WaitTime--;
 
@@ -32,7 +32,7 @@ public class BarnacleCollected : MonoBehaviour
 
         if (player.GetComponent<QuestingStuff>().HasBarnacle == true && HasFinished == true)
         {
-            if (UI.position.x < InvisiblePosition) UI.position = new Vector3(UI.position.x + 1, UI.position.y, UI.position.z);
+            if (UI.position.x < InvisiblePosition) UI.position = new Vector3(UI.position.x + 5, UI.position.y, UI.position.z);
 
         }
     }

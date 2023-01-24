@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelNumber: 1
-  moveSpeed: 1
+  moveSpeed: 10
   MainMenuSceneNumber: 0
   GameScene: 2
 --- !u!1 &1140314939

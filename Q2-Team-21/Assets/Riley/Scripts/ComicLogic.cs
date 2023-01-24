@@ -18,7 +18,7 @@ public class ComicLogic : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (PanelNumber > 6) PanelNumber = 6;
         if (PanelNumber < 0) PanelNumber = 0;
@@ -59,8 +59,8 @@ public class ComicLogic : MonoBehaviour
         if (rect.anchoredPosition.y > Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y-moveSpeed);
         if (rect.anchoredPosition.y < Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y+moveSpeed);
 
-        if (PanelNumber == 6 && rect.localScale.x > 0) rect.localScale = new Vector2(rect.localScale.x - 0.0005f, rect.localScale.y - 0.0005f);
-        else if (rect.localScale.x < 1) rect.localScale = new Vector2(rect.localScale.x + 0.0005f, rect.localScale.y + 0.0005f);
+        if (PanelNumber == 6 && rect.localScale.x > 0) rect.localScale = new Vector2(rect.localScale.x - 0.005f, rect.localScale.y - 0.005f);
+        else if (rect.localScale.x < 1) rect.localScale = new Vector2(rect.localScale.x + 0.005f, rect.localScale.y + 0.005f);
         else if (rect.localScale.x > 1) rect.localScale = new Vector2(1, 1);
 
         if (rect.anchoredPosition == Position && PanelNumber == 0) SceneManager.LoadScene(MainMenuSceneNumber);
