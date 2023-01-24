@@ -19,14 +19,18 @@ public class NewDialougeManager : MonoBehaviour
     public BoatEngine engine;
     public RotateAroundCam cam;
     public CharacterControllerScript cam2;
+    
+
+
     public void OpenDialogue(Message[] messages, Actor[] actors, GameObject gameobjects)
     {
 
-        player.GetComponent<FindMousePositionTest>().enabled = false;
+        //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
-        cam2.GetComponent<CharacterControllerScript>().enabled = false;
+        player.GetComponent<CharacterControllerScript>().enabled = false;
+        Debug.Log("Disabling Controller 1");
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
         currentMessages = messages;
@@ -39,7 +43,8 @@ public class NewDialougeManager : MonoBehaviour
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         cam.GetComponent<RotateAroundCam>().enabled = false;
-        cam2.GetComponent<CharacterControllerScript>().enabled = false;
+        player.GetComponent<CharacterControllerScript>().enabled = false;
+        Debug.Log("Disabling Controller 2");
         gameObject.GetComponent<Canvas>().enabled = true;
         //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
@@ -84,7 +89,8 @@ public class NewDialougeManager : MonoBehaviour
         else
         {
             cam.GetComponent<RotateAroundCam>().enabled = true;
-            cam2.GetComponent<CharacterControllerScript>().enabled = true;
+            player.GetComponent<CharacterControllerScript>().enabled = true;
+            Debug.Log("Renable Character controller");
             engine.GetComponent<BoatEngine>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             //player.GetComponent<FindMousePositionTest>().enabled = true;
@@ -99,12 +105,16 @@ public class NewDialougeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            player.GetComponent<CharacterControllerScript>().enabled = false;
+            Debug.Log("TURN ON MAN!!!!");
+        }
     }
 }

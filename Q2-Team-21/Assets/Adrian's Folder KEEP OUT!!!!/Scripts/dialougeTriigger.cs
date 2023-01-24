@@ -25,7 +25,7 @@ public class dialougeTriigger : MonoBehaviour
         Debug.Log(collision.tag);
         if (x == 1 && disableCollider == true && collision.tag != "blood")
         {
-            player.GetComponent<FindMousePositionTest>().enabled = false;
+            //player.GetComponent<FindMousePositionTest>().enabled = false;
             //player.GetComponent<Animator>().enabled = false;
             //player.GetComponent<Rigidbody>().gravityScale = 0;
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
@@ -36,10 +36,10 @@ public class dialougeTriigger : MonoBehaviour
         }
         if (x == 1 && disableCollider == false && collision.tag != "blood")
         {
-            player.GetComponent<CharacterControllerScript>().enabled = false;
+            //player.GetComponent<CharacterControllerScript>().enabled = false;
             //UIDUI.enabled = true;
             StartDialogue();
-            gameObject.GetComponent<SphereCollider>().enabled = false;
+            //gameObject.GetComponent<SphereCollider>().enabled = false;
         }
 
         
