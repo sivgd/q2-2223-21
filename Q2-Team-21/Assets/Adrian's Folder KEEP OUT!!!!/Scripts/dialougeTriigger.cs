@@ -41,6 +41,7 @@ public class dialougeTriigger : MonoBehaviour
             StartDialogue();
             //gameObject.GetComponent<SphereCollider>().enabled = false;
         }
+        disableCollider = true;
 
         
     }
