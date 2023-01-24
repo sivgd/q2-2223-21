@@ -8,7 +8,8 @@ using UnityEngine.UI;
 public class FadeIn : MonoBehaviour
 {
     public Image img;
-    public float alpha;
+    
+    public int WaitTime;
     
     // Start is called before the first frame update
     void Start()
@@ -23,13 +24,15 @@ public class FadeIn : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        if (WaitTime > 0) WaitTime--;
         //img.color = Color.white;
-        Debug.Log(img.color.a);
-        if (img.color.a > 0)
+        //Debug.Log(img.color.a);
+        if (img.color.a > 0 && WaitTime <= 0) 
         {
-            this.GetComponent<Image>().color = new Color(0, 0, 0, img.color.a - 0.0005f);
+            this.GetComponent<Image>().color = new Color(0, 0, 0, img.color.a - 0.005f);
+            
         }
-        
+        if(img.color.a<=0.75f && WaitTime<=0) this.GetComponent<Image>().color = new Color(0, 0, 0, img.color.a - 0.005f);
+        if (img.color.a<=0) this.gameObject.SetActive(false);
     }
 }
