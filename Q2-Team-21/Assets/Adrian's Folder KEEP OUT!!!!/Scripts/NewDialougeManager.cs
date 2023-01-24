@@ -29,13 +29,13 @@ public class NewDialougeManager : MonoBehaviour
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
-<<<<<<< HEAD
+
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Debug.Log("Disabling Controller 1");
-=======
+
         Cursor.visible = true;
         cam2.GetComponent<CharacterControllerScript>().enabled = false;
->>>>>>> 5ab43a94be5ad07421accbcda1e52ef657b27b81
+
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
         currentMessages = messages;
