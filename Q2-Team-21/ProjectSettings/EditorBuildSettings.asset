@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Riley/IntroComic.unity
     guid: 81344e0c5f9961442880b32ab7c19683
   - enabled: 1
+    path: Assets/Adrian's Folder KEEP OUT!!!!/Riley'sTestScene 1.unity
+    guid: 49fc3fdb1bc50ba40876f19a6f58ab91
+  - enabled: 0
     path: Assets/Riley/Riley'sTestScene.unity
     guid: fa44026d5fa72e54facdd40734068262
   - enabled: 0

@@ -29,8 +29,13 @@ public class NewDialougeManager : MonoBehaviour
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+<<<<<<< HEAD
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Debug.Log("Disabling Controller 1");
+=======
+        Cursor.visible = true;
+        cam2.GetComponent<CharacterControllerScript>().enabled = false;
+>>>>>>> 5ab43a94be5ad07421accbcda1e52ef657b27b81
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
         currentMessages = messages;
@@ -49,6 +54,7 @@ public class NewDialougeManager : MonoBehaviour
         //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
@@ -93,14 +99,12 @@ public class NewDialougeManager : MonoBehaviour
             Debug.Log("Renable Character controller");
             engine.GetComponent<BoatEngine>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
             //player.GetComponent<FindMousePositionTest>().enabled = true;
             Debug.Log("conservation ended");
             gameObject.GetComponent<Canvas>().enabled = false;
         }
-        if(xray == 5 && SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            SceneManager.LoadScene(2);
-        }
+        
     }
     // Start is called before the first frame update
     void Start()
