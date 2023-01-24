@@ -26,6 +26,7 @@ public class NewDialougeManager : MonoBehaviour
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         cam2.GetComponent<CharacterControllerScript>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         gameobjects.GetComponent<SphereCollider>().enabled = false;
@@ -44,6 +45,7 @@ public class NewDialougeManager : MonoBehaviour
         //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
@@ -87,14 +89,12 @@ public class NewDialougeManager : MonoBehaviour
             cam2.GetComponent<CharacterControllerScript>().enabled = true;
             engine.GetComponent<BoatEngine>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
             //player.GetComponent<FindMousePositionTest>().enabled = true;
             Debug.Log("conservation ended");
             gameObject.GetComponent<Canvas>().enabled = false;
         }
-        if(xray == 5 && SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            SceneManager.LoadScene(2);
-        }
+        
     }
     // Start is called before the first frame update
     void Start()
