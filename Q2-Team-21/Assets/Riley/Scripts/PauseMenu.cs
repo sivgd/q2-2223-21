@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
     public GameObject PauseMenuUI;
     public int MainMenuNumber = 0;
-
+    public bool DoesThisWork;
     public GameObject RestartAreYouSure;
     public GameObject MainMenuAreYouSure;
     public GameObject MainPauseMenu;
@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        DoesThisWork = false;
     }
     // Update is called once per frame
     void Update()
@@ -29,17 +30,30 @@ public class PauseMenu : MonoBehaviour
         {
             RestartAreYouSure.SetActive(false);
             MainMenuAreYouSure.SetActive(false);
-            MainPauseMenu.SetActive(true);
+            //MainPauseMenu.SetActive(true);
 
+            //switch (isGamePaused)
+            //{
+            //    case true:
+            //        DoesThisWork = true;
+            //        break;
 
-            if (isGamePaused == true)
+            //    case false:
+            //        DoesThisWork = false;
+            //        break;
+            //}
+
+            switch (isGamePaused)
             {
-                Resume();
+                case true:
+                    Resume();
+                    break;
+
+                case false:
+                    Pause();
+                    break;
             }
-            else
-            {
-                Pause();
-            }
+            //Pause();
 
             //Camera.transform.rotation = Quaternion.Euler(LockRotation);
         }
@@ -47,7 +61,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Resume");
+        Debug.Log("RESUME");
         PauseMenuUI.SetActive(false);
         player.GetComponent<CharacterControllerScript>().enabled= true;
         Time.timeScale = 1f;
