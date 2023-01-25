@@ -24,7 +24,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Start()
     {
         // Find the object with the tag "Player"
-        GameObject player = GameObject.FindWithTag("Player");
+        GameObject player = GameObject.FindWithTag("PlayerBoat");
         
 
         // Get the player's rigidbody component
