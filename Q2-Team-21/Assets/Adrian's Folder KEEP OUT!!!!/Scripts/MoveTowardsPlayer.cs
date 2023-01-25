@@ -21,7 +21,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     private bool isSticking = false;
 
     public int health;
-    void Awake()
+    void Start()
     {
         // Find the object with the tag "Player"
         GameObject player = GameObject.FindWithTag("Player");
@@ -81,7 +81,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // If the object collides with the player
-        if (collision.gameObject.CompareTag("Player"))
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.CompareTag("PlayerBoat"))
         {
             objectRigidbody.isKinematic= true;
             // Set the flag indicating that the object is sticking to the player
@@ -94,6 +95,7 @@ public class MoveTowardsPlayer : MonoBehaviour
             StartCoroutine(DrainHealth());
             // Disable the box collider component
             GetComponent<BoxCollider>().enabled = false;
+            GetComponent<BoxCollider>().isTrigger= true;
         }
     }
 

@@ -6,24 +6,23 @@ public class dialougeTriigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
-    public static int x = 0;
+    public int x = 0;
     public Canvas UIDUI;
     public bool disableCollider;
     public static GameObject player;
 
-    private void Awake()
-    {
-        x = 1;
-    }
+    
 
     void Start()
     {
+        
         player = GameObject.FindGameObjectWithTag("Player");
     }
     private void OnTriggerEnter(Collider collision)
     {
+        x++;
         Debug.Log(collision.tag);
-        if (x == 1 && disableCollider == true && collision.tag != "blood")
+        if (disableCollider == true && collision.tag == "Player")
         {
             //player.GetComponent<FindMousePositionTest>().enabled = false;
             //player.GetComponent<Animator>().enabled = false;
@@ -34,14 +33,14 @@ public class dialougeTriigger : MonoBehaviour
             Destroy(gameObject);
 
         }
-        if (x == 1 && disableCollider == false && collision.tag != "blood")
+        if (disableCollider == false && collision.tag == "Player")
         {
             //player.GetComponent<CharacterControllerScript>().enabled = false;
             //UIDUI.enabled = true;
             StartDialogue();
-            //gameObject.GetComponent<SphereCollider>().enabled = false;
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
-        disableCollider = true;
+        
 
         
     }
@@ -49,10 +48,7 @@ public class dialougeTriigger : MonoBehaviour
     //{
     //    OnLevelWasLoaded(3);
     //}
-    private void OnLevelWasLoaded(int level)
-    {
-        StartDialogue();
-    }
+    
     //private void OnTriggerStay(Collider other)
     //{
     //    if (x != 1)

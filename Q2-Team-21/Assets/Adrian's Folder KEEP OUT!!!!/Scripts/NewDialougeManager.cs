@@ -29,11 +29,11 @@ public class NewDialougeManager : MonoBehaviour
         engine.GetComponent<BoatEngine>().enabled = false;
         cam.GetComponent<RotateAroundCam>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
-
+        Cursor.visible = true;
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Debug.Log("Disabling Controller 1");
 
-        Cursor.visible = true;
+        
         cam2.GetComponent<CharacterControllerScript>().enabled = false;
 
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
@@ -97,9 +97,9 @@ public class NewDialougeManager : MonoBehaviour
             cam.GetComponent<RotateAroundCam>().enabled = true;
             player.GetComponent<CharacterControllerScript>().enabled = true;
             Debug.Log("Renable Character controller");
-            engine.GetComponent<BoatEngine>().enabled = true;
+            
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
+            
             //player.GetComponent<FindMousePositionTest>().enabled = true;
             Debug.Log("conservation ended");
             gameObject.GetComponent<Canvas>().enabled = false;
@@ -113,12 +113,5 @@ public class NewDialougeManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            player.GetComponent<CharacterControllerScript>().enabled = false;
-            Debug.Log("TURN ON MAN!!!!");
-        }
-    }
+    
 }
