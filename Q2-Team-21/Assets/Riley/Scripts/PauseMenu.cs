@@ -9,18 +9,20 @@ public class PauseMenu : MonoBehaviour
     public static bool isGamePaused = false;
     public GameObject PauseMenuUI;
     public int MainMenuNumber = 0;
-
+    public bool DoesThisWork;
     public GameObject RestartAreYouSure;
     public GameObject MainMenuAreYouSure;
     public GameObject MainPauseMenu;
-
-    public GameObject player;
+    private GameObject Boat;
+    private GameObject player;
     //public GameObject Camera;
     //private Vector3 LockRotation = new Vector3(0,0,0);
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        Boat = GameObject.FindGameObjectWithTag("BoatCam");
+        DoesThisWork = false;
     }
     // Update is called once per frame
     void Update()
@@ -29,17 +31,30 @@ public class PauseMenu : MonoBehaviour
         {
             RestartAreYouSure.SetActive(false);
             MainMenuAreYouSure.SetActive(false);
-            MainPauseMenu.SetActive(true);
+            //MainPauseMenu.SetActive(true);
 
+            //switch (isGamePaused)
+            //{
+            //    case true:
+            //        DoesThisWork = true;
+            //        break;
 
-            if (isGamePaused == true)
+            //    case false:
+            //        DoesThisWork = false;
+            //        break;
+            //}
+
+            switch (isGamePaused)
             {
-                Resume();
+                case true:
+                    Resume();
+                    break;
+
+                case false:
+                    Pause();
+                    break;
             }
-            else
-            {
-                Pause();
-            }
+            //Pause();
 
             //Camera.transform.rotation = Quaternion.Euler(LockRotation);
         }
@@ -47,9 +62,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Resume");
+        Debug.Log("RESUME");
         PauseMenuUI.SetActive(false);
         player.GetComponent<CharacterControllerScript>().enabled= true;
+        Boat.GetComponent<RotateAroundCam>().enabled = true;
         Time.timeScale = 1f;
         isGamePaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -59,7 +75,8 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         Debug.Log("PAUSE");
-;       PauseMenuUI.SetActive(true);
+;        PauseMenuUI.SetActive(true);
+        Boat.GetComponent<RotateAroundCam>().enabled = false;
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Time.timeScale = 0f;
         isGamePaused = true;
