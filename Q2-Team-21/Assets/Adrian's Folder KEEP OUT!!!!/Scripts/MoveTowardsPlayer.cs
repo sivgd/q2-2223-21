@@ -17,7 +17,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     private Player healthss;
     // A reference to the object's rigidbody
     private Rigidbody objectRigidbody;
-    public GameObject locationPlayer;
+    
     // A flag indicating whether the object is sticking to the player
     private bool isSticking = false;
 
@@ -40,6 +40,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 
         // Get the object's rigidbody component
         objectRigidbody = GetComponent<Rigidbody>();
+        Debug.Log(objectRigidbody);
         if (health <= 0) Destroy(gameObject);
         // If the object is sticking to the player, don't do anything
         if (isSticking)
@@ -51,6 +52,8 @@ public class MoveTowardsPlayer : MonoBehaviour
         // If the player's rigidbody exists
         if (playerRigidbody != null)
         {
+
+            Debug.Log("Rigidbody component is attached to the player object");
             // Calculate the direction in which the object should move
             Vector3 direction = (playerRigidbody.position - objectRigidbody.position).normalized;
 
@@ -61,7 +64,7 @@ public class MoveTowardsPlayer : MonoBehaviour
             objectRigidbody.MovePosition(objectRigidbody.position + velocity * Time.deltaTime);
             if(player != null)
             {
-                this.transform.position = new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z);
+                transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
 
 
             }
@@ -103,7 +106,7 @@ public class MoveTowardsPlayer : MonoBehaviour
             // Start the health drain coroutine
             StartCoroutine(DrainHealth());
             // Disable the box collider component
-            GetComponent<BoxCollider>().enabled = false;
+            //GetComponent<BoxCollider>().enabled = false;
             GetComponent<BoxCollider>().isTrigger= true;
         }
     }

@@ -51,7 +51,7 @@ void Update()
                 for (int i = 0; i < hitObjects.Count; i++)
                 {
                     //Debug.Log(hitObjects[i].name);
-                    if (hitObjects[i].tag == "enemy")
+                    if (hitObjects[i].tag == "Wave1" || hitObjects[i].tag == "Wave2")
                     {
                         hitObjects[i].GetComponent<MoveTowardsPlayer>().health--;
                     }

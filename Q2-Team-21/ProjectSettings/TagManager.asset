@@ -18,6 +18,7 @@ TagManager:
   - Pearl
   - Car
   - Wave1
+  - Wave2
   layers:
   - Default
   - TransparentFX

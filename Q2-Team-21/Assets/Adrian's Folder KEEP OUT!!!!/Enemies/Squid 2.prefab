@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3428658438145381462}
   - component: {fileID: 3428658438145381463}
   - component: {fileID: 3428658438145381458}
+  - component: {fileID: 4418532675388608110}
   m_Layer: 6
   m_Name: Squid 2
   m_TagString: enemy
@@ -225,8 +226,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7175945, y: 1.351272, z: 0.28931427}
-  m_Center: {x: -0.1412034, y: 0.48886928, z: 0.18194501}
+  m_Size: {x: 0.7615964, y: 1.351272, z: 0.28931427}
+  m_Center: {x: -0.11920246, y: 0.48886928, z: 0.18194501}
 --- !u!114 &3428658438145381463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf84f240c103174a9baa499211ffa6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drainRate: 2
+  drainRate: 20
   rotationSpeed: 3
   stickDistance: 1
   health: 10
@@ -259,3 +260,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &4418532675388608110
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428658438145381460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.99044675, z: 0.38248095}
+  m_Center: {x: 0, y: 0.59764385, z: 0.30875954}

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bf84f240c103174a9baa499211ffa6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drainRate: 1
+  drainRate: 10
   rotationSpeed: 6
   stickDistance: 1
   health: 2
