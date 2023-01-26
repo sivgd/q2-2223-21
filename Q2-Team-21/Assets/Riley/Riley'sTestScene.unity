@@ -21333,6 +21333,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6544513400939854478, guid: 0cc34b2388512234ca28dbaafcf49a97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544513400939854479, guid: 0cc34b2388512234ca28dbaafcf49a97, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6544513402803055479, guid: 0cc34b2388512234ca28dbaafcf49a97, type: 3}
       propertyPath: BoatTXT
       value: 
@@ -30532,7 +30540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1261814251
 RectTransform:
   m_ObjectHideFlags: 0
