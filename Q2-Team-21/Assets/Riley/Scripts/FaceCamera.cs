@@ -16,6 +16,7 @@ public class FaceCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Camera = GameObject.FindGameObjectWithTag("MainCamera");
         Vector3 VectorToPlayer = new Vector3(Camera.transform.position.x - transform.position.x, 0, Camera.transform.position.z - transform.position.z).normalized;
 
         DegreesRotate = Mathf.Atan2(VectorToPlayer.x, VectorToPlayer.z) * Mathf.Rad2Deg;
