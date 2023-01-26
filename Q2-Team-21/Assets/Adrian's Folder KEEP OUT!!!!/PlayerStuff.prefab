@@ -2732,6 +2732,7 @@ MonoBehaviour:
   healthMax: 100
   HpBar: {fileID: 1926028528420786598}
   HealthMask: {fileID: 1926028526791914798}
+  player: {fileID: 0}
 --- !u!1 &1926028528093190525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,11 +2942,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sensitivity: 2
-  Boat: {fileID: 0}
-  InBoat: 0
-  PlayerBoatPosTransform: {fileID: 0}
-  moveSpeed: 10
+  speed: 0
+  gravity: -38
   jumpHeight: 3
+  groundCheck: {fileID: 0}
+  Dead: 0
+  Parent: {fileID: 0}
   BoatTXT: {fileID: 1926028527006122935}
   LightTXT: {fileID: 0}
 --- !u!114 &1926028528102454411
@@ -5349,7 +5351,6 @@ MonoBehaviour:
   currentJetPower: 0
   InMotion: 0
   InReverseMotion: 0
-  Proppeler: {fileID: 8379807038190380562}
 --- !u!114 &5933220403809058459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5878,7 +5879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5933220405608547268
 Transform:
   m_ObjectHideFlags: 0
@@ -6095,7 +6096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7681024011117653106
 Transform:
   m_ObjectHideFlags: 0

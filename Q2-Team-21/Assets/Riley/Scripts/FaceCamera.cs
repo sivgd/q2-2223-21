@@ -10,7 +10,7 @@ public class FaceCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera = GameObject.FindGameObjectWithTag("BoatCam");
+        Camera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
