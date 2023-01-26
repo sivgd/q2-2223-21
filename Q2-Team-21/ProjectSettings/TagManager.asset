@@ -4,15 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - WaterChecker
   - PlayerBoat
-  - GroundChecker
-  - BoatCam
-  - PlayerBoatSpot
-  - Water
   - enemy
-  - LightPost
-  - Bulb
   - Mermaid
   - Barnacle
   - Pearl

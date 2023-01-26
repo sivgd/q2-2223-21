@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject RestartAreYouSure;
     public GameObject MainMenuAreYouSure;
     public GameObject MainPauseMenu;
-    private GameObject Boat;
+    [SerializeField] GameObject BoatCam;
     private GameObject player;
     //public GameObject Camera;
     //private Vector3 LockRotation = new Vector3(0,0,0);
@@ -21,7 +21,6 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Boat = GameObject.FindGameObjectWithTag("BoatCam");
         DoesThisWork = false;
     }
     // Update is called once per frame
@@ -62,10 +61,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("RESUME");
+        //Debug.Log("RESUME");
         PauseMenuUI.SetActive(false);
         player.GetComponent<CharacterControllerScript>().enabled= true;
-        Boat.GetComponent<RotateAroundCam>().enabled = true;
+        BoatCam.GetComponent<RotateAroundCam>().enabled = true;
         Time.timeScale = 1f;
         isGamePaused = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -74,9 +73,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        Debug.Log("PAUSE");
+        //Debug.Log("PAUSE");
 ;        PauseMenuUI.SetActive(true);
-        Boat.GetComponent<RotateAroundCam>().enabled = false;
+        BoatCam.GetComponent<RotateAroundCam>().enabled = false;
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Time.timeScale = 0f;
         isGamePaused = true;

@@ -1,7 +1,3 @@
-using JetBrains.Annotations;
-using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
@@ -10,81 +6,48 @@ public class CharacterControllerScript : MonoBehaviour
 
     private GameObject PlayerCam;
     private Transform PlayerCamera;
-    public float Sensitivity;
+    [SerializeField] float Sensitivity;
     private Vector2 Sensitivities;
     private Vector2 XYRotation;
 
-    //Raycast
-
-    private LayerMask InteractablesLayerMask;
-    private GameObject LookingAtObj;
-
-    //Utility
-    public GameObject Boat;
-    private GameObject BoatCam;
-    public bool InBoat;
-    public Transform PlayerBoatPosTransform;
-
     //Movement
 
-    private CharacterController controller;
     Vector3 move;
-    private LayerMask GroundLayer;
-    public float moveSpeed;
-    private float speed;
-    private float speedButFaster;
-    private float stamina;
-    private float gravity = -38;
-    public float jumpHeight;
-
-    private GameObject groundCheckOBJ;
-    private Transform groundCheck;
+    private CharacterController controller;
+    [SerializeField] float speed;
+    [SerializeField] float gravity = -38;
+    [SerializeField] float jumpHeight;
+    [SerializeField] Transform groundCheck;
     private float groundDistance = 0.3f;
-
     private Vector3 velocity;
-    private bool isGrounded;
+    public bool Dead;
 
     //UI
 
-    public GameObject BoatTXT;
-    public GameObject LightTXT;
+    [SerializeField] TransitionHandler Parent;
+    [SerializeField] GameObject BoatTXT;
+    [SerializeField] GameObject LightTXT;
+    private bool InBoat;
 
     //////////////////////////////////////////////////////
     void Start()
     {
         //Camera
-
-        Cursor.lockState = CursorLockMode.Locked;
         PlayerCam = GameObject.FindGameObjectWithTag("MainCamera");
-        PlayerCamera = PlayerCam.transform;
-
+        PlayerCamera = PlayerCam.transform; 
         Sensitivities.x = Sensitivity;
         Sensitivities.y = Sensitivity;
-
-        //Raycast
-
-        InteractablesLayerMask = LayerMask.GetMask("Interactables");
-
-        //Utility
-
-        Boat = GameObject.FindGameObjectWithTag("PlayerBoat");
-        BoatCam = GameObject.FindGameObjectWithTag("BoatCam");
-        BoatCam.SetActive(false);
-        Boat.GetComponent<BoatEngine>().enabled = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         //Movement
-
-        GroundLayer = LayerMask.GetMask("Ground");
         controller = gameObject.GetComponent<CharacterController>();
-        groundCheckOBJ = GameObject.FindGameObjectWithTag("GroundChecker");
-        groundCheck = groundCheckOBJ.transform;
-        speed = moveSpeed;
-        speedButFaster = speed * 1.6f;
     }
 
     //////////////////////////////////////////////////////
     void Update()
     {
+        InBoat = Parent.InBoat;
+
         //Camera
 
         Vector2 MouseInput = new Vector2
@@ -103,22 +66,9 @@ public class CharacterControllerScript : MonoBehaviour
 
         //Raycast
 
-        if (InBoat == true && Input.GetKeyDown(KeyCode.E))
-        {
-            ExitBoat();
-            BoatTXT.SetActive(false);
-        }
-        else if(InBoat == false)
-        {
-            BoatTXT.SetActive(false);
-        }
-        else if (InBoat == true)
-        {
-            BoatTXT.SetActive(false);
-        }
-
         var ray = new Ray(origin: PlayerCam.transform.position, direction: PlayerCam.transform.forward);
         RaycastHit hit;
+        GameObject LookingAtObj;
         if (Physics.Raycast(ray, out hit, 1000))
         {
             LookingAtObj = hit.transform.gameObject;
@@ -127,20 +77,16 @@ public class CharacterControllerScript : MonoBehaviour
                 BoatTXT.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if (InBoat == false)
-                    {
-                        EnterBoat();
-                        BoatTXT.SetActive(false);
-                    }
+                    Parent.EnterBoat();
                 }
             }
-            if (LookingAtObj.tag == "")
+            else
             {
-
-            }
-            if (LookingAtObj.tag == "")
-            {
-
+                BoatTXT.SetActive(false);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Parent.ExitBoat();
+                }
             }
         }
         else
@@ -148,29 +94,9 @@ public class CharacterControllerScript : MonoBehaviour
             LookingAtObj = null;
         }
 
-        // Movement
+        //Movement
 
-        if (speed == speedButFaster)
-        {
-            stamina -= Time.deltaTime;
-        }
-        else if (stamina <= 5)
-        {
-            stamina += Time.deltaTime * 0.6f;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) || stamina <= 0)
-        {
-            speed = moveSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift) && stamina > 0)
-        {
-            speed = speedButFaster;
-        }
-
-        //^^^sprint end
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, GroundLayer);
+        bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -186,42 +112,13 @@ public class CharacterControllerScript : MonoBehaviour
             velocity.y = -2f;
         }
 
+        //Jump
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-
-        if (InBoat == true)
-        {
-            gameObject.transform.position = GameObject.FindGameObjectWithTag("PlayerBoatSpot").GetComponent<Transform>().position;
-        }
-
-        //UI
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            EnterBoat();
-        }
-    }
-
-    public void EnterBoat()
-    {
-        InBoat = true;
-        Boat.GetComponent<BoatEngine>().enabled = true;
-        BoatCam.SetActive(true);
-        PlayerCam.SetActive(false);
-    }
-
-    public void ExitBoat()
-    {
-        InBoat = false;
-        Boat.GetComponent<BoatEngine>().enabled = false;
-        BoatCam.SetActive(false);
-        PlayerCam.SetActive(true);
     }
 }
