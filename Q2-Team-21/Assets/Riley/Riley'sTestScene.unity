@@ -10800,7 +10800,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3428658438145381459, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381459, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11877,7 +11877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257986125478570525, guid: b239593c09988044f8e1f3fc0f35f92c, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 257986125478570525, guid: b239593c09988044f8e1f3fc0f35f92c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15511,7 +15511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257986125478570525, guid: b239593c09988044f8e1f3fc0f35f92c, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 257986125478570525, guid: b239593c09988044f8e1f3fc0f35f92c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17926,7 +17926,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1314875701053396963, guid: 0cc34b2388512234ca28dbaafcf49a97, type: 3}
   m_PrefabInstance: {fileID: 870913771}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 700293600}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75de2a0e9751bf3409cdfa0ab383cf88, type: 3}
@@ -35967,7 +35967,7 @@ GameObject:
   - component: {fileID: 1531082771}
   - component: {fileID: 1531082770}
   m_Layer: 5
-  m_Name: BoatText (1)
+  m_Name: BoatText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,6 +12,11 @@ TagManager:
   - Car
   - Wave1
   - Wave2
+  - Water
+  - BoatCam
+  - LightPost
+  - PlayerBoatSpot
+  - GroundChecker
   layers:
   - Default
   - TransparentFX
