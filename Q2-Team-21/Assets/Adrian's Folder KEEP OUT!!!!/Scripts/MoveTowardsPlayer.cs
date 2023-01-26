@@ -32,7 +32,11 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     void Update()
     {
+        
         player = GameObject.FindWithTag("PlayerBoat");
+        float x = gameObject.transform.position.x;
+        float y = player.transform.position.y;
+        float z = gameObject.transform.position.z;
         GameObject healths = GameObject.FindWithTag("Car");
         // Get the player's rigidbody component
         playerRigidbody = player.GetComponent<Rigidbody>();
@@ -64,7 +68,7 @@ public class MoveTowardsPlayer : MonoBehaviour
             objectRigidbody.MovePosition(objectRigidbody.position + velocity * Time.deltaTime);
             if(player != null)
             {
-                transform.position = new Vector3(transform.position.x, player.transform.position.y, transform.position.z);
+                transform.position = new Vector3(x, y, z);
 
 
             }
@@ -106,7 +110,7 @@ public class MoveTowardsPlayer : MonoBehaviour
             // Start the health drain coroutine
             StartCoroutine(DrainHealth());
             // Disable the box collider component
-            //GetComponent<BoxCollider>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
             GetComponent<BoxCollider>().isTrigger= true;
         }
     }
