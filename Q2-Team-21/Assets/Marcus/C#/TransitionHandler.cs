@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject FPSCam;
     [SerializeField] GameObject FPSOnBoat;
     public bool InBoat;
+    public bool dead;
 
     void Start()
     {
@@ -22,6 +24,22 @@ public class TransitionHandler : MonoBehaviour
         {
             FPS.transform.position = FPSOnBoat.transform.position;
         }
+    }
+
+    private void LateUpdate()
+    {
+        if(dead == true)
+        {
+            EnterBoat();
+            StartCoroutine(UnDeath());
+            dead = false;
+        }
+    }
+
+    IEnumerator UnDeath()
+    {
+        yield return new WaitForSeconds(.1f);
+        ExitBoat();
     }
 
     public void EnterBoat()
@@ -40,5 +58,6 @@ public class TransitionHandler : MonoBehaviour
         FPS.GetComponent<CharacterController>().enabled = true;
         FPSCam.SetActive(true);
         InBoat=false;
+        StopAllCoroutines();
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
@@ -46,8 +47,6 @@ public class CharacterControllerScript : MonoBehaviour
     //////////////////////////////////////////////////////
     void Update()
     {
-        InBoat = Parent.InBoat;
-
         //Camera
 
         Vector2 MouseInput = new Vector2
@@ -66,6 +65,12 @@ public class CharacterControllerScript : MonoBehaviour
 
         //Raycast
 
+        InBoat = Parent.InBoat;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Parent.ExitBoat();
+        }
+
         var ray = new Ray(origin: PlayerCam.transform.position, direction: PlayerCam.transform.forward);
         RaycastHit hit;
         GameObject LookingAtObj;
@@ -83,10 +88,10 @@ public class CharacterControllerScript : MonoBehaviour
             else
             {
                 BoatTXT.SetActive(false);
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Parent.ExitBoat();
-                }
+                //if (Input.GetKeyDown(KeyCode.E))
+                //{
+                //    Parent.ExitBoat();
+                //}
             }
         }
         else
@@ -120,5 +125,19 @@ public class CharacterControllerScript : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if (Dead == true)
+        {
+            Parent.dead = true;
+            Dead = false;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 4)
+        {
+            Dead = true;
+        }
     }
 }

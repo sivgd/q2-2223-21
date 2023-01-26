@@ -15,8 +15,6 @@ public class BoatEngine : MonoBehaviour
     //The boat's current engine power is public for debugging
     public float currentJetPower;
 
-    private float thrustFromWaterJet = 0f;
-
     private Rigidbody boatRB;
 
     private float WaterJetRotation_Y = 0f;
@@ -26,44 +24,17 @@ public class BoatEngine : MonoBehaviour
     public bool InMotion;
     public bool InReverseMotion;
 
-    public GameObject Proppeler;
-    private Animator Prop;
-
-
-
     void Start() 
 	{
         boatRB = GetComponent<Rigidbody>();
 
         boatController = GetComponent<BoatController>();
-
-        Prop = Proppeler.GetComponent<Animator>();
     }
-
-
 
     void Update() 
 	{
         UserInput();
-
-        //if (InMotion == true)
-        //{
-        //    Prop.SetBool("InMotion", true);
-        //    Prop.SetBool("InReverseMotion", false);
-        //}
-        //else if (InReverseMotion == true)
-        //{
-        //    Prop.SetBool("InMotion", false);
-        //    Prop.SetBool("InReverseMotion", true);
-        //}
-        //else
-        //{
-        //    Prop.SetBool("InMotion", false);
-        //    Prop.SetBool("InReverseMotion", false);
-        //}
-
     }
-
 
     void FixedUpdate()
     {
