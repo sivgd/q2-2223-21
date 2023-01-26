@@ -8,6 +8,7 @@ public class HealthBar : MonoBehaviour
     public float healthMax;
     public GameObject HpBar;
     public GameObject HealthMask;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        healthCurrent = player.GetComponent<Player>().health;
         float healthPercent = (healthCurrent / healthMax) * 80;
 
         if (healthPercent > 100) healthPercent = 100;

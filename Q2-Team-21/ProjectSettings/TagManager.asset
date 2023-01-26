@@ -13,6 +13,11 @@ TagManager:
   - enemy
   - LightPost
   - Bulb
+  - Mermaid
+  - Barnacle
+  - Pearl
+  - Car
+  - Wave1
   layers:
   - Default
   - TransparentFX

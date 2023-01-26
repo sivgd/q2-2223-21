@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         Debug.Log("PAUSE");
-;        PauseMenuUI.SetActive(true);
+;       PauseMenuUI.SetActive(true);
         player.GetComponent<CharacterControllerScript>().enabled = false;
         Time.timeScale = 0f;
         isGamePaused = true;

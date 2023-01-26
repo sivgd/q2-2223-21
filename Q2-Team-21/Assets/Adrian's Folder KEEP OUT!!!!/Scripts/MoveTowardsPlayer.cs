@@ -13,10 +13,11 @@ public class MoveTowardsPlayer : MonoBehaviour
 
     // A reference to the player's rigidbody
     private Rigidbody playerRigidbody;
-
+    private GameObject player;
+    private Player healthss;
     // A reference to the object's rigidbody
     private Rigidbody objectRigidbody;
-
+    public GameObject locationPlayer;
     // A flag indicating whether the object is sticking to the player
     private bool isSticking = false;
 
@@ -24,19 +25,21 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Start()
     {
         // Find the object with the tag "Player"
-        GameObject player = GameObject.FindWithTag("PlayerBoat");
         
 
-        // Get the player's rigidbody component
-        playerRigidbody = player.GetComponent<Rigidbody>();
-       
-
-        // Get the object's rigidbody component
-        objectRigidbody = GetComponent<Rigidbody>();
+        
     }
 
     void Update()
     {
+        player = GameObject.FindWithTag("PlayerBoat");
+        GameObject healths = GameObject.FindWithTag("Car");
+        // Get the player's rigidbody component
+        playerRigidbody = player.GetComponent<Rigidbody>();
+        healthss = healths.GetComponent<Player>();
+
+        // Get the object's rigidbody component
+        objectRigidbody = GetComponent<Rigidbody>();
         if (health <= 0) Destroy(gameObject);
         // If the object is sticking to the player, don't do anything
         if (isSticking)
@@ -56,6 +59,12 @@ public class MoveTowardsPlayer : MonoBehaviour
 
             // Move the object towards the player
             objectRigidbody.MovePosition(objectRigidbody.position + velocity * Time.deltaTime);
+            if(player != null)
+            {
+                this.transform.position = new Vector3(this.transform.position.x, player.transform.position.y, this.transform.position.z);
+
+
+            }
 
             // Calculate the distance between the object and the target
             float distance = Vector3.Distance(transform.position, playerRigidbody.position);
@@ -108,7 +117,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         while (isSticking)
         {
             // Drain the player's health
-            playerScript.health -= drainRate * Time.deltaTime;
+            healthss.health -= drainRate * Time.deltaTime;
 
             yield return new WaitForSeconds(1.0f);
         }
