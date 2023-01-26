@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Riley/IntroComic.unity
     guid: 81344e0c5f9961442880b32ab7c19683
   - enabled: 1
+    path: Assets/Riley/Riley'sTestScene.unity
+    guid: fa44026d5fa72e54facdd40734068262
+  - enabled: 0
     path: Assets/Marcus/Marcus'sMapTest.unity
     guid: 913d78735c6eb384c82473bfb59223fd
   - enabled: 0
