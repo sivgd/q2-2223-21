@@ -23,8 +23,7 @@ public class Player : MonoBehaviour
         
         if (health <= 0)
         {
-            rb.useGravity = true;
-            timer += Time.deltaTime;
+            
             gameObject.GetComponent<BoatEngine>().enabled = false;
             if (timer > time)
             {

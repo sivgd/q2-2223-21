@@ -12,7 +12,7 @@ public class FaceCamera : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("MainCamera");
-        Boat = GameObject.FindGameObjectWithTag("BoatCam");
+        Boat = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     // Update is called once per frame
