@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3459272}
   - component: {fileID: 3459271}
   m_Layer: 0
-  m_Name: IslandTest
+  m_Name: MermaidIsland
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15826,11 +15826,11 @@ PrefabInstance:
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
+      objectReference: {fileID: 21300000, guid: 1859336ca8bd7cf43afd6a1b342242bf, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+      objectReference: {fileID: 21300000, guid: cbdb9ca09f55cf74b90f526d8fc38066, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Hey you okay?
@@ -33633,11 +33633,11 @@ PrefabInstance:
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
+      objectReference: {fileID: 21300000, guid: 1859336ca8bd7cf43afd6a1b342242bf, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+      objectReference: {fileID: 21300000, guid: cbdb9ca09f55cf74b90f526d8fc38066, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Woah. you actually got that giant pearl!
@@ -48971,6 +48971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtThisTrans: {fileID: 8393430505780509723}
+  distanceToObject: 50
 --- !u!1 &3580336647398482899
 GameObject:
   m_ObjectHideFlags: 0
