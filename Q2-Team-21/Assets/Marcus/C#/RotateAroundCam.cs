@@ -9,10 +9,10 @@ public class RotateAroundCam : MonoBehaviour
     //The height, if we dont want to look at the center position of the object
     private float heightOffset = 1f;
     //The distance from the camera to the object we look at
-	float distanceToObject = 50f;
+	public float distanceToObject = 50f;
     //The min and max distance for zooming
     float minDistance = 10f;
-    float maxDistance = 100f;
+    float maxDistance = 10f;
     float zoomSpeed = 5f;
     //The speed which we move the camera
 	float xSpeed = 180f;
@@ -96,15 +96,15 @@ public class RotateAroundCam : MonoBehaviour
 
 	void Update() 
     {
-		//Zoom in/out
-		if (Input.GetAxis("Mouse ScrollWheel") > 0f) 
+        //Zoom in/out
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             distanceToObject -= zoomSpeed;
-		} 
-		else if (Input.GetAxis("Mouse ScrollWheel") < 0f) 
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             distanceToObject += zoomSpeed;
-		}
+        }
 
         distanceToObject = Mathf.Clamp(distanceToObject, minDistance, maxDistance);
 	}

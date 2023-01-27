@@ -22,6 +22,13 @@ public class MoveTowardsPlayer : MonoBehaviour
     private bool isSticking = false;
 
     public int health;
+
+    public bool debug;
+
+    [SerializeField]
+    private float z;
+    private float x;
+    private float y;
     void Start()
     {
         // Find the object with the tag "Player"
@@ -34,9 +41,9 @@ public class MoveTowardsPlayer : MonoBehaviour
     {
         
         player = GameObject.FindWithTag("PlayerBoat");
-        float x = gameObject.transform.position.x;
-        float y = player.transform.position.y;
-        float z = gameObject.transform.position.z;
+        
+        
+        
         GameObject healths = GameObject.FindWithTag("Car");
         // Get the player's rigidbody component
         playerRigidbody = player.GetComponent<Rigidbody>();
@@ -44,7 +51,7 @@ public class MoveTowardsPlayer : MonoBehaviour
 
         // Get the object's rigidbody component
         objectRigidbody = GetComponent<Rigidbody>();
-        Debug.Log(objectRigidbody);
+        //Debug.Log(objectRigidbody);
         if (health <= 0) Destroy(gameObject);
         // If the object is sticking to the player, don't do anything
         if (isSticking)
@@ -57,16 +64,30 @@ public class MoveTowardsPlayer : MonoBehaviour
         if (playerRigidbody != null)
         {
 
-            Debug.Log("Rigidbody component is attached to the player object");
+            //Debug.Log("Rigidbody component is attached to the player object");
             // Calculate the direction in which the object should move
             Vector3 direction = (playerRigidbody.position - objectRigidbody.position).normalized;
+            
 
             // Calculate the velocity at which the object should move
             Vector3 velocity = direction * rotationSpeed;
 
             // Move the object towards the player
             objectRigidbody.MovePosition(objectRigidbody.position + velocity * Time.deltaTime);
-            if(player != null)
+            x = objectRigidbody.position.x;
+            y = player.transform.position.y;
+            z = objectRigidbody.position.z;
+            float ey = gameObject.transform.position.y;
+            if (debug)
+            {
+                
+                Debug.Log(direction);
+                Debug.Log("player y: " + y);
+                Debug.Log("enemy y pos: " + ey);
+                Debug.Log("enemy z pos: " + z);
+                Debug.Log("Enemy x pos: " + x);
+            }
+            if (player != null)
             {
                 transform.position = new Vector3(x, y, z);
 
