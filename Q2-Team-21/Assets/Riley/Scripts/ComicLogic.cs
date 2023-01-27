@@ -34,11 +34,11 @@ public class ComicLogic : MonoBehaviour
                 break; 
             
             case 2:
-                Position = new Vector2(0, 768);
+                Position = new Vector2(-1024, 768);
                 break;
 
             case 3:
-                Position = new Vector2(-1024, 768);
+                Position = new Vector2(0, 768);
                 break;
     
             case 4:
@@ -53,17 +53,20 @@ public class ComicLogic : MonoBehaviour
                 Position = new Vector2(-60, 90);
                 break;
         }
-
-        if (rect.anchoredPosition.x > Position.x) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x-moveSpeed, rect.anchoredPosition.y);
-        if (rect.anchoredPosition.x < Position.x) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x+moveSpeed, rect.anchoredPosition.y);
-        if (rect.anchoredPosition.y > Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y-moveSpeed);
-        if (rect.anchoredPosition.y < Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y+moveSpeed);
+        for(int i = 0; i < moveSpeed; i++)
+        {
+            if (rect.anchoredPosition.x > Position.x) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x - 1, rect.anchoredPosition.y);
+            if (rect.anchoredPosition.x < Position.x) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x + 1, rect.anchoredPosition.y);
+            if (rect.anchoredPosition.y > Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y - 1);
+            if (rect.anchoredPosition.y < Position.y) rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y + 1);
+        }
+        
 
         if (PanelNumber == 6 && rect.localScale.x > 0) rect.localScale = new Vector2(rect.localScale.x - 0.005f, rect.localScale.y - 0.005f);
         else if (rect.localScale.x < 1) rect.localScale = new Vector2(rect.localScale.x + 0.005f, rect.localScale.y + 0.005f);
         else if (rect.localScale.x > 1) rect.localScale = new Vector2(1, 1);
 
-        if (rect.anchoredPosition == Position && PanelNumber == 0) SceneManager.LoadScene(MainMenuSceneNumber);
+        if (rect.anchoredPosition == Position && PanelNumber == 0 && rect.localScale.x == 1) SceneManager.LoadScene(MainMenuSceneNumber);
         if (rect.anchoredPosition == Position && PanelNumber == 6 && rect.localScale.x < 0.001) SceneManager.LoadScene(GameScene);
 
     }
