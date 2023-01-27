@@ -13,6 +13,7 @@ public class activateEnemies : MonoBehaviour
             Debug.Log("Number of enemies found: " + enemies.Length);
             foreach (GameObject enemy in enemies)
             {
+                Debug.Log(enemy.tag);
                 enemy.GetComponent<MoveTowardsPlayer>().enabled = true;
             }
         }

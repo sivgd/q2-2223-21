@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         //rb.useGravity =false;
     }
 
@@ -23,8 +24,8 @@ public class Player : MonoBehaviour
         
         if (health <= 0)
         {
-            
-            gameObject.GetComponent<BoatEngine>().enabled = false;
+
+            GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().enabled = false;
             if (timer > time)
             {
                 timer = 0;

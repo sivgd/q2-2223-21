@@ -29,9 +29,9 @@ void Update()
             RaycastHit hit;
             
             InteractablesLayerMask = LayerMask.GetMask("Enemy"); // this sets the layer mask to only hit objects on layer 8
-        
+            float maxDis = Vector3.Distance(gameObject.transform.position, pos);
 
-            if (Physics.Raycast(ray, out hit, 1000,InteractablesLayerMask, QueryTriggerInteraction.Ignore))
+            if (Physics.Raycast(ray, out hit, maxDis,InteractablesLayerMask, QueryTriggerInteraction.Ignore))
             {
                 Debug.Log(hit.collider.gameObject.layer + " LayerNumber");
                 Debug.Log(hit.collider.isTrigger + " HasTrigger");
