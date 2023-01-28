@@ -43,7 +43,7 @@ public class QuestingStuff : MonoBehaviour
             Barnacle.SetActive(false);
         }
 
-        if (Vector3.Distance(Boat.transform.position, Mermaid.transform.position) < 30)
+        if (Vector3.Distance(Boat.transform.position, Mermaid.transform.position) < 15)
         {
             InSpeakingRange= true;
         }
@@ -52,7 +52,10 @@ public class QuestingStuff : MonoBehaviour
             InSpeakingRange= false;
             HasSomethingToSay = true;
         }
-
+        if (InSpeakingRange == true && HasPearl == true)
+        {
+            HasReturnedPearl = true;
+        }
 
     }
 }
