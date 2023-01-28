@@ -453,12 +453,16 @@ PrefabInstance:
       value: Squid 2 (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -628,12 +632,16 @@ PrefabInstance:
       value: Squid 2 (14)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -693,12 +701,16 @@ PrefabInstance:
       value: Squid 2 (12)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -758,12 +770,16 @@ PrefabInstance:
       value: Squid 2 (35)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1028,12 +1044,16 @@ PrefabInstance:
       value: Squid 2 (22)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1093,12 +1113,16 @@ PrefabInstance:
       value: Squid 2 (16)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1296,12 +1320,16 @@ PrefabInstance:
       value: Squid 2 (34)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1361,12 +1389,16 @@ PrefabInstance:
       value: Squid 2 (28)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1588,12 +1620,16 @@ PrefabInstance:
       value: Squid 2 (9)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1653,12 +1689,16 @@ PrefabInstance:
       value: Squid 2 (17)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -1910,12 +1950,16 @@ PrefabInstance:
       value: Squid 2 (32)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -2178,12 +2222,16 @@ PrefabInstance:
       value: Squid 2 (33)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -2599,12 +2647,16 @@ PrefabInstance:
       value: Squid 2 (21)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -2733,12 +2785,16 @@ PrefabInstance:
       value: Squid 2 (24)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -2798,12 +2854,16 @@ PrefabInstance:
       value: Squid 2 (15)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -2863,12 +2923,16 @@ PrefabInstance:
       value: Squid 2 (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -3194,12 +3258,16 @@ PrefabInstance:
       value: Squid 2 (11)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -3367,12 +3435,16 @@ PrefabInstance:
       value: Squid 2 (13)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -3559,12 +3631,16 @@ PrefabInstance:
       value: Squid 2 (20)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -3859,12 +3935,16 @@ PrefabInstance:
       value: Squid 2 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -4077,12 +4157,16 @@ PrefabInstance:
       value: Squid 2 (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -4207,12 +4291,16 @@ PrefabInstance:
       value: Squid 2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -4272,12 +4360,16 @@ PrefabInstance:
       value: Squid 2 (10)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -4406,12 +4498,16 @@ PrefabInstance:
       value: Squid 2 (37)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5026,12 +5122,16 @@ PrefabInstance:
       value: Squid 2 (26)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5160,12 +5260,16 @@ PrefabInstance:
       value: Squid 2 (7)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5225,12 +5329,16 @@ PrefabInstance:
       value: Squid 2 (23)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5385,12 +5493,16 @@ PrefabInstance:
       value: Squid 2 (18)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5450,12 +5562,16 @@ PrefabInstance:
       value: Squid 2 (27)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5795,12 +5911,16 @@ PrefabInstance:
       value: Squid 2 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -5955,12 +6075,16 @@ PrefabInstance:
       value: Squid 2 (30)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6158,12 +6282,16 @@ PrefabInstance:
       value: Squid 2 (31)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6223,12 +6351,16 @@ PrefabInstance:
       value: Squid 2 (25)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6288,12 +6420,16 @@ PrefabInstance:
       value: Squid 2 (29)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6422,12 +6558,16 @@ PrefabInstance:
       value: Squid 2 (36)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6487,12 +6627,16 @@ PrefabInstance:
       value: Squid 2 (19)
       objectReference: {fileID: 0}
     - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3428658438145381460, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_TagString
       value: Wave2
       objectReference: {fileID: 0}
     - target: {fileID: 4418532675388608110, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c23718fc444174b9339e3a01e104f2, type: 3}
@@ -6560,6 +6704,14 @@ PrefabInstance:
       propertyPath: LightTXT
       value: 
       objectReference: {fileID: 3538134369092203609}
+    - target: {fileID: 3644813920155816900, guid: 1fdb118a25155fc45aae6861d60f3efe, type: 3}
+      propertyPath: m_TagString
+      value: BoatHull
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698226079567277509, guid: 1fdb118a25155fc45aae6861d60f3efe, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4698226080426987649, guid: 1fdb118a25155fc45aae6861d60f3efe, type: 3}
       propertyPath: m_RootOrder
       value: 0

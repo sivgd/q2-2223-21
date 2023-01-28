@@ -226,8 +226,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.90578353, y: 1.351272, z: 0.8151902}
-  m_Center: {x: -0.04710889, y: 0.48886928, z: 0.06455064}
+  m_Size: {x: 0.90578353, y: 2.359037, z: 0.8151902}
+  m_Center: {x: -0.04710889, y: 0.99275136, z: 0.06455064}
 --- !u!114 &3428658438145381463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   drainRate: 20
   rotationSpeed: 3
   stickDistance: 1
-  health: 10
+  health: 5
   debug: 0
   z: 0
 --- !u!54 &3428658438145381458
@@ -270,8 +270,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3428658438145381460}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7268235, y: 1.1999545, z: 0.19670963}
-  m_Center: {x: 0.088494465, y: 0.70239776, z: 0.21587388}
+  m_Size: {x: 0.7268235, y: 2.155675, z: 0.65998477}
+  m_Center: {x: 0.088494465, y: 1.1802583, z: -0.015763562}

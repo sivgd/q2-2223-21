@@ -17,6 +17,7 @@ TagManager:
   - LightPost
   - PlayerBoatSpot
   - GroundChecker
+  - BoatHull
   layers:
   - Default
   - TransparentFX

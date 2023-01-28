@@ -32,23 +32,42 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Start()
     {
         // Find the object with the tag "Player"
-        
-
-        
+        Debug.Log(this.enabled);
+        GameObject playerBoat = GameObject.FindWithTag("PlayerBoat");
+        if (playerBoat != null)
+        {
+            if (playerBoat.GetComponent<Rigidbody>() == null)
+            {
+                playerBoat.AddComponent<Rigidbody>();
+                Debug.Log("Rigidbody added to PlayerBoat.");
+            }
+            else
+            {
+                Debug.Log("PlayerBoat already has a Rigidbody.");
+            }
+        }
+        else
+        {
+            Debug.LogError("No object with tag 'PlayerBoat' found.");
+        }
     }
+
+
 
     void Update()
     {
         
         player = GameObject.FindWithTag("PlayerBoat");
-        
+        //Debug.Log(player); WORKING
         
         
         GameObject healths = GameObject.FindWithTag("Car");
+        //Debug.Log(healths); Working
         // Get the player's rigidbody component
-        playerRigidbody = player.GetComponent<Rigidbody>();
+        playerRigidbody = GameObject.FindGameObjectWithTag("PlayerBoat").GetComponent<Rigidbody>();
+        Debug.Log(playerRigidbody);
         healthss = healths.GetComponent<Player>();
-
+        //Debug.Log(healthss);    
         // Get the object's rigidbody component
         objectRigidbody = GetComponent<Rigidbody>();
         //Debug.Log(objectRigidbody);

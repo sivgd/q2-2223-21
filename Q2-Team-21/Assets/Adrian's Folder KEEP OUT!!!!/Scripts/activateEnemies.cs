@@ -7,7 +7,7 @@ public class activateEnemies : MonoBehaviour
     public string wave;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "PlayerBoat")
+        if (other.gameObject.CompareTag("BoatHull"))
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(wave);
             Debug.Log("Number of enemies found: " + enemies.Length);
