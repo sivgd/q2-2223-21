@@ -6694,7 +6694,7 @@ PrefabInstance:
       objectReference: {fileID: 5031820015984376048}
     - target: {fileID: 353512914825462947, guid: 1fdb118a25155fc45aae6861d60f3efe, type: 3}
       propertyPath: health
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 711247143786424304, guid: 1fdb118a25155fc45aae6861d60f3efe, type: 3}
       propertyPath: BoatTXT
@@ -10041,7 +10041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthCurrent: 100
-  healthMax: 1000
+  healthMax: 100
   HpBar: {fileID: 2417066526026069277}
   HealthMask: {fileID: 2417066526030043300}
   player: {fileID: 301229861}
