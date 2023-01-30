@@ -14123,11 +14123,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.size
-      value: 19
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].name
@@ -14138,13 +14138,21 @@ PrefabInstance:
       value: Jerry
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[2].name
+      value: ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
+      objectReference: {fileID: 21300000, guid: 1859336ca8bd7cf43afd6a1b342242bf, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+      objectReference: {fileID: 21300000, guid: cbdb9ca09f55cf74b90f526d8fc38066, type: 3}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: actors.Array.data[2].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7912bb27dcecd70459ed3e7ff77ac6d8, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Hey you okay?
@@ -14246,6 +14254,81 @@ PrefabInstance:
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[18].message
       value: No clue at all where you could get a giant pearl...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[19].message
+      value: Anyways, wish you luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[20].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[20].message
+      value: '*Ribbit*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[21].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[21].message
+      value: (Used WASD to move regardless of whether or not your in the boat)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[22].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[22].message
+      value: (While inside the boat E is used to leave and space is used to attack)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[23].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[23].message
+      value: (E is used while out of the boat to re-enter and interact with certain
+        objects)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[24].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[24].message
+      value: (Additionally in order to unstuck your boat you may need to jump into
+        it with the space bar)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[25].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[25].message
+      value: (If you cannot get it unstuck the pause menu you can access through
+        escape can be of help)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[26].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[26].message
+      value: (With that out of the way. Good luck, you'll need it...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[27].message
+      value: You okay? you look like you just saw a ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[28].actorId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[28].message
+      value: ...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
@@ -30423,7 +30506,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: m_Name
-      value: MermaidIntroConversation (1)
+      value: MermaidPearlDeliveredConversation
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: m_IsActive
@@ -30500,11 +30583,11 @@ PrefabInstance:
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 69b48cb847f0c964e966efd5e3e5a5c7, type: 3}
+      objectReference: {fileID: 21300000, guid: 1859336ca8bd7cf43afd6a1b342242bf, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[1].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ca617cc4f9b0c1e4b82549910f1212a3, type: 3}
+      objectReference: {fileID: 21300000, guid: cbdb9ca09f55cf74b90f526d8fc38066, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
       value: Woah. you actually got that giant pearl!
