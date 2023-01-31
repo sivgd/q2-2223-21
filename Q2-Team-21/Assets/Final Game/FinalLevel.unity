@@ -14762,6 +14762,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1895023263}
     - target: {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: pearl
+      value: 
+      objectReference: {fileID: 929610694}
+    - target: {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: Mermaid
+      value: 
+      objectReference: {fileID: 1468195329}
+    - target: {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: Barnacle
+      value: 
+      objectReference: {fileID: 1873815498}
+    - target: {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
