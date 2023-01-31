@@ -21,7 +21,7 @@ public class dialougeTriigger : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         x++;
-        Debug.Log(collision.tag);
+        //Debug.Log(collision.tag);
         if (disableCollider == true && collision.tag == "Player")
         {
             //player.GetComponent<FindMousePositionTest>().enabled = false;

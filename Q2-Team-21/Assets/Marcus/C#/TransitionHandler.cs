@@ -38,13 +38,13 @@ public class TransitionHandler : MonoBehaviour
 
     IEnumerator UnDeath()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(1f);
         ExitBoat();
     }
 
     public void EnterBoat()
     {
-        //FPS.GetComponent<CharacterController>().enabled = false;
+        FPS.GetComponent<CharacterController>().enabled = false;
         FPSCam.SetActive(false);
         Boat.GetComponent<BoatEngine>().enabled = true;
         BoatCam.SetActive(true);
@@ -55,7 +55,7 @@ public class TransitionHandler : MonoBehaviour
     {
         Boat.GetComponent<BoatEngine>().enabled = false;
         BoatCam.SetActive(false);
-        //FPS.GetComponent<CharacterController>().enabled = true;
+        FPS.GetComponent<CharacterController>().enabled = true;
         FPSCam.SetActive(true);
         InBoat=false;
         StopAllCoroutines();

@@ -137,7 +137,7 @@ public class MoveTowardsPlayer : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // If the object collides with the player
-        Debug.Log(collision.gameObject.tag);
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.CompareTag("PlayerBoat"))
         {
             objectRigidbody.isKinematic= true;

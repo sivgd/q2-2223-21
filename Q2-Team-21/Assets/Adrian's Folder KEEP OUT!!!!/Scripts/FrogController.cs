@@ -23,7 +23,6 @@ void Update()
         if (Input.GetKeyDown(KeyCode.Space)) // if the player presses space
         {
             Vector3 pos = endPoint.transform.position;
-            Debug.Log("current pos: " + pos);
             // create a ray from the camera in the direction the camera is facing
             Ray ray = new Ray(gameObject.transform.position, dir);
             RaycastHit hit;

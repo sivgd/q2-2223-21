@@ -61,8 +61,8 @@ public class CharacterControllerScript : MonoBehaviour
         XYRotation.x = Mathf.Clamp(XYRotation.x, -90f, 90f);
 
         transform.eulerAngles = new Vector3(0f, XYRotation.y, 0f);
-        //PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
-        //PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
+        PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
+        PlayerCamera.localEulerAngles = new Vector3(XYRotation.x, 0f, 0f);
 
         //Raycast
 
@@ -89,10 +89,19 @@ public class CharacterControllerScript : MonoBehaviour
             else
             {
                 BoatTXT.SetActive(false);
-                //if (Input.GetKeyDown(KeyCode.E))
-                //{
-                //    Parent.ExitBoat();
-                //}
+            }
+
+            if (LookingAtObj.tag == "LightPost" && InBoat == false)
+            {
+                LightTXT.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    LookingAtObj.GetComponent<LightPointScript>().active = true;
+                }
+            }
+            else
+            {
+                LightTXT.SetActive(false);
             }
         }
         else
