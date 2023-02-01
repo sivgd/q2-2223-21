@@ -12939,7 +12939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.size
-      value: 29
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].name
@@ -12966,81 +12966,131 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7912bb27dcecd70459ed3e7ff77ac6d8, type: 3}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[0].actorId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[0].message
-      value: Hey you okay?
+      value: (Used WASD to move regardless of whether or not your in the boat)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[1].actorId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[1].message
-      value: You just got out of the worst tsunami Ive ever seen!
+      value: (While inside the boat E is used to leave and space is used to attack)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[2].actorId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[2].message
-      value: But dont worry about being stuck here.
+      value: (E is used while out of the boat to re-enter and interact with certain
+        objects)
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[3].actorId
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[3].message
-      value: Because im pretty clever and I know how to get you home!
+      value: (Additionally in order to unstuck your boat you may need to jump into
+        it with the space bar)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[4].actorId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[4].message
-      value: And its quite simple, You just got to go past the giant coral reef!
+      value: (If you cannot get it unstuck the pause menu you can access through
+        escape can be of help)
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[5].actorId
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[5].message
-      value: '*ribbit*'
+      value: (With that out of the way. Good luck, you'll need it...)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[6].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[6].message
-      value: Oh your boat cant go through coral? Well dont worry I have a plan!
+      value: Hey you okay?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[7].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[7].message
-      value: You just need to steal some stuff from that old shipwreck over there!
-        It'll have SOMETHING.
+      value: You just got out of the worst tsunami Ive ever seen!
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[8].actorId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[8].message
-      value: '*croak*'
+      value: But dont worry about being stuck here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[9].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[9].message
-      value: Oh wait you cant swim in salt water? That... makes sense actually.
+      value: Because im pretty clever and I know how to get you home!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[10].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[10].message
-      value: Yeah dont know how to help you with that-OH WAIT!
+      value: And its quite simple, You just got to go past the giant coral reef!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[11].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[11].message
-      value: I still got that Barrel of Gunpowder!
+      value: '*ribbit*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[12].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[12].message
-      value: and with that you can just BLOW IT UP!
+      value: Oh your boat cant go through coral? Wait why not you have a cannon?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[13].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[13].message
-      value: Though, gunpowder isn't cheap... So how about you get me something.
+      value: '*croak*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[14].actorId
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[14].message
-      value: Something valuable like say... A giant pearl?
+      value: Ah no gunpowder or cannonballs
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[15].message
-      value: Though I have no clue where you could find something like that.
+      value: luckily I have some gunpowder!
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[16].actorId
@@ -13048,8 +13098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[16].message
-      value: Definitely nothing of that description in a nearby shrine to an evil
-        storm god.
+      value: Though, gunpowder isn't cheap... So how about you get me something.
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[17].actorId
@@ -13057,7 +13106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[17].message
-      value: in the place surrounded by black spikes. Nope
+      value: Something valuable like say... A giant pearl?
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[18].actorId
@@ -13065,74 +13114,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[18].message
-      value: No clue at all where you could get a giant pearl...
+      value: Though I have no clue where you could find something like that.
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[19].message
-      value: Anyways, wish you luck!
+      value: Definitely nothing of that description in a nearby shrine to an evil
+        storm god.
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[20].actorId
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[20].message
-      value: '*Ribbit*'
+      value: in the place surrounded by black spikes. Nope
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[21].actorId
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[21].message
-      value: (Used WASD to move regardless of whether or not your in the boat)
+      value: No clue at all where you could get a giant pearl...
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[22].actorId
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[22].message
-      value: (While inside the boat E is used to leave and space is used to attack)
+      value: Anyways, wish you luck!
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[23].actorId
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[23].message
-      value: (E is used while out of the boat to re-enter and interact with certain
-        objects)
+      value: Yeah dont know how to help you with that-OH WAIT!
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[24].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[24].message
-      value: (Additionally in order to unstuck your boat you may need to jump into
-        it with the space bar)
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[25].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[25].message
-      value: (If you cannot get it unstuck the pause menu you can access through
-        escape can be of help)
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[26].actorId
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[26].message
-      value: (With that out of the way. Good luck, you'll need it...)
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[27].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[27].message
-      value: You okay? you look like you just saw a ghost
+      value: ...
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[28].actorId
@@ -27843,7 +27894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].name
@@ -27912,19 +27963,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[8].message
-      value: now simply take it to that wreck by the sand cliffs and...
+      value: Now I recently found an old shipwreck in the sand maze
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[9].message
-      value: KPLOW!!!
+      value: and it has some cannonballs. And with the gunpowder I gave you
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[10].message
-      value: and something of use to you is sure to come out!
+      value: you can use your cannon to blow a hole in the coral!
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[11].message
-      value: I still got a subscription to gunpowder weekly!
+      value: Though probably only a sick section...
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[12].message
