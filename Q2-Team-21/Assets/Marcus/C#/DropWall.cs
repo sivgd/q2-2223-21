@@ -20,10 +20,13 @@ public class DropWall : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerCam.SetActive(false);
-        WallCam.SetActive(true);
-        wall.GetComponent<Animator>().SetBool("PurlTurnedIn", true);
-        StartCoroutine(ResetCams());
+        if (other.gameObject.CompareTag("Player"))
+        {
+            PlayerCam.SetActive(false);
+            WallCam.SetActive(true);
+            wall.GetComponent<Animator>().SetBool("PurlTurnedIn", true);
+            StartCoroutine(ResetCams());
+        }
     }
 
     IEnumerator ResetCams()
