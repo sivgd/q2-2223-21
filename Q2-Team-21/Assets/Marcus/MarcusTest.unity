@@ -58991,7 +58991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4501834476231135686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.831, y: 2.662, z: -1.428}
+  m_LocalPosition: {x: 0.17, y: 2.194, z: 7.029}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8544474882336344265}
@@ -59115,6 +59115,7 @@ GameObject:
   - component: {fileID: 4501834476914213603}
   - component: {fileID: 4501834476914213601}
   - component: {fileID: 4501834476914213600}
+  - component: {fileID: 4501834476914213608}
   m_Layer: 0
   m_Name: PlayerFPS
   m_TagString: Player
@@ -59122,6 +59123,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &4501834476914213608
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4501834476914213607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25
+  m_Height: 0.5
+  m_Direction: 1
+  m_Center: {x: 0.00000005960465, y: 0, z: -0.00000008940698}
 --- !u!114 &4501834477089109720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71312,6 +71327,7 @@ MonoBehaviour:
   WallLower: {fileID: 431866065}
   WallCam: {fileID: 1359340996}
   canon: {fileID: 8089756717950500802}
+  Frogelme: {fileID: 3693108958251049406}
   cannonBallsCollected: 0
   InBoat: 0
   dead: 0

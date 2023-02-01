@@ -16,6 +16,7 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject WallLower;
     [SerializeField] GameObject WallCam;
     [SerializeField] Cannon canon;
+    [SerializeField] GameObject Frogelme;
     public bool cannonBallsCollected;
     public bool InBoat;
     public bool dead;
@@ -23,6 +24,8 @@ public class TransitionHandler : MonoBehaviour
     void Start()
     {
         ExitBoat();
+        Frogelme.GetComponent<MeshRenderer>().enabled = false;
+        Frogelme.GetComponent<FrogController>().enabled = false;
     }
 
     private void Update()
@@ -72,6 +75,8 @@ public class TransitionHandler : MonoBehaviour
         Boat.GetComponent<BoatEngine>().enabled = true;
         BoatCam.SetActive(true);
         InBoat = true;
+        Frogelme.GetComponent<MeshRenderer>().enabled = true;
+        Frogelme.GetComponent<FrogController>().enabled = true;
         if (cannonBallsCollected == true)
         {
             canon.enabled = true;
@@ -89,6 +94,8 @@ public class TransitionHandler : MonoBehaviour
         FPS.GetComponent<CharacterController>().enabled = true;
         FPSCam.SetActive(true);
         InBoat=false;
+        Frogelme.GetComponent<MeshRenderer>().enabled = false;
+        Frogelme.GetComponent<FrogController>().enabled = false;
         StopAllCoroutines();
         canon.enabled = false;
     }
