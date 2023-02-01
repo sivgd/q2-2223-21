@@ -12,9 +12,13 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject FPSOnBoat;
     [SerializeField] GameObject secondConvo;
     [SerializeField] GameObject Pearl;
+
+    [SerializeField] GameObject WallLower;
+    [SerializeField] GameObject WallCam;
+    [SerializeField] Cannon canon;
+    public bool cannonBallsCollected;
     public bool InBoat;
     public bool dead;
-    public bool pearl;
 
     void Start()
     {
@@ -28,10 +32,16 @@ public class TransitionHandler : MonoBehaviour
             FPS.transform.position = FPSOnBoat.transform.position;
         }
 
-        if (pearl == true)
+        if (Boat.GetComponent<BoatEngine>().pearlCollected == true)
         {
             secondConvo.SetActive(true);
             Pearl.SetActive(false);
+        }
+
+        if (Boat.GetComponent<BoatEngine>().cannonBallCollected == true || FPS.GetComponent<CharacterControllerScript>().cannonBallCollected == true)
+        {
+            cannonBallsCollected = true;
+            canon.enabled = true;
         }
     }
 
@@ -58,6 +68,14 @@ public class TransitionHandler : MonoBehaviour
         Boat.GetComponent<BoatEngine>().enabled = true;
         BoatCam.SetActive(true);
         InBoat = true;
+        if (cannonBallsCollected == true)
+        {
+            canon.enabled = true;
+        }
+        else
+        {
+            canon.enabled = false;
+        }
     }
 
     public void ExitBoat()
@@ -68,13 +86,6 @@ public class TransitionHandler : MonoBehaviour
         FPSCam.SetActive(true);
         InBoat=false;
         StopAllCoroutines();
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Pearl"))
-        {
-            pearl = true;
-        }
+        canon.enabled = false;
     }
 }

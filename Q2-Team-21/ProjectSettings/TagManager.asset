@@ -19,6 +19,7 @@ TagManager:
   - GroundChecker
   - BoatHull
   - RileysCanvas
+  - CannonBalls
   layers:
   - Default
   - TransparentFX

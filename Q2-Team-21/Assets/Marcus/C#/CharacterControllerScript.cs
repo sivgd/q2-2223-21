@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class CharacterControllerScript : MonoBehaviour
 {
+    public bool cannonBallCollected;
+    private GameObject CannonBalls;
+
     //Camera
 
     private GameObject PlayerCam;
@@ -141,6 +144,23 @@ public class CharacterControllerScript : MonoBehaviour
             Parent.dead = true;
             Dead = false;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("CannonBalls"))
+        {
+            cannonBallCollected = true;
+            CannonBalls = collision.gameObject;
+            StartCoroutine(ResetBoolFPS());
+        }
+    }
+
+    IEnumerator ResetBoolFPS()
+    {
+        yield return new WaitForSeconds(0.5f);
+        cannonBallCollected = false;
+        CannonBalls.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

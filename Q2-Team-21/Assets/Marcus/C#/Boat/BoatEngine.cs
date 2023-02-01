@@ -24,6 +24,10 @@ public class BoatEngine : MonoBehaviour
     public bool InMotion;
     public bool InReverseMotion;
 
+    public bool pearlCollected;
+    public bool cannonBallCollected;
+    private GameObject CannonBalls;
+
     void Start() 
 	{
         boatRB = GetComponent<Rigidbody>();
@@ -39,6 +43,28 @@ public class BoatEngine : MonoBehaviour
     void FixedUpdate()
     {
         UpdateWaterJet();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Pearl"))
+        {
+            pearlCollected = true;
+        }
+
+        if (collision.gameObject.CompareTag("CannonBalls"))
+        {
+            cannonBallCollected = true;
+            CannonBalls = collision.gameObject;
+            StartCoroutine(ResetBool());
+        }
+    }
+
+    IEnumerator ResetBool()
+    {
+        yield return new WaitForSeconds(0.5f);
+        cannonBallCollected = false;
+        CannonBalls.SetActive(false);
     }
 
 
