@@ -14874,7 +14874,7 @@ PrefabInstance:
       objectReference: {fileID: 1873815498}
     - target: {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3183622237247621551, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_Pivot.x
@@ -14960,9 +14960,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3183622237709935621, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3266381283777190922}
     - target: {fileID: 3183622237709935623, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_Name
-      value: BombDelivered
+      value: CannonBallCollected
       objectReference: {fileID: 0}
     - target: {fileID: 3183622237709935623, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_IsActive
@@ -14988,7 +14992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3183622238061640057, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3183622238300804440, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_FontData.m_MaxSize
@@ -15014,7 +15018,9 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 7329938524700093311}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3183622237247621549, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+    - {fileID: 3183622237247621546, guid: 18786077f4f216444bebd17990ce58af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 18786077f4f216444bebd17990ce58af, type: 3}
 --- !u!1 &662939445 stripped
 GameObject:
@@ -47532,7 +47538,7 @@ MonoBehaviour:
   BoatCam: {fileID: 3266381283147405293}
   FPSCam: {fileID: 7329938524741279558}
   FPSOnBoat: {fileID: 7329938526164367454}
-  secondConvo: {fileID: 0}
+  secondConvo: {fileID: 1415782281}
   Pearl: {fileID: 6611450117961519710}
   WallLower: {fileID: 6611450117597358409}
   WallCam: {fileID: 6611450116381527132}

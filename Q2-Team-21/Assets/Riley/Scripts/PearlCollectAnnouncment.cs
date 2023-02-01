@@ -14,14 +14,14 @@ public class PearlCollectAnnouncment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("RileysCanvas");
+        player = GameObject.FindGameObjectWithTag("PlayerBoat");
         UI = GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(player.GetComponent<QuestingStuff>().HasPearl == true && HasFinished == false)
+        if(player.GetComponent<BoatEngine>().pearlCollected == true && HasFinished == false)
         {
             if (UI.position.x > VisiblePosition) UI.position = new Vector3(UI.position.x - 5, UI.position.y, UI.position.z);
 
@@ -30,7 +30,7 @@ public class PearlCollectAnnouncment : MonoBehaviour
             if (WaitTime <= 0) HasFinished = true;
         }
 
-        if (player.GetComponent<QuestingStuff>().HasPearl == true && HasFinished == true)
+        if (player.GetComponent<BoatEngine>().pearlCollected == true && HasFinished == true)
         {
             if (UI.position.x < InvisiblePosition) UI.position = new Vector3(UI.position.x + 5, UI.position.y, UI.position.z);
 
