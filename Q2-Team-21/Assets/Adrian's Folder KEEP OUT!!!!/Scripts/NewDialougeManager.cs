@@ -31,7 +31,6 @@ public class NewDialougeManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         player.GetComponent<CharacterControllerScript>().enabled = false;
-        Debug.Log("Disabling Controller 1");
 
         
         cam2.GetComponent<CharacterControllerScript>().enabled = false;
@@ -42,14 +41,12 @@ public class NewDialougeManager : MonoBehaviour
         currentActors = actors;
         activeMessage = 0;
         
-        Debug.Log("started converstiaon");
         DisplayMessage();
     }
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         cam.GetComponent<RotateAroundCam>().enabled = false;
         player.GetComponent<CharacterControllerScript>().enabled = false;
-        Debug.Log("Disabling Controller 2");
         gameObject.GetComponent<Canvas>().enabled = true;
         //player.GetComponent<FindMousePositionTest>().enabled = false;
         engine.GetComponent<BoatEngine>().enabled = false;
@@ -59,7 +56,6 @@ public class NewDialougeManager : MonoBehaviour
         currentActors = actors;
         activeMessage = 0;
 
-        Debug.Log("started converstiaon");
         DisplayMessage();
     }
     
@@ -96,12 +92,10 @@ public class NewDialougeManager : MonoBehaviour
         {
             cam.GetComponent<RotateAroundCam>().enabled = true;
             player.GetComponent<CharacterControllerScript>().enabled = true;
-            Debug.Log("Renable Character controller");
             
             Cursor.lockState = CursorLockMode.Locked;
             
             //player.GetComponent<FindMousePositionTest>().enabled = true;
-            Debug.Log("conservation ended");
             gameObject.GetComponent<Canvas>().enabled = false;
         }
         

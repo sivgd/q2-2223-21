@@ -6,10 +6,11 @@ public class LightPointScript : MonoBehaviour
 {
     public bool active;
     [SerializeField] GameObject Bulb;
+    [SerializeField] GameObject Pearl;
 
     void Start()
     {
-        
+        Pearl.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     void Update()
@@ -17,6 +18,13 @@ public class LightPointScript : MonoBehaviour
         if (active == true)
         {
             Bulb.GetComponent<Animator>().SetBool("LightSet", true);
+            StartCoroutine(PearlFall());
         }
+    }
+
+    IEnumerator PearlFall()
+    {
+        yield return new WaitForSeconds(3f);
+        Pearl.GetComponent<Rigidbody>().isKinematic = false;
     }
 }

@@ -10,8 +10,11 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject BoatCam;
     [SerializeField] GameObject FPSCam;
     [SerializeField] GameObject FPSOnBoat;
+    [SerializeField] GameObject secondConvo;
+    [SerializeField] GameObject Pearl;
     public bool InBoat;
     public bool dead;
+    public bool pearl;
 
     void Start()
     {
@@ -23,6 +26,12 @@ public class TransitionHandler : MonoBehaviour
         if (InBoat == true)
         {
             FPS.transform.position = FPSOnBoat.transform.position;
+        }
+
+        if (pearl == true)
+        {
+            secondConvo.SetActive(true);
+            Pearl.SetActive(false);
         }
     }
 
@@ -38,7 +47,7 @@ public class TransitionHandler : MonoBehaviour
 
     IEnumerator UnDeath()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.1f);
         ExitBoat();
     }
 
@@ -59,5 +68,13 @@ public class TransitionHandler : MonoBehaviour
         FPSCam.SetActive(true);
         InBoat=false;
         StopAllCoroutines();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Pearl"))
+        {
+            pearl = true;
+        }
     }
 }
