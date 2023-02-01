@@ -26,7 +26,7 @@ void Update()
             // create a ray from the camera in the direction the camera is facing
             Ray ray = new Ray(gameObject.transform.position, dir);
             RaycastHit hit;
-            
+            this.GetComponent<AudioSource>().Play();
             InteractablesLayerMask = LayerMask.GetMask("Enemy"); // this sets the layer mask to only hit objects on layer 8
             float maxDis = Vector3.Distance(gameObject.transform.position, pos);
 

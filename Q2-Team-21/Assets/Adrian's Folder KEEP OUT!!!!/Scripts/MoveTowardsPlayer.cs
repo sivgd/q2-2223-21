@@ -167,6 +167,8 @@ public class MoveTowardsPlayer : MonoBehaviour
             healthss.health -= drainRate * Time.deltaTime;
 
             yield return new WaitForSeconds(1.0f);
+
+            this.GetComponent<AudioSource>().Play();
         }
 
         yield return null;
