@@ -38,10 +38,14 @@ public class TransitionHandler : MonoBehaviour
             Pearl.SetActive(false);
         }
 
-        if (Boat.GetComponent<BoatEngine>().cannonBallCollected == true || FPS.GetComponent<CharacterControllerScript>().cannonBallCollected == true)
+        if (Boat.GetComponent<BoatEngine>().cannonBallCollected == true)
         {
             cannonBallsCollected = true;
             canon.enabled = true;
+        }
+        else if (FPS.GetComponent<CharacterControllerScript>().cannonBallCollected == true)
+        {
+            cannonBallsCollected = true;
         }
     }
 
