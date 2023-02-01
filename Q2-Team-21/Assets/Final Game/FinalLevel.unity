@@ -13844,6 +13844,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3183622237286003050, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3183622237709935621, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: player
       value: 
@@ -13862,17 +13866,23 @@ PrefabInstance:
       objectReference: {fileID: 7530047016382679078}
     - target: {fileID: 3183622237947828579, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_Text
-      value: 'Shipwreck Wrecked
-
-'
+      value: Cannonball Collected
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183622237947828579, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3183622237947828579, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 32
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3183622237947828579, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183622237947828579, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3183622238061640057, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: m_IsActive
