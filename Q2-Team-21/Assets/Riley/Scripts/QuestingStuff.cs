@@ -37,11 +37,11 @@ public class QuestingStuff : MonoBehaviour
             pearl.SetActive(false);
         }
 
-        if (Vector3.Distance(Boat.transform.position, Barnacle.transform.position) < 20)
-        {
-            HasBarnacle = true;
-            Barnacle.SetActive(false);
-        }
+        //if (Vector3.Distance(Boat.transform.position, Barnacle.transform.position) < 20)
+        //{
+        //    HasBarnacle = true;
+        //    Barnacle.SetActive(false);
+        //}
 
         if (Vector3.Distance(Boat.transform.position, Mermaid.transform.position) < 15)
         {
