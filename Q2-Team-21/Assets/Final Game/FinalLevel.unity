@@ -11570,6 +11570,11 @@ Transform:
   m_Father: {fileID: 1588737422}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &548562821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4849263140136065797, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+  m_PrefabInstance: {fileID: 620860401}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &557102131
 GameObject:
   m_ObjectHideFlags: 0
@@ -14031,6 +14036,10 @@ PrefabInstance:
       propertyPath: cam2
       value: 
       objectReference: {fileID: 7329938524700093304}
+    - target: {fileID: 3522109781210553672, guid: 18786077f4f216444bebd17990ce58af, type: 3}
+      propertyPath: Speed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3522109781210553672, guid: 18786077f4f216444bebd17990ce58af, type: 3}
       propertyPath: engine
       value: 
@@ -27902,7 +27911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.size
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: actors.Array.data[0].name
@@ -27987,16 +27996,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[12].message
-      value: and with that you can totally total that ol hunk a wood!
+      value: You can fire the canon by pressing the Left Mouse Button.
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[13].message
-      value: Though ya know, that subscription aint cheap... So how about ya get
-        me something.
+      value: 'It was a pleasure meeting you, hope you make it home in one piece. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
+      propertyPath: messages.Array.data[14].actorId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[14].message
-      value: Something valuable like say... A giant pearl.
+      value: '*Croak*'
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[15].message
@@ -46171,6 +46183,7 @@ MonoBehaviour:
   FPSCam: {fileID: 7329938524741279558}
   FPSOnBoat: {fileID: 7329938526164367454}
   secondConvo: {fileID: 1415782281}
+  firstConvo: {fileID: 548562821}
   Pearl: {fileID: 6611450117961519710}
   WallLower: {fileID: 6611450117597358409}
   WallCam: {fileID: 6611450116381527132}

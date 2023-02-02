@@ -11,6 +11,7 @@ public class TransitionHandler : MonoBehaviour
     [SerializeField] GameObject FPSCam;
     [SerializeField] GameObject FPSOnBoat;
     [SerializeField] GameObject secondConvo;
+    [SerializeField] GameObject firstConvo;
     [SerializeField] GameObject Pearl;
 
     [SerializeField] GameObject WallLower;
@@ -37,6 +38,7 @@ public class TransitionHandler : MonoBehaviour
 
         if (Boat.GetComponent<BoatEngine>().pearlCollected == true)
         {
+            firstConvo.SetActive(false);
             secondConvo.SetActive(true);
             Pearl.SetActive(false);
         }
