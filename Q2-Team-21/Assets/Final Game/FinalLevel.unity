@@ -27980,7 +27980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[8].message
-      value: Now I recently found an old shipwreck in the sand maze
+      value: After taking down the wall, I  found an old shipwreck in the sand maze
       objectReference: {fileID: 0}
     - target: {fileID: 4849263140136065819, guid: 9885965ca0df28c4481055a13787b74b, type: 3}
       propertyPath: messages.Array.data[9].message
