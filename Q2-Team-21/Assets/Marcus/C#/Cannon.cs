@@ -8,13 +8,14 @@ public class Cannon : MonoBehaviour
     public GameObject Cannonball;
     public Transform barrel;
     public GameObject Boat;
-    private bool Reloaded;
+    public bool Reloaded;
 
     public float force;
 
-    void Start()
+
+    private void Awake()
     {
-        
+        Reloaded = true;
     }
 
     void Update()
@@ -32,5 +33,6 @@ public class Cannon : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Reloaded = true;
+        StopCoroutine(Reload());
     }
 }

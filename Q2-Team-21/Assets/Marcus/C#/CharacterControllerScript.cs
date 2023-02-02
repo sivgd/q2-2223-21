@@ -152,6 +152,7 @@ public class CharacterControllerScript : MonoBehaviour
         {
             cannonBallCollected = true;
             CannonBalls = collision.gameObject;
+            CannonBalls.SetActive(false);
             StartCoroutine(ResetBoolFPS());
         }
     }
@@ -160,7 +161,6 @@ public class CharacterControllerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         cannonBallCollected = false;
-        CannonBalls.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)

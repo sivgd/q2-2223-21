@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class BoatEngine : MonoBehaviour 
 {
@@ -27,6 +28,7 @@ public class BoatEngine : MonoBehaviour
     public bool pearlCollected;
     public bool cannonBallCollected;
     private GameObject CannonBalls;
+    public bool Finished;
 
     void Start() 
 	{
@@ -71,7 +73,7 @@ public class BoatEngine : MonoBehaviour
     void UserInput()
     {
         //Forward / reverse
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && Finished == false)
         {
             if (boatController.CurrentSpeed < 50f && currentJetPower < maxPower)
             {
@@ -80,7 +82,7 @@ public class BoatEngine : MonoBehaviour
                 InReverseMotion = false;
             }
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) && Finished == false)
         {
             if (boatController.CurrentSpeed > -50f && currentJetPower > -maxPower)
             {
@@ -89,15 +91,21 @@ public class BoatEngine : MonoBehaviour
                 InMotion = false;
             }
         }
+        else if (Finished == true)
+        {
+            currentJetPower = maxPower;
+            InMotion = true;
+            InReverseMotion = false;
+        }
         else
         {
             currentJetPower = 0f;
-            InMotion=false;
+            InMotion = false;
             InReverseMotion = false;
         }
 
         //Steer left
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && Finished == false)
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + 2f;
 
@@ -111,7 +119,7 @@ public class BoatEngine : MonoBehaviour
             waterJetTransform.localEulerAngles = newRotation;
         }
         //Steer right
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) && Finished == false)
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - 2f;
 

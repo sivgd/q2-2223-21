@@ -11,7 +11,7 @@ public class CannonBall : MonoBehaviour
 
     IEnumerator DeleteBall()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
     }
 }
