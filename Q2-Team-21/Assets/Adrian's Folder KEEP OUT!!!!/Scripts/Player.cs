@@ -45,11 +45,11 @@ public class Player : MonoBehaviour
 
             health = Mathf.Clamp(health, 0, maxHealth);
 
-            if (health == 0 && GameObject.Find("Player (1)").GetComponent<TransitionHandler>().InBoat == true)
+            if (health == 0 && GameObject.Find("Player").GetComponent<TransitionHandler>().InBoat == true)
             {
                 GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().maxPower = 0f;
             }
-            else if(GameObject.Find("Player (1)").GetComponent<TransitionHandler>().InBoat == true)
+            else if(GameObject.Find("Player").GetComponent<TransitionHandler>().InBoat == true)
             {
                 GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().maxPower = 200000f;
             }

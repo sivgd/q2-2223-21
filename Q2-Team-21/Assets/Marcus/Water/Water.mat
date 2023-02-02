@@ -42,10 +42,10 @@ Material:
     m_Floats:
     - _Depth: 2
     - _Displacement: 0
-    - _NormalStrength: 0.3
-    - _Smoothness: 0.8
+    - _NormalStrength: 0.36
+    - _Smoothness: 1
     - _Strength: 0.3
     m_Colors:
-    - _DeepWater: {r: 0.19424155, g: 0.7604113, b: 0.9150943, a: 0.6392157}
-    - _ShallowWater: {r: 0.4704966, g: 0.768139, b: 0.9150943, a: 0.41960785}
+    - _DeepWater: {r: 0, g: 0.8125751, b: 1, a: 0.7647059}
+    - _ShallowWater: {r: 0.3160377, g: 0.98632336, b: 1, a: 0.7294118}
   m_BuildTextureStacks: []
