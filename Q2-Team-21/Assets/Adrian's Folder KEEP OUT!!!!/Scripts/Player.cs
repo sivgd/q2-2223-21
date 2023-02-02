@@ -47,11 +47,11 @@ public class Player : MonoBehaviour
 
             if (health == 0 && GameObject.Find("Player").GetComponent<TransitionHandler>().InBoat == true)
             {
-                GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().maxPower = 0f;
+                GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().enabled =false;
             }
-            else if(GameObject.Find("Player").GetComponent<TransitionHandler>().InBoat == true)
+            else if(health >= 1 && GameObject.Find("Player").GetComponent<TransitionHandler>().InBoat == true)
             {
-                GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().maxPower = 200000f;
+                GameObject.FindWithTag("PlayerBoat").GetComponent<BoatEngine>().enabled = true;
             }
         }
         catch (NullReferenceException)
