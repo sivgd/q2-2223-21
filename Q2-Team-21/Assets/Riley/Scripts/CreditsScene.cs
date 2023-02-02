@@ -9,8 +9,8 @@ public class CreditsScene : MonoBehaviour
     
     void Update()
     {
-        if (CreditsNumber < 0) CreditsNumber = 6;
-        if (CreditsNumber > 6) CreditsNumber = 0;
+        if (CreditsNumber < 0) CreditsNumber = 7;
+        if (CreditsNumber > 7) CreditsNumber = 0;
     }
 
     public void CreditsNumberDown() 
