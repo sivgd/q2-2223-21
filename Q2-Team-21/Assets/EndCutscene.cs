@@ -26,11 +26,11 @@ public class EndCutscene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.tag == "PlayerBoat")
+        //Debug.Log(other.gameObject.tag);
+        if (other.tag == "BoatHull")
         {
-
-
+            //Debug.Log("==============================");
+                
             BoatCam.SetActive(false);
             CutsceneCam.SetActive(true);
             Engine.Finished = true;
